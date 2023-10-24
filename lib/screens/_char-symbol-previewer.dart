@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:four_pics_baybayin/charsymbols/sarimanok.dart';
+import 'package:four_pics_baybayin/charsymbols/robotika.dart';
 import 'package:four_pics_baybayin/components/bgi-box.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart';
@@ -26,195 +26,198 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
       var symbols = <Widget>[];
 
       var noLabels = [
-        SarimanokCharSymbolNoLabels.createA(size, size),
-        SarimanokCharSymbolNoLabels.createEI(size, size),  
-        SarimanokCharSymbolNoLabels.createOU(size, size),  
+        RobotikaCharSymbolNoLabels.createA(size, size),
+        RobotikaCharSymbolNoLabels.createEI(size, size),  
+        RobotikaCharSymbolNoLabels.createOU(size, size),  
         
         // B
-        SarimanokCharSymbolNoLabels.createBa(size, size),
-        SarimanokCharSymbolNoLabels.createBeBi(size, size),  
-        SarimanokCharSymbolNoLabels.createBoBu(size, size),  
-        SarimanokCharSymbolNoLabels.createB(size, size),
+        RobotikaCharSymbolNoLabels.createBa(size, size),
+        RobotikaCharSymbolNoLabels.createBeBi(size, size),  
+        RobotikaCharSymbolNoLabels.createBoBu(size, size),  
+        RobotikaCharSymbolNoLabels.createB(size, size),
 
         // K 
-        SarimanokCharSymbolNoLabels.createKa(size, size),
-        SarimanokCharSymbolNoLabels.createKeKi(size, size),  
-        SarimanokCharSymbolNoLabels.createKoKu(size, size),  
-        SarimanokCharSymbolNoLabels.createK(size, size),
+        RobotikaCharSymbolNoLabels.createKa(size, size),
+        RobotikaCharSymbolNoLabels.createKeKi(size, size),  
+        RobotikaCharSymbolNoLabels.createKoKu(size, size),  
+        RobotikaCharSymbolNoLabels.createK(size, size),
 
         // D 
-        SarimanokCharSymbolNoLabels.createDa(size, size),
-        SarimanokCharSymbolNoLabels.createDeDi(size, size),  
-        SarimanokCharSymbolNoLabels.createDoDu(size, size),  
-        SarimanokCharSymbolNoLabels.createD(size, size),
+        RobotikaCharSymbolNoLabels.createDa(size, size),
+        RobotikaCharSymbolNoLabels.createDeDi(size, size),  
+        RobotikaCharSymbolNoLabels.createDoDu(size, size),  
+        RobotikaCharSymbolNoLabels.createD(size, size),
 
         // G
-        SarimanokCharSymbolNoLabels.createGa(size, size),
-        SarimanokCharSymbolNoLabels.createGeGi(size, size),  
-        SarimanokCharSymbolNoLabels.createGoGu(size, size),  
-        SarimanokCharSymbolNoLabels.createG(size, size),
+        RobotikaCharSymbolNoLabels.createGa(size, size),
+        RobotikaCharSymbolNoLabels.createGeGi(size, size),  
+        RobotikaCharSymbolNoLabels.createGoGu(size, size),  
+        RobotikaCharSymbolNoLabels.createG(size, size),
 
         // H 
-        SarimanokCharSymbolNoLabels.createHa(size, size),
-        SarimanokCharSymbolNoLabels.createHeHi(size, size),  
-        SarimanokCharSymbolNoLabels.createHoHu(size, size),  
-        SarimanokCharSymbolNoLabels.createH(size, size),
+        RobotikaCharSymbolNoLabels.createHa(size, size),
+        RobotikaCharSymbolNoLabels.createHeHi(size, size),  
+        RobotikaCharSymbolNoLabels.createHoHu(size, size),  
+        RobotikaCharSymbolNoLabels.createH(size, size),
 
         // L
-        SarimanokCharSymbolNoLabels.createLa(size, size),
-        SarimanokCharSymbolNoLabels.createLeLi(size, size),  
-        SarimanokCharSymbolNoLabels.createLoLu(size, size),  
-        SarimanokCharSymbolNoLabels.createL(size, size),
+        RobotikaCharSymbolNoLabels.createLa(size, size),
+        RobotikaCharSymbolNoLabels.createLeLi(size, size),  
+        RobotikaCharSymbolNoLabels.createLoLu(size, size),  
+        RobotikaCharSymbolNoLabels.createL(size, size),
 
         // M
-        SarimanokCharSymbolNoLabels.createMa(size, size),
-        SarimanokCharSymbolNoLabels.createMeMi(size, size),  
-        SarimanokCharSymbolNoLabels.createMoMu(size, size),  
-        SarimanokCharSymbolNoLabels.createM(size, size),
+        RobotikaCharSymbolNoLabels.createMa(size, size),
+        RobotikaCharSymbolNoLabels.createMeMi(size, size),  
+        RobotikaCharSymbolNoLabels.createMoMu(size, size),  
+        RobotikaCharSymbolNoLabels.createM(size, size),
 
         // N
-        SarimanokCharSymbolNoLabels.createNa(size, size),
-        SarimanokCharSymbolNoLabels.createNeNi(size, size),  
-        SarimanokCharSymbolNoLabels.createNoNu(size, size),  
-        SarimanokCharSymbolNoLabels.createN(size, size),
+        RobotikaCharSymbolNoLabels.createNa(size, size),
+        RobotikaCharSymbolNoLabels.createNeNi(size, size),  
+        RobotikaCharSymbolNoLabels.createNoNu(size, size),  
+        RobotikaCharSymbolNoLabels.createN(size, size),
+        
+        // NG
+        RobotikaCharSymbolNoLabels.createNga(size, size),
+        RobotikaCharSymbolNoLabels.createNgeNgi(size, size),  
+        RobotikaCharSymbolNoLabels.createNgoNgu(size, size),  
+        RobotikaCharSymbolNoLabels.createNg(size, size),
 
         // P
-        SarimanokCharSymbolNoLabels.createPa(size, size),
-        SarimanokCharSymbolNoLabels.createPePi(size, size),  
-        SarimanokCharSymbolNoLabels.createPoPu(size, size),  
-        SarimanokCharSymbolNoLabels.createP(size, size),
+        RobotikaCharSymbolNoLabels.createPa(size, size),
+        RobotikaCharSymbolNoLabels.createPePi(size, size),  
+        RobotikaCharSymbolNoLabels.createPoPu(size, size),  
+        RobotikaCharSymbolNoLabels.createP(size, size),
 
         // R
-        SarimanokCharSymbolNoLabels.createRa(size, size),
-        SarimanokCharSymbolNoLabels.createReRi(size, size),  
-        SarimanokCharSymbolNoLabels.createRoRu(size, size),  
-        SarimanokCharSymbolNoLabels.createR(size, size),
+        RobotikaCharSymbolNoLabels.createRa(size, size),
+        RobotikaCharSymbolNoLabels.createReRi(size, size),  
+        RobotikaCharSymbolNoLabels.createRoRu(size, size),  
+        RobotikaCharSymbolNoLabels.createR(size, size),
 
         // S 
-        SarimanokCharSymbolNoLabels.createRa(size, size),
-        SarimanokCharSymbolNoLabels.createReRi(size, size),  
-        SarimanokCharSymbolNoLabels.createRoRu(size, size),  
-        SarimanokCharSymbolNoLabels.createR(size, size),
+        RobotikaCharSymbolNoLabels.createRa(size, size),
+        RobotikaCharSymbolNoLabels.createReRi(size, size),  
+        RobotikaCharSymbolNoLabels.createRoRu(size, size),  
+        RobotikaCharSymbolNoLabels.createR(size, size),
 
         // T
-        SarimanokCharSymbolNoLabels.createTa(size, size),
-        SarimanokCharSymbolNoLabels.createTeTi(size, size),  
-        SarimanokCharSymbolNoLabels.createToTu(size, size),  
-        SarimanokCharSymbolNoLabels.createT(size, size),
+        RobotikaCharSymbolNoLabels.createTa(size, size),
+        RobotikaCharSymbolNoLabels.createTeTi(size, size),  
+        RobotikaCharSymbolNoLabels.createToTu(size, size),  
+        RobotikaCharSymbolNoLabels.createT(size, size),
 
         // W
-        SarimanokCharSymbolNoLabels.createWa(size, size),
-        SarimanokCharSymbolNoLabels.createWeWi(size, size),  
-        SarimanokCharSymbolNoLabels.createWoWu(size, size),  
-        SarimanokCharSymbolNoLabels.createW(size, size),
+        RobotikaCharSymbolNoLabels.createWa(size, size),
+        RobotikaCharSymbolNoLabels.createWeWi(size, size),  
+        RobotikaCharSymbolNoLabels.createWoWu(size, size),  
+        RobotikaCharSymbolNoLabels.createW(size, size),
         
         // Y
-        SarimanokCharSymbolNoLabels.createYa(size, size),
-        SarimanokCharSymbolNoLabels.createYeYi(size, size),  
-        SarimanokCharSymbolNoLabels.createYoYu(size, size),  
-        SarimanokCharSymbolNoLabels.createY(size, size),
+        RobotikaCharSymbolNoLabels.createYa(size, size),
+        RobotikaCharSymbolNoLabels.createYeYi(size, size),  
+        RobotikaCharSymbolNoLabels.createYoYu(size, size),  
+        RobotikaCharSymbolNoLabels.createY(size, size),
 
-        // NG
-        SarimanokCharSymbolNoLabels.createNga(size, size),
-        SarimanokCharSymbolNoLabels.createNgeNgi(size, size),  
-        SarimanokCharSymbolNoLabels.createNgoNgu(size, size),  
-        SarimanokCharSymbolNoLabels.createNg(size, size),
+  
       ];
 
       var withLabels = [
-        SarimanokCharSymbolWithLabels.createA(size, size),
-        SarimanokCharSymbolWithLabels.createEI(size, size),  
-        SarimanokCharSymbolWithLabels.createOU(size, size),  
+        RobotikaCharSymbolWithLabels.createA(size, size),
+        RobotikaCharSymbolWithLabels.createEI(size, size),  
+        RobotikaCharSymbolWithLabels.createOU(size, size),  
         
         // B
-        SarimanokCharSymbolWithLabels.createBa(size, size),
-        SarimanokCharSymbolWithLabels.createBeBi(size, size),  
-        SarimanokCharSymbolWithLabels.createBoBu(size, size),  
-        SarimanokCharSymbolWithLabels.createB(size, size),
+        RobotikaCharSymbolWithLabels.createBa(size, size),
+        RobotikaCharSymbolWithLabels.createBeBi(size, size),  
+        RobotikaCharSymbolWithLabels.createBoBu(size, size),  
+        RobotikaCharSymbolWithLabels.createB(size, size),
 
         // K 
-        SarimanokCharSymbolWithLabels.createKa(size, size),
-        SarimanokCharSymbolWithLabels.createKeKi(size, size),  
-        SarimanokCharSymbolWithLabels.createKoKu(size, size),  
-        SarimanokCharSymbolWithLabels.createK(size, size),
+        RobotikaCharSymbolWithLabels.createKa(size, size),
+        RobotikaCharSymbolWithLabels.createKeKi(size, size),  
+        RobotikaCharSymbolWithLabels.createKoKu(size, size),  
+        RobotikaCharSymbolWithLabels.createK(size, size),
 
         // D 
-        SarimanokCharSymbolWithLabels.createDa(size, size),
-        SarimanokCharSymbolWithLabels.createDeDi(size, size),  
-        SarimanokCharSymbolWithLabels.createDoDu(size, size),  
-        SarimanokCharSymbolWithLabels.createD(size, size),
+        RobotikaCharSymbolWithLabels.createDa(size, size),
+        RobotikaCharSymbolWithLabels.createDeDi(size, size),  
+        RobotikaCharSymbolWithLabels.createDoDu(size, size),  
+        RobotikaCharSymbolWithLabels.createD(size, size),
 
         // G
-        SarimanokCharSymbolWithLabels.createGa(size, size),
-        SarimanokCharSymbolWithLabels.createGeGi(size, size),  
-        SarimanokCharSymbolWithLabels.createGoGu(size, size),  
-        SarimanokCharSymbolWithLabels.createG(size, size),
+        RobotikaCharSymbolWithLabels.createGa(size, size),
+        RobotikaCharSymbolWithLabels.createGeGi(size, size),  
+        RobotikaCharSymbolWithLabels.createGoGu(size, size),  
+        RobotikaCharSymbolWithLabels.createG(size, size),
 
         // H 
-        SarimanokCharSymbolWithLabels.createHa(size, size),
-        SarimanokCharSymbolWithLabels.createHeHi(size, size),  
-        SarimanokCharSymbolWithLabels.createHoHu(size, size),  
-        SarimanokCharSymbolWithLabels.createH(size, size),
+        RobotikaCharSymbolWithLabels.createHa(size, size),
+        RobotikaCharSymbolWithLabels.createHeHi(size, size),  
+        RobotikaCharSymbolWithLabels.createHoHu(size, size),  
+        RobotikaCharSymbolWithLabels.createH(size, size),
 
         // L
-        SarimanokCharSymbolWithLabels.createLa(size, size),
-        SarimanokCharSymbolWithLabels.createLeLi(size, size),  
-        SarimanokCharSymbolWithLabels.createLoLu(size, size),  
-        SarimanokCharSymbolWithLabels.createL(size, size),
+        RobotikaCharSymbolWithLabels.createLa(size, size),
+        RobotikaCharSymbolWithLabels.createLeLi(size, size),  
+        RobotikaCharSymbolWithLabels.createLoLu(size, size),  
+        RobotikaCharSymbolWithLabels.createL(size, size),
 
         // M
-        SarimanokCharSymbolWithLabels.createMa(size, size),
-        SarimanokCharSymbolWithLabels.createMeMi(size, size),  
-        SarimanokCharSymbolWithLabels.createMoMu(size, size),  
-        SarimanokCharSymbolWithLabels.createM(size, size),
+        RobotikaCharSymbolWithLabels.createMa(size, size),
+        RobotikaCharSymbolWithLabels.createMeMi(size, size),  
+        RobotikaCharSymbolWithLabels.createMoMu(size, size),  
+        RobotikaCharSymbolWithLabels.createM(size, size),
 
         // N
-        SarimanokCharSymbolWithLabels.createNa(size, size),
-        SarimanokCharSymbolWithLabels.createNeNi(size, size),  
-        SarimanokCharSymbolWithLabels.createNoNu(size, size),  
-        SarimanokCharSymbolWithLabels.createN(size, size),
-
-        // P
-        SarimanokCharSymbolWithLabels.createPa(size, size),
-        SarimanokCharSymbolWithLabels.createPePi(size, size),  
-        SarimanokCharSymbolWithLabels.createPoPu(size, size),  
-        SarimanokCharSymbolWithLabels.createP(size, size),
-
-        // R
-        SarimanokCharSymbolWithLabels.createRa(size, size),
-        SarimanokCharSymbolWithLabels.createReRi(size, size),  
-        SarimanokCharSymbolWithLabels.createRoRu(size, size),  
-        SarimanokCharSymbolWithLabels.createR(size, size),
-
-        // S 
-        SarimanokCharSymbolWithLabels.createRa(size, size),
-        SarimanokCharSymbolWithLabels.createReRi(size, size),  
-        SarimanokCharSymbolWithLabels.createRoRu(size, size),  
-        SarimanokCharSymbolWithLabels.createR(size, size),
-
-        // T
-        SarimanokCharSymbolWithLabels.createTa(size, size),
-        SarimanokCharSymbolWithLabels.createTeTi(size, size),  
-        SarimanokCharSymbolWithLabels.createToTu(size, size),  
-        SarimanokCharSymbolWithLabels.createT(size, size),
-
-        // W
-        SarimanokCharSymbolWithLabels.createWa(size, size),
-        SarimanokCharSymbolWithLabels.createWeWi(size, size),  
-        SarimanokCharSymbolWithLabels.createWoWu(size, size),  
-        SarimanokCharSymbolWithLabels.createW(size, size),
-        
-        // Y
-        SarimanokCharSymbolWithLabels.createYa(size, size),
-        SarimanokCharSymbolWithLabels.createYeYi(size, size),  
-        SarimanokCharSymbolWithLabels.createYoYu(size, size),  
-        SarimanokCharSymbolWithLabels.createY(size, size),
+        RobotikaCharSymbolWithLabels.createNa(size, size),
+        RobotikaCharSymbolWithLabels.createNeNi(size, size),  
+        RobotikaCharSymbolWithLabels.createNoNu(size, size),  
+        RobotikaCharSymbolWithLabels.createN(size, size),
 
         // NG
-        SarimanokCharSymbolWithLabels.createNga(size, size),
-        SarimanokCharSymbolWithLabels.createNgeNgi(size, size),  
-        SarimanokCharSymbolWithLabels.createNgoNgu(size, size),  
-        SarimanokCharSymbolWithLabels.createNg(size, size),
+        RobotikaCharSymbolWithLabels.createNga(size, size),
+        RobotikaCharSymbolWithLabels.createNgeNgi(size, size),  
+        RobotikaCharSymbolWithLabels.createNgoNgu(size, size),  
+        RobotikaCharSymbolWithLabels.createNg(size, size),
+        
+        // P
+        RobotikaCharSymbolWithLabels.createPa(size, size),
+        RobotikaCharSymbolWithLabels.createPePi(size, size),  
+        RobotikaCharSymbolWithLabels.createPoPu(size, size),  
+        RobotikaCharSymbolWithLabels.createP(size, size),
+
+        // R
+        RobotikaCharSymbolWithLabels.createRa(size, size),
+        RobotikaCharSymbolWithLabels.createReRi(size, size),  
+        RobotikaCharSymbolWithLabels.createRoRu(size, size),  
+        RobotikaCharSymbolWithLabels.createR(size, size),
+
+        // S 
+        RobotikaCharSymbolWithLabels.createRa(size, size),
+        RobotikaCharSymbolWithLabels.createReRi(size, size),  
+        RobotikaCharSymbolWithLabels.createRoRu(size, size),  
+        RobotikaCharSymbolWithLabels.createR(size, size),
+
+        // T
+        RobotikaCharSymbolWithLabels.createTa(size, size),
+        RobotikaCharSymbolWithLabels.createTeTi(size, size),  
+        RobotikaCharSymbolWithLabels.createToTu(size, size),  
+        RobotikaCharSymbolWithLabels.createT(size, size),
+
+        // W
+        RobotikaCharSymbolWithLabels.createWa(size, size),
+        RobotikaCharSymbolWithLabels.createWeWi(size, size),  
+        RobotikaCharSymbolWithLabels.createWoWu(size, size),  
+        RobotikaCharSymbolWithLabels.createW(size, size),
+        
+        // Y
+        RobotikaCharSymbolWithLabels.createYa(size, size),
+        RobotikaCharSymbolWithLabels.createYeYi(size, size),  
+        RobotikaCharSymbolWithLabels.createYoYu(size, size),  
+        RobotikaCharSymbolWithLabels.createY(size, size),
+
       ];
 
       for(int i = 0; i < noLabels.length; i++) {
