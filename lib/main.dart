@@ -1,4 +1,7 @@
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
+import 'package:four_pics_baybayin/helpers/globals.dart';
+import 'package:four_pics_baybayin/screens/main-menu.dart';
+import 'package:four_pics_baybayin/screens/settings.dart'; 
 import 'package:provider/provider.dart';
 import 'package:four_pics_baybayin/helpers/load-image.dart';
 
@@ -28,6 +31,8 @@ List<String> preloads = [
   "assets/icons/icon-switch.png"
 ];
 
+
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -38,7 +43,7 @@ Future<void> main() async {
     await loadImage(AssetImage(preloads[i]));
   }
 
-  runApp(const Root());
+  runApp(Root(key: root));
 }
 
 class Root extends StatefulWidget
@@ -51,6 +56,14 @@ class Root extends StatefulWidget
 
 class RootState extends State<Root> 
 {
+  Widget currentScreen = const SettingsScreen();
+
+  void setScreen(Widget screen) {
+    setState(() {
+      currentScreen = screen;
+    });
+  }
+  
   @override 
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -61,7 +74,7 @@ class RootState extends State<Root>
         theme: ThemeData(
           fontFamily: "Lexend"
         ),  
-        home: const CharSymbolPreviewerScreen()
+        home: currentScreen
       )
     );
   }

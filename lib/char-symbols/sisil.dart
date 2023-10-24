@@ -2,18 +2,18 @@ import "package:flutter/material.dart";
 import "package:four_pics_baybayin/components/char-symbol.dart";
 import "package:four_pics_baybayin/state/ui-state.dart";
 
-class RobotikaCharSymbolNoLabels 
+class SisilCharSymbolNoLabels 
 {
   // VOWELS
   static Widget createA(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
+      charOffsetX: 0.2,
       charOffsetY: 0.25,
       character: "A",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -23,11 +23,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.25,
       charOffsetY: 0.25,
       character: "E",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -37,11 +37,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.4,
-      charOffsetY: 0.28,
+      charOffsetX: 0.37,
+      charOffsetY: 0.25,
       character: "O",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -52,11 +52,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.26,
+      charOffsetX: 0.30,
+      charOffsetY: 0.25,
       character: "B",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -66,10 +66,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Bi",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -79,10 +79,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.26,
+      charOffsetY: 0.24,
       character: "Bo",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -92,10 +92,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.26,
+      charOffsetY: 0.24,
       character: "B+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -107,10 +107,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "K",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -120,10 +120,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Ke",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -136,7 +136,7 @@ class RobotikaCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ko",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -149,7 +149,7 @@ class RobotikaCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "K+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -160,11 +160,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
-      charOffsetY: 0.27,
+      charOffsetX: 0.28,
+      charOffsetY: 0.25,
       character: "D",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -173,11 +173,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
-      charOffsetY: 0.30,
+      charOffsetX: 0.28,
+      charOffsetY: 0.25,
       character: "De",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -186,11 +186,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
-      charOffsetY: 0.28,
+      charOffsetX: 0.28,
+      charOffsetY: 0.25,
       character: "Do",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -199,11 +199,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "D+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -214,11 +214,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "G",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -227,11 +227,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "Ge",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -240,11 +240,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "Go",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -253,11 +253,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "G+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -268,11 +268,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "H",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -281,11 +281,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetX: 0.28,
+      charOffsetY: 0.25,
       character: "he",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -294,11 +294,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "Ho",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -307,11 +307,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "H+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -322,11 +322,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "L",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -335,11 +335,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "Le",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -348,11 +348,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.26,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "Lo",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -361,11 +361,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.26,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "L+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -376,11 +376,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetX: 0.27,
+      charOffsetY: 0.25,
       character: "M",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -389,11 +389,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetX: 0.27,
+      charOffsetY: 0.25,
       character: "Me",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -402,11 +402,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetX: 0.27,
+      charOffsetY: 0.25,
       character: "Mo",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -415,11 +415,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.26,
+      charOffsetX: 0.27,
+      charOffsetY: 0.25,
       character: "M+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -430,11 +430,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.31,
-      charOffsetY: 0.26,
+      charOffsetX: 0.3,
+      charOffsetY: 0.24,
       character: "n",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -443,11 +443,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.31,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.24,
       character: "ne",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -456,11 +456,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.31,
-      charOffsetY: 0.26,
+      charOffsetX: 0.3,
+      charOffsetY: 0.24,
       character: "ni",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -469,11 +469,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.31,
+      charOffsetX: 0.3,
       charOffsetY: 0.24,
       character: "n+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -484,11 +484,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.3,
+      charOffsetX: 0.24,
+      charOffsetY: 0.24,
       character: "N",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -497,11 +497,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.3,
+      charOffsetX: 0.24,
+      charOffsetY: 0.25,
       character: "Ne",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -510,11 +510,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.24,
       charOffsetY: 0.25,
       character: "No",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -523,11 +523,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.24,
       charOffsetY: 0.25,
       character: "N+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -538,11 +538,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "P",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -551,11 +551,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.32,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "Pe",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -564,11 +564,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "Po",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -577,11 +577,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "P+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -592,11 +592,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "R",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -605,11 +605,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "Re",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -618,11 +618,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "Ro",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -631,11 +631,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "R+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -647,10 +647,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.27,
+      charOffsetY: 0.25,
       character: "S",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -660,10 +660,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Se",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -676,7 +676,7 @@ class RobotikaCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "So",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -689,7 +689,7 @@ class RobotikaCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "S+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -701,10 +701,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "T",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -714,10 +714,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.32,
+      charOffsetY: 0.25,
       character: "Te",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -727,10 +727,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "To",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -739,11 +739,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "T+",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -755,10 +755,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "W",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -768,10 +768,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "We",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -781,10 +781,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.26,
+      charOffsetY: 0.25,
       character: "Wo",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -794,10 +794,10 @@ class RobotikaCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.26,
+      charOffsetY: 0.25,
       character: "W",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -808,11 +808,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.28,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "Y",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -821,11 +821,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.3,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "Ye",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -834,11 +834,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "Yo",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -847,11 +847,11 @@ class RobotikaCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
-      charOffsetY: 0.28,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "Y",
       withLabels: false,
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -860,19 +860,19 @@ class RobotikaCharSymbolNoLabels
 
 // ---------------------------------------------------------------------------//
 
-class RobotikaCharSymbolWithLabels 
+class SisilCharSymbolWithLabels 
 {
   // VOWELS
   static Widget createA(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
+      charOffsetX: 0.2,
       charOffsetY: 0.25,
       character: "A",
       withLabels: true,
       labelCharacters: "a",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -882,12 +882,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.27,
       charOffsetY: 0.22,
       character: "E",
       withLabels: true,
       labelCharacters: "e/i",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -897,12 +897,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.4,
-      charOffsetY: 0.24,
+      charOffsetX: 0.37,
+      charOffsetY: 0.22,
       character: "O",
       withLabels: true,
       labelCharacters: "o/u",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -913,12 +913,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.24,
+      charOffsetX: 0.32,
+      charOffsetY: 0.22,
       character: "B",
       withLabels: true,
       labelCharacters: "ba",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -927,12 +927,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "Be",
       withLabels: true,
       labelCharacters: "be/bi",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -941,12 +941,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.3,
       charOffsetY: 0.20,
       character: "Bo",
       withLabels: true,
       labelCharacters: "bo/bu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -955,12 +955,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.3,
       charOffsetY: 0.18,
       character: "B+",
       withLabels: true,
       labelCharacters: "b",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -972,11 +972,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.20,
       character: "K",
       withLabels: true,
       labelCharacters: "ka",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -986,11 +986,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Ke",
       withLabels: true,
-      labelCharacters: "ke/kir",
-      fontFamily: "Baybayin Robotika",
+      labelCharacters: "ke/ki",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1004,7 +1004,7 @@ class RobotikaCharSymbolWithLabels
       character: "Ko",
       withLabels: true,
       labelCharacters: "ko/ku",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1018,7 +1018,7 @@ class RobotikaCharSymbolWithLabels
       character: "K+",
       withLabels: true,
       labelCharacters: "k",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1029,12 +1029,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
-      charOffsetY: 0.25,
+      charOffsetX: 0.3,
+      charOffsetY: 0.22,
       character: "D",
       withLabels: true,
       labelCharacters: "da",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1043,12 +1043,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.22,
       character: "De",
       withLabels: true,
       labelCharacters: "de/di",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1057,12 +1057,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
+      charOffsetX: 0.3,
       charOffsetY: 0.20,
       character: "Do",
       withLabels: true,
       labelCharacters: "do/du",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1071,12 +1071,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
+      charOffsetX: 0.3,
       charOffsetY: 0.18,
       character: "D+",
       withLabels: true,
       labelCharacters: "d",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1087,12 +1087,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.22,
       character: "G",
       withLabels: true,
       labelCharacters: "ga",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1101,12 +1101,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.22,
       character: "Ge",
       withLabels: true,
       labelCharacters: "ge/gi",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1115,12 +1115,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.20,
       character: "Go",
       withLabels: true,
       labelCharacters: "go/gu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1129,12 +1129,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.18,
       character: "G+",
       withLabels: true,
       labelCharacters: "g",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1150,7 +1150,7 @@ class RobotikaCharSymbolWithLabels
       character: "H",
       withLabels: true,
       labelCharacters: "ha",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1160,11 +1160,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.22,
       character: "He",
       withLabels: true,
       labelCharacters: "he/hi",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1178,7 +1178,7 @@ class RobotikaCharSymbolWithLabels
       character: "Ho",
       withLabels: true,
       labelCharacters: "ho/hu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1192,7 +1192,7 @@ class RobotikaCharSymbolWithLabels
       character: "H+",
       withLabels: true,
       labelCharacters: "h",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1203,12 +1203,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetX: 0.3,
+      charOffsetY: 0.22,
       character: "L",
       withLabels: true,
       labelCharacters: "la",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1217,12 +1217,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.22,
       character: "Le",
       withLabels: true,
       labelCharacters: "le/li",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1231,12 +1231,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.22,
       character: "Lo",
       withLabels: true,
       labelCharacters: "lo/lu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1245,12 +1245,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.18,
       character: "L+",
       withLabels: true,
       labelCharacters: "l",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1261,12 +1261,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetX: 0.28,
+      charOffsetY: 0.25,
       character: "M",
       withLabels: true,
       labelCharacters: "ma",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1275,12 +1275,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetX: 0.28,
+      charOffsetY: 0.25,
       character: "Me",
       withLabels: true,
       labelCharacters: "me/mi",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1289,12 +1289,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.22,
       character: "Mo",
       withLabels: true,
       labelCharacters: "mo/mu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1303,12 +1303,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.20,
       character: "M+",
       withLabels: true,
       labelCharacters: "m",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1319,12 +1319,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetX: 0.28,
+      charOffsetY: 0.22,
       character: "N",
       withLabels: true,
       labelCharacters: "na",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1333,12 +1333,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetX: 0.28,
+      charOffsetY: 0.22,
       character: "Ne",
       withLabels: true,
       labelCharacters: "ne/ni",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1347,12 +1347,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.20,
       character: "No",
       withLabels: true,
       labelCharacters: "no/nu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1361,12 +1361,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.20,
       character: "N+",
       withLabels: true,
       labelCharacters: "n",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1377,12 +1377,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.22,
       character: "N",
       withLabels: true,
       labelCharacters: "nga",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1391,12 +1391,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.22,
       character: "Ne",
       withLabels: true,
       labelCharacters: "nge/ngi",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1405,12 +1405,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.22,
       character: "No",
       withLabels: true,
       labelCharacters: "ngo/ngu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1419,12 +1419,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.18,
       character: "N+",
       withLabels: true,
       labelCharacters: "ng",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1440,7 +1440,7 @@ class RobotikaCharSymbolWithLabels
       character: "P",
       withLabels: true,
       labelCharacters: "pa",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1454,7 +1454,7 @@ class RobotikaCharSymbolWithLabels
       character: "Pe",
       withLabels: true,
       labelCharacters: "pe/pi",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1464,11 +1464,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.22,
+      charOffsetY: 0.20,
       character: "Po",
       withLabels: true,
       labelCharacters: "po/pu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1478,11 +1478,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.2,
+      charOffsetY: 0.16,
       character: "P+",
       withLabels: true,
       labelCharacters: "p",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1498,7 +1498,7 @@ class RobotikaCharSymbolWithLabels
       character: "R",
       withLabels: true,
       labelCharacters: "ra",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1508,11 +1508,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Re",
       withLabels: true,
       labelCharacters: "re/ri",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1526,7 +1526,7 @@ class RobotikaCharSymbolWithLabels
       character: "Ro",
       withLabels: true,
       labelCharacters: "ro/ru",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1540,7 +1540,7 @@ class RobotikaCharSymbolWithLabels
       character: "R+",
       withLabels: true,
       labelCharacters: "r",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1556,7 +1556,7 @@ class RobotikaCharSymbolWithLabels
       character: "S",
       withLabels: true,
       labelCharacters: "sa",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1570,7 +1570,7 @@ class RobotikaCharSymbolWithLabels
       character: "Se",
       withLabels: true,
       labelCharacters: "se/si",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1584,7 +1584,7 @@ class RobotikaCharSymbolWithLabels
       character: "So",
       withLabels: true,
       labelCharacters: "so/su",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1598,7 +1598,7 @@ class RobotikaCharSymbolWithLabels
       character: "S+",
       withLabels: true,
       labelCharacters: "s",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1610,11 +1610,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "T",
       withLabels: true,
       labelCharacters: "ta",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1624,11 +1624,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Te",
       withLabels: true,
       labelCharacters: "te/ti",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1642,7 +1642,7 @@ class RobotikaCharSymbolWithLabels
       character: "To",
       withLabels: true,
       labelCharacters: "to/tu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1656,7 +1656,7 @@ class RobotikaCharSymbolWithLabels
       character: "T+",
       withLabels: true,
       labelCharacters: "t",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1667,12 +1667,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "W",
       withLabels: true,
       labelCharacters: "wa",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1681,12 +1681,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.28,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "We",
       withLabels: true,
       labelCharacters: "we/wi",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1695,12 +1695,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.22,
       character: "Wo",
       withLabels: true,
       labelCharacters: "wo/wu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1709,12 +1709,12 @@ class RobotikaCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.24,
-      character: "W+",
+      charOffsetX: 0.3,
+      charOffsetY: 0.20,
+      character: "W",
       withLabels: true,
       labelCharacters: "w",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1726,11 +1726,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.24,
+      charOffsetY: 0.25,
       character: "Y",
       withLabels: true,
       labelCharacters: "ya",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1740,11 +1740,11 @@ class RobotikaCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Ye",
       withLabels: true,
       labelCharacters: "ye/yi",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1758,7 +1758,7 @@ class RobotikaCharSymbolWithLabels
       character: "Yo",
       withLabels: true,
       labelCharacters: "yo/yu",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1769,10 +1769,10 @@ class RobotikaCharSymbolWithLabels
       height: height,
       charOffsetX: 0.3,
       charOffsetY: 0.18,
-      character: "Y+",
+      character: "Y",
       withLabels: true,
       labelCharacters: "y",
-      fontFamily: "Baybayin Robotika",
+      fontFamily: "Baybayin Sisil",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 

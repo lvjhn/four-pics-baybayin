@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:four_pics_baybayin/components/char-symbol.dart";
 import "package:four_pics_baybayin/state/ui-state.dart";
 
-class SejongCharSymbolNoLabels 
+class SarimanokCharSymbolNoLabels 
 {
   // VOWELS
   static Widget createA(double width, double height) {
@@ -13,7 +13,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "A",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -23,11 +23,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.26,
+      charOffsetX: 0.22,
       charOffsetY: 0.25,
       character: "E",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -37,11 +37,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetX: 0.40,
+      charOffsetY: 0.25,
       character: "O",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -53,10 +53,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "B",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -66,10 +66,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Bi",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -79,10 +79,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.24,
       character: "Bo",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -92,10 +92,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.24,
       character: "B+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -107,10 +107,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "K",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -120,10 +120,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Ke",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -136,7 +136,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ko",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -149,7 +149,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "K+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -161,10 +161,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.27,
+      charOffsetY: 0.25,
       character: "D",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -174,10 +174,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.30,
+      charOffsetY: 0.25,
       character: "De",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -187,10 +187,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Do",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -203,7 +203,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "D+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -218,7 +218,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "G",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -231,7 +231,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ge",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -244,7 +244,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Go",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -257,7 +257,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "G+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -268,11 +268,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "H",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -281,11 +281,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "he",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -294,11 +294,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "Ho",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -307,11 +307,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "H+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -323,10 +323,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "L",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -336,10 +336,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Le",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -349,10 +349,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Lo",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -362,10 +362,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "L+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -377,10 +377,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "M",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -390,10 +390,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Me",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -403,10 +403,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Mo",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -416,10 +416,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "M+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -430,11 +430,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.31,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.26,
       character: "n",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -443,11 +443,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.31,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.26,
       character: "ne",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -456,11 +456,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.31,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.26,
       character: "ni",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -469,11 +469,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.31,
+      charOffsetX: 0.3,
       charOffsetY: 0.26,
       character: "n+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -484,11 +484,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.3,
+      charOffsetX: 0.32,
+      charOffsetY: 0.24,
       character: "N",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -497,11 +497,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.3,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "Ne",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -510,11 +510,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "No",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -523,11 +523,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "N+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -539,10 +539,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "P",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -552,10 +552,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.32,
+      charOffsetY: 0.25,
       character: "Pe",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -565,10 +565,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Po",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -578,10 +578,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "P+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -596,7 +596,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "R",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -605,11 +605,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
-      charOffsetY: 0.3,
+      charOffsetX: 0.30,
+      charOffsetY: 0.25,
       character: "Re",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -622,7 +622,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ro",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -635,7 +635,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "R+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -647,10 +647,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.27,
+      charOffsetY: 0.25,
       character: "S",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -660,10 +660,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Se",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -676,7 +676,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "So",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -689,7 +689,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "S+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -701,10 +701,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "T",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -714,10 +714,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.32,
+      charOffsetY: 0.25,
       character: "Te",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -727,10 +727,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "To",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -739,11 +739,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetX: 0.3,
+      charOffsetY: 0.25,
       character: "T+",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -754,11 +754,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "W",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -767,11 +767,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "We",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -780,11 +780,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "Wo",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -793,11 +793,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "W",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -809,10 +809,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Y",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -822,10 +822,10 @@ class SejongCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Ye",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -838,7 +838,7 @@ class SejongCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Yo",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -847,11 +847,11 @@ class SejongCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
-      charOffsetY: 0.32,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "Y",
       withLabels: false,
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -860,7 +860,7 @@ class SejongCharSymbolNoLabels
 
 // ---------------------------------------------------------------------------//
 
-class SejongCharSymbolWithLabels 
+class SarimanokCharSymbolWithLabels 
 {
   // VOWELS
   static Widget createA(double width, double height) {
@@ -872,7 +872,7 @@ class SejongCharSymbolWithLabels
       character: "A",
       withLabels: true,
       labelCharacters: "a",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -882,12 +882,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.26,
+      charOffsetX: 0.30,
       charOffsetY: 0.22,
       character: "E",
       withLabels: true,
       labelCharacters: "e/i",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -897,12 +897,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.34,
-      charOffsetY: 0.24,
+      charOffsetX: 0.40,
+      charOffsetY: 0.22,
       character: "O",
       withLabels: true,
       labelCharacters: "o/u",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -914,11 +914,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.24,
+      charOffsetY: 0.22,
       character: "B",
       withLabels: true,
       labelCharacters: "ba",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -928,11 +928,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Be",
       withLabels: true,
       labelCharacters: "be/bi",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -946,7 +946,7 @@ class SejongCharSymbolWithLabels
       character: "Bo",
       withLabels: true,
       labelCharacters: "bo/bu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -960,7 +960,7 @@ class SejongCharSymbolWithLabels
       character: "B+",
       withLabels: true,
       labelCharacters: "b",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -972,11 +972,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.20,
       character: "K",
       withLabels: true,
       labelCharacters: "ka",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -986,11 +986,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Ke",
       withLabels: true,
-      labelCharacters: "ke/kir",
-      fontFamily: "Baybayin Sejong",
+      labelCharacters: "ke/ki",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1004,7 +1004,7 @@ class SejongCharSymbolWithLabels
       character: "Ko",
       withLabels: true,
       labelCharacters: "ko/ku",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1018,7 +1018,7 @@ class SejongCharSymbolWithLabels
       character: "K+",
       withLabels: true,
       labelCharacters: "k",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1030,11 +1030,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.25,
+      charOffsetY: 0.22,
       character: "D",
       withLabels: true,
       labelCharacters: "da",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1044,11 +1044,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.3,
+      charOffsetY: 0.22,
       character: "De",
       withLabels: true,
       labelCharacters: "de/di",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1062,7 +1062,7 @@ class SejongCharSymbolWithLabels
       character: "Do",
       withLabels: true,
       labelCharacters: "do/du",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1076,7 +1076,7 @@ class SejongCharSymbolWithLabels
       character: "D+",
       withLabels: true,
       labelCharacters: "d",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1092,7 +1092,7 @@ class SejongCharSymbolWithLabels
       character: "G",
       withLabels: true,
       labelCharacters: "ga",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1102,11 +1102,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.28,
-      charOffsetY: 0.28,
+      charOffsetY: 0.22,
       character: "Ge",
       withLabels: true,
       labelCharacters: "ge/gi",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1120,7 +1120,7 @@ class SejongCharSymbolWithLabels
       character: "Go",
       withLabels: true,
       labelCharacters: "go/gu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1134,7 +1134,7 @@ class SejongCharSymbolWithLabels
       character: "G+",
       withLabels: true,
       labelCharacters: "g",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1150,7 +1150,7 @@ class SejongCharSymbolWithLabels
       character: "H",
       withLabels: true,
       labelCharacters: "ha",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1160,11 +1160,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.22,
       character: "He",
       withLabels: true,
       labelCharacters: "he/hi",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1178,7 +1178,7 @@ class SejongCharSymbolWithLabels
       character: "Ho",
       withLabels: true,
       labelCharacters: "ho/hu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1192,7 +1192,7 @@ class SejongCharSymbolWithLabels
       character: "H+",
       withLabels: true,
       labelCharacters: "h",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1204,11 +1204,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.22,
       character: "L",
       withLabels: true,
       labelCharacters: "la",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1218,11 +1218,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.3,
+      charOffsetY: 0.22,
       character: "Le",
       withLabels: true,
       labelCharacters: "le/li",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1236,7 +1236,7 @@ class SejongCharSymbolWithLabels
       character: "Lo",
       withLabels: true,
       labelCharacters: "lo/lu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1250,7 +1250,7 @@ class SejongCharSymbolWithLabels
       character: "L+",
       withLabels: true,
       labelCharacters: "l",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1262,11 +1262,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "M",
       withLabels: true,
       labelCharacters: "ma",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1276,11 +1276,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Me",
       withLabels: true,
       labelCharacters: "me/mi",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1294,7 +1294,7 @@ class SejongCharSymbolWithLabels
       character: "Mo",
       withLabels: true,
       labelCharacters: "mo/mu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1308,7 +1308,7 @@ class SejongCharSymbolWithLabels
       character: "M+",
       withLabels: true,
       labelCharacters: "m",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1320,11 +1320,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.22,
       character: "N",
       withLabels: true,
       labelCharacters: "na",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1334,11 +1334,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.22,
       character: "Ne",
       withLabels: true,
       labelCharacters: "ne/ni",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1352,7 +1352,7 @@ class SejongCharSymbolWithLabels
       character: "No",
       withLabels: true,
       labelCharacters: "no/nu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1366,7 +1366,7 @@ class SejongCharSymbolWithLabels
       character: "N+",
       withLabels: true,
       labelCharacters: "n",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1378,11 +1378,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.22,
       character: "N",
       withLabels: true,
       labelCharacters: "nga",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1392,11 +1392,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.22,
       character: "Ne",
       withLabels: true,
       labelCharacters: "nge/ngi",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1410,7 +1410,7 @@ class SejongCharSymbolWithLabels
       character: "No",
       withLabels: true,
       labelCharacters: "ngo/ngu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1424,7 +1424,7 @@ class SejongCharSymbolWithLabels
       character: "N+",
       withLabels: true,
       labelCharacters: "ng",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1435,12 +1435,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "P",
       withLabels: true,
       labelCharacters: "pa",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1449,12 +1449,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "Pe",
       withLabels: true,
       labelCharacters: "pe/pi",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1463,12 +1463,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
-      charOffsetY: 0.22,
+      charOffsetX: 0.3,
+      charOffsetY: 0.20,
       character: "Po",
       withLabels: true,
       labelCharacters: "po/pu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1477,12 +1477,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
-      charOffsetY: 0.2,
+      charOffsetX: 0.328,
+      charOffsetY: 0.16,
       character: "P+",
       withLabels: true,
       labelCharacters: "p",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1498,7 +1498,7 @@ class SejongCharSymbolWithLabels
       character: "R",
       withLabels: true,
       labelCharacters: "ra",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1508,11 +1508,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Re",
       withLabels: true,
       labelCharacters: "re/ri",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1526,7 +1526,7 @@ class SejongCharSymbolWithLabels
       character: "Ro",
       withLabels: true,
       labelCharacters: "ro/ru",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1540,7 +1540,7 @@ class SejongCharSymbolWithLabels
       character: "R+",
       withLabels: true,
       labelCharacters: "r",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1556,7 +1556,7 @@ class SejongCharSymbolWithLabels
       character: "S",
       withLabels: true,
       labelCharacters: "sa",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1570,7 +1570,7 @@ class SejongCharSymbolWithLabels
       character: "Se",
       withLabels: true,
       labelCharacters: "se/si",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1584,7 +1584,7 @@ class SejongCharSymbolWithLabels
       character: "So",
       withLabels: true,
       labelCharacters: "so/su",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1598,7 +1598,7 @@ class SejongCharSymbolWithLabels
       character: "S+",
       withLabels: true,
       labelCharacters: "s",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1610,11 +1610,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "T",
       withLabels: true,
       labelCharacters: "ta",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1624,11 +1624,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetY: 0.25,
       character: "Te",
       withLabels: true,
       labelCharacters: "te/ti",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1642,7 +1642,7 @@ class SejongCharSymbolWithLabels
       character: "To",
       withLabels: true,
       labelCharacters: "to/tu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1656,7 +1656,7 @@ class SejongCharSymbolWithLabels
       character: "T+",
       withLabels: true,
       labelCharacters: "t",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1667,12 +1667,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "W",
       withLabels: true,
       labelCharacters: "wa",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1681,12 +1681,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.28,
+      charOffsetX: 0.32,
+      charOffsetY: 0.25,
       character: "We",
       withLabels: true,
       labelCharacters: "we/wi",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1695,12 +1695,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "Wo",
       withLabels: true,
       labelCharacters: "wo/wu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1709,12 +1709,12 @@ class SejongCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.24,
+      charOffsetX: 0.32,
+      charOffsetY: 0.20,
       character: "W",
       withLabels: true,
       labelCharacters: "w",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1726,11 +1726,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Y",
       withLabels: true,
       labelCharacters: "ya",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1740,11 +1740,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.25,
       character: "Ye",
       withLabels: true,
       labelCharacters: "ye/yi",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1758,7 +1758,7 @@ class SejongCharSymbolWithLabels
       character: "Yo",
       withLabels: true,
       labelCharacters: "yo/yu",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1768,11 +1768,11 @@ class SejongCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.3,
+      charOffsetY: 0.18,
       character: "Y",
       withLabels: true,
       labelCharacters: "y",
-      fontFamily: "Baybayin Sejong",
+      fontFamily: "Baybayin Sarimanok",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 

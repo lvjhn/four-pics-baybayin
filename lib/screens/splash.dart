@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/components/bgi-box.dart';
+import 'package:four_pics_baybayin/helpers/goto.dart';
 import 'package:four_pics_baybayin/components/shrink-grow-animation.dart';
 import 'package:four_pics_baybayin/screens/main-menu.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
@@ -26,10 +27,7 @@ class SplashScreenState extends State<SplashScreen>
   }
 
   void route() {
-      Navigator.pushReplacement(context, MaterialPageRoute(
-        builder: (context) => const MainMenuScreen()
-      )
-    ); 
+    goto(context, const MainMenuScreen());
   }
   
   @override 

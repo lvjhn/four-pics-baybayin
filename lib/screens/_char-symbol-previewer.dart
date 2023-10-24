@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:four_pics_baybayin/charsymbols/robotika.dart';
+import 'package:four_pics_baybayin/char-symbols/sisil.dart';
 import 'package:four_pics_baybayin/components/bgi-box.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +16,7 @@ class CharSymbolPreviewerScreen extends StatefulWidget
 class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
 {
   int foo = 1;
-  double size = 80;
+  double size = 100;
 
 
   @override
@@ -26,197 +26,197 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
       var symbols = <Widget>[];
 
       var noLabels = [
-        RobotikaCharSymbolNoLabels.createA(size, size),
-        RobotikaCharSymbolNoLabels.createEI(size, size),  
-        RobotikaCharSymbolNoLabels.createOU(size, size),  
+        SisilCharSymbolNoLabels.createA(size, size),
+        SisilCharSymbolNoLabels.createEI(size, size),  
+        SisilCharSymbolNoLabels.createOU(size, size),  
         
         // B
-        RobotikaCharSymbolNoLabels.createBa(size, size),
-        RobotikaCharSymbolNoLabels.createBeBi(size, size),  
-        RobotikaCharSymbolNoLabels.createBoBu(size, size),  
-        RobotikaCharSymbolNoLabels.createB(size, size),
+        SisilCharSymbolNoLabels.createBa(size, size),
+        SisilCharSymbolNoLabels.createBeBi(size, size),  
+        SisilCharSymbolNoLabels.createBoBu(size, size),  
+        SisilCharSymbolNoLabels.createB(size, size),
 
         // K 
-        RobotikaCharSymbolNoLabels.createKa(size, size),
-        RobotikaCharSymbolNoLabels.createKeKi(size, size),  
-        RobotikaCharSymbolNoLabels.createKoKu(size, size),  
-        RobotikaCharSymbolNoLabels.createK(size, size),
+        SisilCharSymbolNoLabels.createKa(size, size),
+        SisilCharSymbolNoLabels.createKeKi(size, size),  
+        SisilCharSymbolNoLabels.createKoKu(size, size),  
+        SisilCharSymbolNoLabels.createK(size, size),
 
         // D 
-        RobotikaCharSymbolNoLabels.createDa(size, size),
-        RobotikaCharSymbolNoLabels.createDeDi(size, size),  
-        RobotikaCharSymbolNoLabels.createDoDu(size, size),  
-        RobotikaCharSymbolNoLabels.createD(size, size),
+        SisilCharSymbolNoLabels.createDa(size, size),
+        SisilCharSymbolNoLabels.createDeDi(size, size),  
+        SisilCharSymbolNoLabels.createDoDu(size, size),  
+        SisilCharSymbolNoLabels.createD(size, size),
 
         // G
-        RobotikaCharSymbolNoLabels.createGa(size, size),
-        RobotikaCharSymbolNoLabels.createGeGi(size, size),  
-        RobotikaCharSymbolNoLabels.createGoGu(size, size),  
-        RobotikaCharSymbolNoLabels.createG(size, size),
+        SisilCharSymbolNoLabels.createGa(size, size),
+        SisilCharSymbolNoLabels.createGeGi(size, size),  
+        SisilCharSymbolNoLabels.createGoGu(size, size),  
+        SisilCharSymbolNoLabels.createG(size, size),
 
         // H 
-        RobotikaCharSymbolNoLabels.createHa(size, size),
-        RobotikaCharSymbolNoLabels.createHeHi(size, size),  
-        RobotikaCharSymbolNoLabels.createHoHu(size, size),  
-        RobotikaCharSymbolNoLabels.createH(size, size),
+        SisilCharSymbolNoLabels.createHa(size, size),
+        SisilCharSymbolNoLabels.createHeHi(size, size),  
+        SisilCharSymbolNoLabels.createHoHu(size, size),  
+        SisilCharSymbolNoLabels.createH(size, size),
 
         // L
-        RobotikaCharSymbolNoLabels.createLa(size, size),
-        RobotikaCharSymbolNoLabels.createLeLi(size, size),  
-        RobotikaCharSymbolNoLabels.createLoLu(size, size),  
-        RobotikaCharSymbolNoLabels.createL(size, size),
+        SisilCharSymbolNoLabels.createLa(size, size),
+        SisilCharSymbolNoLabels.createLeLi(size, size),  
+        SisilCharSymbolNoLabels.createLoLu(size, size),  
+        SisilCharSymbolNoLabels.createL(size, size),
 
         // M
-        RobotikaCharSymbolNoLabels.createMa(size, size),
-        RobotikaCharSymbolNoLabels.createMeMi(size, size),  
-        RobotikaCharSymbolNoLabels.createMoMu(size, size),  
-        RobotikaCharSymbolNoLabels.createM(size, size),
+        SisilCharSymbolNoLabels.createMa(size, size),
+        SisilCharSymbolNoLabels.createMeMi(size, size),  
+        SisilCharSymbolNoLabels.createMoMu(size, size),  
+        SisilCharSymbolNoLabels.createM(size, size),
 
         // N
-        RobotikaCharSymbolNoLabels.createNa(size, size),
-        RobotikaCharSymbolNoLabels.createNeNi(size, size),  
-        RobotikaCharSymbolNoLabels.createNoNu(size, size),  
-        RobotikaCharSymbolNoLabels.createN(size, size),
+        SisilCharSymbolNoLabels.createNa(size, size),
+        SisilCharSymbolNoLabels.createNeNi(size, size),  
+        SisilCharSymbolNoLabels.createNoNu(size, size),  
+        SisilCharSymbolNoLabels.createN(size, size),
         
         // NG
-        RobotikaCharSymbolNoLabels.createNga(size, size),
-        RobotikaCharSymbolNoLabels.createNgeNgi(size, size),  
-        RobotikaCharSymbolNoLabels.createNgoNgu(size, size),  
-        RobotikaCharSymbolNoLabels.createNg(size, size),
+        SisilCharSymbolNoLabels.createNga(size, size),
+        SisilCharSymbolNoLabels.createNgeNgi(size, size),  
+        SisilCharSymbolNoLabels.createNgoNgu(size, size),  
+        SisilCharSymbolNoLabels.createNg(size, size),
 
         // P
-        RobotikaCharSymbolNoLabels.createPa(size, size),
-        RobotikaCharSymbolNoLabels.createPePi(size, size),  
-        RobotikaCharSymbolNoLabels.createPoPu(size, size),  
-        RobotikaCharSymbolNoLabels.createP(size, size),
+        SisilCharSymbolNoLabels.createPa(size, size),
+        SisilCharSymbolNoLabels.createPePi(size, size),  
+        SisilCharSymbolNoLabels.createPoPu(size, size),  
+        SisilCharSymbolNoLabels.createP(size, size),
 
         // R
-        RobotikaCharSymbolNoLabels.createRa(size, size),
-        RobotikaCharSymbolNoLabels.createReRi(size, size),  
-        RobotikaCharSymbolNoLabels.createRoRu(size, size),  
-        RobotikaCharSymbolNoLabels.createR(size, size),
+        SisilCharSymbolNoLabels.createRa(size, size),
+        SisilCharSymbolNoLabels.createReRi(size, size),  
+        SisilCharSymbolNoLabels.createRoRu(size, size),  
+        SisilCharSymbolNoLabels.createR(size, size),
 
         // S 
-        RobotikaCharSymbolNoLabels.createRa(size, size),
-        RobotikaCharSymbolNoLabels.createReRi(size, size),  
-        RobotikaCharSymbolNoLabels.createRoRu(size, size),  
-        RobotikaCharSymbolNoLabels.createR(size, size),
+        SisilCharSymbolNoLabels.createRa(size, size),
+        SisilCharSymbolNoLabels.createReRi(size, size),  
+        SisilCharSymbolNoLabels.createRoRu(size, size),  
+        SisilCharSymbolNoLabels.createR(size, size),
 
         // T
-        RobotikaCharSymbolNoLabels.createTa(size, size),
-        RobotikaCharSymbolNoLabels.createTeTi(size, size),  
-        RobotikaCharSymbolNoLabels.createToTu(size, size),  
-        RobotikaCharSymbolNoLabels.createT(size, size),
+        SisilCharSymbolNoLabels.createTa(size, size),
+        SisilCharSymbolNoLabels.createTeTi(size, size),  
+        SisilCharSymbolNoLabels.createToTu(size, size),  
+        SisilCharSymbolNoLabels.createT(size, size),
 
         // W
-        RobotikaCharSymbolNoLabels.createWa(size, size),
-        RobotikaCharSymbolNoLabels.createWeWi(size, size),  
-        RobotikaCharSymbolNoLabels.createWoWu(size, size),  
-        RobotikaCharSymbolNoLabels.createW(size, size),
+        SisilCharSymbolNoLabels.createWa(size, size),
+        SisilCharSymbolNoLabels.createWeWi(size, size),  
+        SisilCharSymbolNoLabels.createWoWu(size, size),  
+        SisilCharSymbolNoLabels.createW(size, size),
         
         // Y
-        RobotikaCharSymbolNoLabels.createYa(size, size),
-        RobotikaCharSymbolNoLabels.createYeYi(size, size),  
-        RobotikaCharSymbolNoLabels.createYoYu(size, size),  
-        RobotikaCharSymbolNoLabels.createY(size, size),
+        SisilCharSymbolNoLabels.createYa(size, size),
+        SisilCharSymbolNoLabels.createYeYi(size, size),  
+        SisilCharSymbolNoLabels.createYoYu(size, size),  
+        SisilCharSymbolNoLabels.createY(size, size),
 
   
       ];
 
       var withLabels = [
-        RobotikaCharSymbolWithLabels.createA(size, size),
-        RobotikaCharSymbolWithLabels.createEI(size, size),  
-        RobotikaCharSymbolWithLabels.createOU(size, size),  
+        SisilCharSymbolWithLabels.createA(size, size),
+        SisilCharSymbolWithLabels.createEI(size, size),  
+        SisilCharSymbolWithLabels.createOU(size, size),  
         
         // B
-        RobotikaCharSymbolWithLabels.createBa(size, size),
-        RobotikaCharSymbolWithLabels.createBeBi(size, size),  
-        RobotikaCharSymbolWithLabels.createBoBu(size, size),  
-        RobotikaCharSymbolWithLabels.createB(size, size),
+        SisilCharSymbolWithLabels.createBa(size, size),
+        SisilCharSymbolWithLabels.createBeBi(size, size),  
+        SisilCharSymbolWithLabels.createBoBu(size, size),  
+        SisilCharSymbolWithLabels.createB(size, size),
 
         // K 
-        RobotikaCharSymbolWithLabels.createKa(size, size),
-        RobotikaCharSymbolWithLabels.createKeKi(size, size),  
-        RobotikaCharSymbolWithLabels.createKoKu(size, size),  
-        RobotikaCharSymbolWithLabels.createK(size, size),
+        SisilCharSymbolWithLabels.createKa(size, size),
+        SisilCharSymbolWithLabels.createKeKi(size, size),  
+        SisilCharSymbolWithLabels.createKoKu(size, size),  
+        SisilCharSymbolWithLabels.createK(size, size),
 
         // D 
-        RobotikaCharSymbolWithLabels.createDa(size, size),
-        RobotikaCharSymbolWithLabels.createDeDi(size, size),  
-        RobotikaCharSymbolWithLabels.createDoDu(size, size),  
-        RobotikaCharSymbolWithLabels.createD(size, size),
+        SisilCharSymbolWithLabels.createDa(size, size),
+        SisilCharSymbolWithLabels.createDeDi(size, size),  
+        SisilCharSymbolWithLabels.createDoDu(size, size),  
+        SisilCharSymbolWithLabels.createD(size, size),
 
         // G
-        RobotikaCharSymbolWithLabels.createGa(size, size),
-        RobotikaCharSymbolWithLabels.createGeGi(size, size),  
-        RobotikaCharSymbolWithLabels.createGoGu(size, size),  
-        RobotikaCharSymbolWithLabels.createG(size, size),
+        SisilCharSymbolWithLabels.createGa(size, size),
+        SisilCharSymbolWithLabels.createGeGi(size, size),  
+        SisilCharSymbolWithLabels.createGoGu(size, size),  
+        SisilCharSymbolWithLabels.createG(size, size),
 
         // H 
-        RobotikaCharSymbolWithLabels.createHa(size, size),
-        RobotikaCharSymbolWithLabels.createHeHi(size, size),  
-        RobotikaCharSymbolWithLabels.createHoHu(size, size),  
-        RobotikaCharSymbolWithLabels.createH(size, size),
+        SisilCharSymbolWithLabels.createHa(size, size),
+        SisilCharSymbolWithLabels.createHeHi(size, size),  
+        SisilCharSymbolWithLabels.createHoHu(size, size),  
+        SisilCharSymbolWithLabels.createH(size, size),
 
         // L
-        RobotikaCharSymbolWithLabels.createLa(size, size),
-        RobotikaCharSymbolWithLabels.createLeLi(size, size),  
-        RobotikaCharSymbolWithLabels.createLoLu(size, size),  
-        RobotikaCharSymbolWithLabels.createL(size, size),
+        SisilCharSymbolWithLabels.createLa(size, size),
+        SisilCharSymbolWithLabels.createLeLi(size, size),  
+        SisilCharSymbolWithLabels.createLoLu(size, size),  
+        SisilCharSymbolWithLabels.createL(size, size),
 
         // M
-        RobotikaCharSymbolWithLabels.createMa(size, size),
-        RobotikaCharSymbolWithLabels.createMeMi(size, size),  
-        RobotikaCharSymbolWithLabels.createMoMu(size, size),  
-        RobotikaCharSymbolWithLabels.createM(size, size),
+        SisilCharSymbolWithLabels.createMa(size, size),
+        SisilCharSymbolWithLabels.createMeMi(size, size),  
+        SisilCharSymbolWithLabels.createMoMu(size, size),  
+        SisilCharSymbolWithLabels.createM(size, size),
 
         // N
-        RobotikaCharSymbolWithLabels.createNa(size, size),
-        RobotikaCharSymbolWithLabels.createNeNi(size, size),  
-        RobotikaCharSymbolWithLabels.createNoNu(size, size),  
-        RobotikaCharSymbolWithLabels.createN(size, size),
+        SisilCharSymbolWithLabels.createNa(size, size),
+        SisilCharSymbolWithLabels.createNeNi(size, size),  
+        SisilCharSymbolWithLabels.createNoNu(size, size),  
+        SisilCharSymbolWithLabels.createN(size, size),
 
         // NG
-        RobotikaCharSymbolWithLabels.createNga(size, size),
-        RobotikaCharSymbolWithLabels.createNgeNgi(size, size),  
-        RobotikaCharSymbolWithLabels.createNgoNgu(size, size),  
-        RobotikaCharSymbolWithLabels.createNg(size, size),
+        SisilCharSymbolWithLabels.createNga(size, size),
+        SisilCharSymbolWithLabels.createNgeNgi(size, size),  
+        SisilCharSymbolWithLabels.createNgoNgu(size, size),  
+        SisilCharSymbolWithLabels.createNg(size, size),
         
         // P
-        RobotikaCharSymbolWithLabels.createPa(size, size),
-        RobotikaCharSymbolWithLabels.createPePi(size, size),  
-        RobotikaCharSymbolWithLabels.createPoPu(size, size),  
-        RobotikaCharSymbolWithLabels.createP(size, size),
+        SisilCharSymbolWithLabels.createPa(size, size),
+        SisilCharSymbolWithLabels.createPePi(size, size),  
+        SisilCharSymbolWithLabels.createPoPu(size, size),  
+        SisilCharSymbolWithLabels.createP(size, size),
 
         // R
-        RobotikaCharSymbolWithLabels.createRa(size, size),
-        RobotikaCharSymbolWithLabels.createReRi(size, size),  
-        RobotikaCharSymbolWithLabels.createRoRu(size, size),  
-        RobotikaCharSymbolWithLabels.createR(size, size),
+        SisilCharSymbolWithLabels.createRa(size, size),
+        SisilCharSymbolWithLabels.createReRi(size, size),  
+        SisilCharSymbolWithLabels.createRoRu(size, size),  
+        SisilCharSymbolWithLabels.createR(size, size),
 
         // S 
-        RobotikaCharSymbolWithLabels.createRa(size, size),
-        RobotikaCharSymbolWithLabels.createReRi(size, size),  
-        RobotikaCharSymbolWithLabels.createRoRu(size, size),  
-        RobotikaCharSymbolWithLabels.createR(size, size),
+        SisilCharSymbolWithLabels.createRa(size, size),
+        SisilCharSymbolWithLabels.createReRi(size, size),  
+        SisilCharSymbolWithLabels.createRoRu(size, size),  
+        SisilCharSymbolWithLabels.createR(size, size),
 
         // T
-        RobotikaCharSymbolWithLabels.createTa(size, size),
-        RobotikaCharSymbolWithLabels.createTeTi(size, size),  
-        RobotikaCharSymbolWithLabels.createToTu(size, size),  
-        RobotikaCharSymbolWithLabels.createT(size, size),
+        SisilCharSymbolWithLabels.createTa(size, size),
+        SisilCharSymbolWithLabels.createTeTi(size, size),  
+        SisilCharSymbolWithLabels.createToTu(size, size),  
+        SisilCharSymbolWithLabels.createT(size, size),
 
         // W
-        RobotikaCharSymbolWithLabels.createWa(size, size),
-        RobotikaCharSymbolWithLabels.createWeWi(size, size),  
-        RobotikaCharSymbolWithLabels.createWoWu(size, size),  
-        RobotikaCharSymbolWithLabels.createW(size, size),
+        SisilCharSymbolWithLabels.createWa(size, size),
+        SisilCharSymbolWithLabels.createWeWi(size, size),  
+        SisilCharSymbolWithLabels.createWoWu(size, size),  
+        SisilCharSymbolWithLabels.createW(size, size),
         
         // Y
-        RobotikaCharSymbolWithLabels.createYa(size, size),
-        RobotikaCharSymbolWithLabels.createYeYi(size, size),  
-        RobotikaCharSymbolWithLabels.createYoYu(size, size),  
-        RobotikaCharSymbolWithLabels.createY(size, size),
+        SisilCharSymbolWithLabels.createYa(size, size),
+        SisilCharSymbolWithLabels.createYeYi(size, size),  
+        SisilCharSymbolWithLabels.createYoYu(size, size),  
+        SisilCharSymbolWithLabels.createY(size, size),
 
       ];
 

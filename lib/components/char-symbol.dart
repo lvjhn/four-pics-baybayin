@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CharSymbol extends StatefulWidget 
 {
-   CharSymbol({ 
+  const CharSymbol({ 
     super.key, 
     this.width = 250, 
     this.height = 250,

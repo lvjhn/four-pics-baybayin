@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:four_pics_baybayin/components/char-symbol.dart";
 import "package:four_pics_baybayin/state/ui-state.dart";
 
-class SarimanokCharSymbolNoLabels 
+class RobotikaCharSymbolNoLabels 
 {
   // VOWELS
   static Widget createA(double width, double height) {
@@ -13,7 +13,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "A",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -23,11 +23,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.22,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "E",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -37,11 +37,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.40,
-      charOffsetY: 0.25,
+      charOffsetX: 0.4,
+      charOffsetY: 0.28,
       character: "O",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -53,10 +53,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.26,
       character: "B",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -66,10 +66,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Bi",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -79,10 +79,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.24,
+      charOffsetY: 0.26,
       character: "Bo",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -92,10 +92,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.24,
+      charOffsetY: 0.26,
       character: "B+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -107,10 +107,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "K",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -120,10 +120,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Ke",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -136,7 +136,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ko",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -149,7 +149,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "K+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -161,10 +161,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.25,
+      charOffsetY: 0.27,
       character: "D",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -174,10 +174,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.25,
+      charOffsetY: 0.30,
       character: "De",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -187,10 +187,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Do",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -203,7 +203,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "D+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -218,7 +218,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "G",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -231,7 +231,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ge",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -244,7 +244,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Go",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -257,7 +257,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "G+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -268,11 +268,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.30,
       charOffsetY: 0.25,
       character: "H",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -282,10 +282,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.3,
       character: "he",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -298,7 +298,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ho",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -311,7 +311,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "H+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -323,10 +323,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "L",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -336,10 +336,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.3,
       character: "Le",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -349,10 +349,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.26,
       character: "Lo",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -362,10 +362,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.26,
       character: "L+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -377,10 +377,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "M",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -390,10 +390,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Me",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -403,10 +403,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Mo",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -416,10 +416,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.26,
       character: "M+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -430,11 +430,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.31,
       charOffsetY: 0.26,
       character: "n",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -443,11 +443,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.26,
+      charOffsetX: 0.31,
+      charOffsetY: 0.28,
       character: "ne",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -456,11 +456,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.31,
       charOffsetY: 0.26,
       character: "ni",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -469,11 +469,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.26,
+      charOffsetX: 0.31,
+      charOffsetY: 0.24,
       character: "n+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -484,11 +484,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.24,
+      charOffsetX: 0.30,
+      charOffsetY: 0.3,
       character: "N",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -497,11 +497,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetX: 0.30,
+      charOffsetY: 0.3,
       character: "Ne",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -510,11 +510,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.30,
       charOffsetY: 0.25,
       character: "No",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -523,11 +523,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.30,
       charOffsetY: 0.25,
       character: "N+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -539,10 +539,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "P",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -552,10 +552,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.25,
+      charOffsetY: 0.32,
       character: "Pe",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -565,10 +565,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Po",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -578,10 +578,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "P+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -596,7 +596,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "R",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -605,11 +605,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
-      charOffsetY: 0.25,
+      charOffsetX: 0.28,
+      charOffsetY: 0.3,
       character: "Re",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -622,7 +622,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ro",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -635,7 +635,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "R+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -647,10 +647,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.27,
       character: "S",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -660,10 +660,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.3,
       character: "Se",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -676,7 +676,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "So",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -689,7 +689,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "S+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -701,10 +701,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.3,
       character: "T",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -714,10 +714,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.32,
       character: "Te",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -727,10 +727,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.26,
       character: "To",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -739,11 +739,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetX: 0.32,
+      charOffsetY: 0.26,
       character: "T+",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -755,10 +755,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "W",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -768,10 +768,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "We",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -781,10 +781,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.26,
       character: "Wo",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -794,10 +794,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.26,
       character: "W",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -809,10 +809,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Y",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -822,10 +822,10 @@ class SarimanokCharSymbolNoLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.25,
+      charOffsetY: 0.3,
       character: "Ye",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -838,7 +838,7 @@ class SarimanokCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Yo",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -847,11 +847,11 @@ class SarimanokCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetX: 0.27,
+      charOffsetY: 0.28,
       character: "Y",
       withLabels: false,
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -860,7 +860,7 @@ class SarimanokCharSymbolNoLabels
 
 // ---------------------------------------------------------------------------//
 
-class SarimanokCharSymbolWithLabels 
+class RobotikaCharSymbolWithLabels 
 {
   // VOWELS
   static Widget createA(double width, double height) {
@@ -872,7 +872,7 @@ class SarimanokCharSymbolWithLabels
       character: "A",
       withLabels: true,
       labelCharacters: "a",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -882,12 +882,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.3,
       charOffsetY: 0.22,
       character: "E",
       withLabels: true,
       labelCharacters: "e/i",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -897,12 +897,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.40,
-      charOffsetY: 0.22,
+      charOffsetX: 0.4,
+      charOffsetY: 0.24,
       character: "O",
       withLabels: true,
       labelCharacters: "o/u",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -914,11 +914,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.22,
+      charOffsetY: 0.24,
       character: "B",
       withLabels: true,
       labelCharacters: "ba",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -928,11 +928,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.30,
-      charOffsetY: 0.25,
+      charOffsetY: 0.3,
       character: "Be",
       withLabels: true,
       labelCharacters: "be/bi",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -946,7 +946,7 @@ class SarimanokCharSymbolWithLabels
       character: "Bo",
       withLabels: true,
       labelCharacters: "bo/bu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -960,7 +960,7 @@ class SarimanokCharSymbolWithLabels
       character: "B+",
       withLabels: true,
       labelCharacters: "b",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -972,11 +972,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.20,
+      charOffsetY: 0.25,
       character: "K",
       withLabels: true,
       labelCharacters: "ka",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -986,11 +986,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.3,
       character: "Ke",
       withLabels: true,
-      labelCharacters: "ke/kir",
-      fontFamily: "Baybayin Sarimanok",
+      labelCharacters: "ke/ki",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1004,7 +1004,7 @@ class SarimanokCharSymbolWithLabels
       character: "Ko",
       withLabels: true,
       labelCharacters: "ko/ku",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1018,7 +1018,7 @@ class SarimanokCharSymbolWithLabels
       character: "K+",
       withLabels: true,
       labelCharacters: "k",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1030,11 +1030,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.22,
+      charOffsetY: 0.25,
       character: "D",
       withLabels: true,
       labelCharacters: "da",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1044,11 +1044,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.27,
-      charOffsetY: 0.22,
+      charOffsetY: 0.3,
       character: "De",
       withLabels: true,
       labelCharacters: "de/di",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1062,7 +1062,7 @@ class SarimanokCharSymbolWithLabels
       character: "Do",
       withLabels: true,
       labelCharacters: "do/du",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1076,7 +1076,7 @@ class SarimanokCharSymbolWithLabels
       character: "D+",
       withLabels: true,
       labelCharacters: "d",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1092,7 +1092,7 @@ class SarimanokCharSymbolWithLabels
       character: "G",
       withLabels: true,
       labelCharacters: "ga",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1102,11 +1102,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.28,
-      charOffsetY: 0.22,
+      charOffsetY: 0.28,
       character: "Ge",
       withLabels: true,
       labelCharacters: "ge/gi",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1120,7 +1120,7 @@ class SarimanokCharSymbolWithLabels
       character: "Go",
       withLabels: true,
       labelCharacters: "go/gu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1134,7 +1134,7 @@ class SarimanokCharSymbolWithLabels
       character: "G+",
       withLabels: true,
       labelCharacters: "g",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1150,7 +1150,7 @@ class SarimanokCharSymbolWithLabels
       character: "H",
       withLabels: true,
       labelCharacters: "ha",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1160,11 +1160,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.22,
+      charOffsetY: 0.28,
       character: "He",
       withLabels: true,
       labelCharacters: "he/hi",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1178,7 +1178,7 @@ class SarimanokCharSymbolWithLabels
       character: "Ho",
       withLabels: true,
       labelCharacters: "ho/hu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1192,7 +1192,7 @@ class SarimanokCharSymbolWithLabels
       character: "H+",
       withLabels: true,
       labelCharacters: "h",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1204,11 +1204,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.22,
+      charOffsetY: 0.25,
       character: "L",
       withLabels: true,
       labelCharacters: "la",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1218,11 +1218,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.22,
+      charOffsetY: 0.3,
       character: "Le",
       withLabels: true,
       labelCharacters: "le/li",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1236,7 +1236,7 @@ class SarimanokCharSymbolWithLabels
       character: "Lo",
       withLabels: true,
       labelCharacters: "lo/lu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1250,7 +1250,7 @@ class SarimanokCharSymbolWithLabels
       character: "L+",
       withLabels: true,
       labelCharacters: "l",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1261,12 +1261,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetX: 0.32,
+      charOffsetY: 0.3,
       character: "M",
       withLabels: true,
       labelCharacters: "ma",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1275,12 +1275,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetX: 0.32,
+      charOffsetY: 0.3,
       character: "Me",
       withLabels: true,
       labelCharacters: "me/mi",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1289,12 +1289,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "Mo",
       withLabels: true,
       labelCharacters: "mo/mu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1303,12 +1303,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.20,
       character: "M+",
       withLabels: true,
       labelCharacters: "m",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1320,11 +1320,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.22,
+      charOffsetY: 0.28,
       character: "N",
       withLabels: true,
       labelCharacters: "na",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1334,11 +1334,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.22,
+      charOffsetY: 0.28,
       character: "Ne",
       withLabels: true,
       labelCharacters: "ne/ni",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1352,7 +1352,7 @@ class SarimanokCharSymbolWithLabels
       character: "No",
       withLabels: true,
       labelCharacters: "no/nu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1366,7 +1366,7 @@ class SarimanokCharSymbolWithLabels
       character: "N+",
       withLabels: true,
       labelCharacters: "n",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1377,12 +1377,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.22,
+      charOffsetX: 0.32,
+      charOffsetY: 0.28,
       character: "N",
       withLabels: true,
       labelCharacters: "nga",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1391,12 +1391,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
-      charOffsetY: 0.22,
+      charOffsetX: 0.32,
+      charOffsetY: 0.28,
       character: "Ne",
       withLabels: true,
       labelCharacters: "nge/ngi",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1405,12 +1405,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "No",
       withLabels: true,
       labelCharacters: "ngo/ngu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1419,12 +1419,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.18,
       character: "N+",
       withLabels: true,
       labelCharacters: "ng",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1440,7 +1440,7 @@ class SarimanokCharSymbolWithLabels
       character: "P",
       withLabels: true,
       labelCharacters: "pa",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1454,7 +1454,7 @@ class SarimanokCharSymbolWithLabels
       character: "Pe",
       withLabels: true,
       labelCharacters: "pe/pi",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1464,11 +1464,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.20,
+      charOffsetY: 0.22,
       character: "Po",
       withLabels: true,
       labelCharacters: "po/pu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1477,12 +1477,12 @@ class SarimanokCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.328,
-      charOffsetY: 0.16,
+      charOffsetX: 0.3,
+      charOffsetY: 0.2,
       character: "P+",
       withLabels: true,
       labelCharacters: "p",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1498,7 +1498,7 @@ class SarimanokCharSymbolWithLabels
       character: "R",
       withLabels: true,
       labelCharacters: "ra",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1508,11 +1508,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Re",
       withLabels: true,
       labelCharacters: "re/ri",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1526,7 +1526,7 @@ class SarimanokCharSymbolWithLabels
       character: "Ro",
       withLabels: true,
       labelCharacters: "ro/ru",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1540,7 +1540,7 @@ class SarimanokCharSymbolWithLabels
       character: "R+",
       withLabels: true,
       labelCharacters: "r",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1556,7 +1556,7 @@ class SarimanokCharSymbolWithLabels
       character: "S",
       withLabels: true,
       labelCharacters: "sa",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1570,7 +1570,7 @@ class SarimanokCharSymbolWithLabels
       character: "Se",
       withLabels: true,
       labelCharacters: "se/si",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1584,7 +1584,7 @@ class SarimanokCharSymbolWithLabels
       character: "So",
       withLabels: true,
       labelCharacters: "so/su",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1598,7 +1598,7 @@ class SarimanokCharSymbolWithLabels
       character: "S+",
       withLabels: true,
       labelCharacters: "s",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1610,11 +1610,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "T",
       withLabels: true,
       labelCharacters: "ta",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1624,11 +1624,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "Te",
       withLabels: true,
       labelCharacters: "te/ti",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1642,7 +1642,7 @@ class SarimanokCharSymbolWithLabels
       character: "To",
       withLabels: true,
       labelCharacters: "to/tu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1656,7 +1656,7 @@ class SarimanokCharSymbolWithLabels
       character: "T+",
       withLabels: true,
       labelCharacters: "t",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1672,7 +1672,7 @@ class SarimanokCharSymbolWithLabels
       character: "W",
       withLabels: true,
       labelCharacters: "wa",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1682,11 +1682,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.25,
+      charOffsetY: 0.28,
       character: "We",
       withLabels: true,
       labelCharacters: "we/wi",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1700,7 +1700,7 @@ class SarimanokCharSymbolWithLabels
       character: "Wo",
       withLabels: true,
       labelCharacters: "wo/wu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1710,11 +1710,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.32,
-      charOffsetY: 0.20,
-      character: "W",
+      charOffsetY: 0.24,
+      character: "W+",
       withLabels: true,
       labelCharacters: "w",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1726,11 +1726,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.24,
       character: "Y",
       withLabels: true,
       labelCharacters: "ya",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1740,11 +1740,11 @@ class SarimanokCharSymbolWithLabels
       width: width, 
       height: height,
       charOffsetX: 0.3,
-      charOffsetY: 0.25,
+      charOffsetY: 0.3,
       character: "Ye",
       withLabels: true,
       labelCharacters: "ye/yi",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1758,7 +1758,7 @@ class SarimanokCharSymbolWithLabels
       character: "Yo",
       withLabels: true,
       labelCharacters: "yo/yu",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1769,10 +1769,10 @@ class SarimanokCharSymbolWithLabels
       height: height,
       charOffsetX: 0.3,
       charOffsetY: 0.18,
-      character: "Y",
+      character: "Y+",
       withLabels: true,
       labelCharacters: "y",
-      fontFamily: "Baybayin Sarimanok",
+      fontFamily: "Baybayin Robotika",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 

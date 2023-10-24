@@ -989,7 +989,7 @@ class DekoCharSymbolWithLabels
       charOffsetY: 0.25,
       character: "Ke",
       withLabels: true,
-      labelCharacters: "ke/kir",
+      labelCharacters: "ke/Robotika",
       fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor

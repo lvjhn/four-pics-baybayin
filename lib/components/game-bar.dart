@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:four_pics_baybayin/helpers/goto.dart';
 import 'package:four_pics_baybayin/components/status-indicator.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
+import 'package:four_pics_baybayin/screens/settings.dart';
 
 
 class GameBar extends StatefulWidget 
@@ -40,7 +42,7 @@ class GameBarState extends State<GameBar>
           const SizedBox(width: 10),
           createHomeIcon(context, widget.isHomeIconVisible),
           
-          Expanded(child: const Text("")), 
+          const Expanded(child: Text("")), 
 
           // ---- STATUS INDICATORS ---- //
 
@@ -75,6 +77,7 @@ Widget createSettingsIcon(BuildContext context) {
     child: Image.asset("assets/icons/icon-settings.png", width: 35),
     onTap: () {
       playSound("click-1");
+      goto(context, const SettingsScreen());
     }
   );
 }
