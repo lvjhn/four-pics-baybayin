@@ -63,7 +63,7 @@ class Root extends StatefulWidget
 
 class RootState extends State<Root> 
 {
-  Widget currentScreen = const SettingsScreen();
+  Widget currentScreen = const MainMenuScreen();
 
   void setScreen(Widget screen) {
     setState(() {

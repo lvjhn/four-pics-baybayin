@@ -7,6 +7,8 @@ import 'package:four_pics_baybayin/components/modal-container.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
 import 'package:four_pics_baybayin/components/bgi-box.dart';
 import 'package:four_pics_baybayin/components/game-bar.dart';
+import 'package:four_pics_baybayin/helpers/goto.dart';
+import 'package:four_pics_baybayin/screens/level-selector.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart'; 
 
@@ -130,6 +132,7 @@ class MainMenuScreenState extends State<MainMenuScreen>
         onPressed: () {
           debugPrint("Hello");
           playSound("click-1");
+          goto(context, const LevelSelectorScreen());
         }
       )
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/helpers/goto.dart';
 import 'package:four_pics_baybayin/components/status-indicator.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
+import 'package:four_pics_baybayin/screens/main-menu.dart';
 import 'package:four_pics_baybayin/screens/settings.dart';
 
 
@@ -89,6 +90,7 @@ Widget createHomeIcon(BuildContext context, bool visible) {
       child: Image.asset("assets/icons/icon-home.png", width: 35),
       onTap: () {
         playSound("click-1");
+        goto(context, const MainMenuScreen());
       }
     )
   );
