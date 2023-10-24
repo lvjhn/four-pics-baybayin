@@ -149,10 +149,10 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
         SisilCharSymbolWithLabels.createG(200, 200),
 
         // H 
-        SisilCharSymbolNoLabels.createHa(200, 200),
-        SisilCharSymbolNoLabels.createHeHi(200, 200),  
-        SisilCharSymbolNoLabels.createHoHu(200, 200),  
-        SisilCharSymbolNoLabels.createH(200, 200),
+        SisilCharSymbolWithLabels.createHa(200, 200),
+        SisilCharSymbolWithLabels.createHeHi(200, 200),  
+        SisilCharSymbolWithLabels.createHoHu(200, 200),  
+        SisilCharSymbolWithLabels.createH(200, 200),
 
         // L
         SisilCharSymbolWithLabels.createLa(200, 200),
@@ -217,6 +217,13 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
 
       for(int i = 0; i < noLabels.length; i++) {
         symbols.add(noLabels[i]);
+        symbols.add(const SizedBox(height: 10));
+      }
+
+      symbols.add(const SizedBox(height: 200));
+
+      for(int i = 0; i < withLabels.length; i++) {
+        symbols.add(withLabels[i]);
         symbols.add(const SizedBox(height: 10));
       }
 
