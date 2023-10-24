@@ -2,18 +2,18 @@ import "package:flutter/material.dart";
 import "package:four_pics_baybayin/components/char-symbol.dart";
 import "package:four_pics_baybayin/state/ui-state.dart";
 
-class SisilCharSymbolNoLabels 
+class DekoCharSymbolNoLabels 
 {
   // VOWELS
   static Widget createA(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.27,
       charOffsetY: 0.25,
       character: "A",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -23,11 +23,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.25,
+      charOffsetX: 0.30,
       charOffsetY: 0.25,
       character: "E",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -37,11 +37,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.37,
+      charOffsetX: 0.40,
       charOffsetY: 0.25,
       character: "O",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -52,11 +52,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.30,
+      charOffsetX: 0.33,
       charOffsetY: 0.25,
       character: "B",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -65,11 +65,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.33,
       charOffsetY: 0.25,
       character: "Bi",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -78,11 +78,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.33,
       charOffsetY: 0.24,
       character: "Bo",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -91,11 +91,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.33,
       charOffsetY: 0.24,
       character: "B+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -110,7 +110,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "K",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -123,7 +123,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ke",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -136,7 +136,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Ko",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -149,7 +149,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "K+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -160,11 +160,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "D",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -173,11 +173,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "De",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -186,11 +186,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "Do",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -199,11 +199,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "D+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -214,11 +214,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "G",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -227,11 +227,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "Ge",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -240,11 +240,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "Go",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -253,11 +253,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "G+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -268,11 +268,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "H",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -281,11 +281,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "he",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -294,11 +294,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "Ho",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -307,11 +307,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.25,
       character: "H+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -326,7 +326,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "L",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -339,7 +339,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Le",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -352,7 +352,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Lo",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -365,7 +365,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "L+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -380,7 +380,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "M",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -393,7 +393,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Me",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -406,7 +406,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Mo",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -419,7 +419,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "M+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -434,7 +434,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.24,
       character: "n",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -447,7 +447,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.24,
       character: "ne",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -460,7 +460,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.24,
       character: "ni",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -473,7 +473,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.24,
       character: "n+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -484,11 +484,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.24,
+      charOffsetX: 0.28,
       charOffsetY: 0.24,
       character: "N",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -497,11 +497,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.24,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "Ne",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -510,11 +510,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.24,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "No",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -523,11 +523,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.24,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "N+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -538,11 +538,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "P",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -551,11 +551,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "Pe",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -564,11 +564,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "Po",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -577,11 +577,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "P+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -592,11 +592,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "R",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -605,11 +605,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "Re",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -618,11 +618,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "Ro",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -631,11 +631,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "R+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -650,7 +650,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "S",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -663,7 +663,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Se",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -676,7 +676,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "So",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -689,7 +689,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "S+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -704,7 +704,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "T",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -717,7 +717,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Te",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -730,7 +730,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "To",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -743,7 +743,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "T+",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -758,7 +758,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "W",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -771,7 +771,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "We",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -784,7 +784,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Wo",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -797,7 +797,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "W",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -808,11 +808,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.30,
       charOffsetY: 0.25,
       character: "Y",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -821,11 +821,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.30,
       charOffsetY: 0.25,
       character: "Ye",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -834,11 +834,11 @@ class SisilCharSymbolNoLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.30,
       charOffsetY: 0.25,
       character: "Yo",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -851,7 +851,7 @@ class SisilCharSymbolNoLabels
       charOffsetY: 0.25,
       character: "Y",
       withLabels: false,
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -860,19 +860,19 @@ class SisilCharSymbolNoLabels
 
 // ---------------------------------------------------------------------------//
 
-class SisilCharSymbolWithLabels 
+class DekoCharSymbolWithLabels 
 {
   // VOWELS
   static Widget createA(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.2,
+      charOffsetX: 0.27,
       charOffsetY: 0.25,
       character: "A",
       withLabels: true,
       labelCharacters: "a",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -882,12 +882,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.27,
+      charOffsetX: 0.30,
       charOffsetY: 0.22,
       character: "E",
       withLabels: true,
       labelCharacters: "e/i",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -897,12 +897,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.37,
+      charOffsetX: 0.40,
       charOffsetY: 0.22,
       character: "O",
       withLabels: true,
       labelCharacters: "o/u",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -913,12 +913,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.32,
+      charOffsetX: 0.33,
       charOffsetY: 0.22,
       character: "B",
       withLabels: true,
       labelCharacters: "ba",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -927,12 +927,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.33,
       charOffsetY: 0.25,
       character: "Be",
       withLabels: true,
       labelCharacters: "be/bi",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -941,12 +941,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.33,
       charOffsetY: 0.20,
       character: "Bo",
       withLabels: true,
       labelCharacters: "bo/bu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -955,12 +955,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.33,
       charOffsetY: 0.18,
       character: "B+",
       withLabels: true,
       labelCharacters: "b",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -976,7 +976,7 @@ class SisilCharSymbolWithLabels
       character: "K",
       withLabels: true,
       labelCharacters: "ka",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -990,7 +990,7 @@ class SisilCharSymbolWithLabels
       character: "Ke",
       withLabels: true,
       labelCharacters: "ke/kir",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1004,7 +1004,7 @@ class SisilCharSymbolWithLabels
       character: "Ko",
       withLabels: true,
       labelCharacters: "ko/ku",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1018,7 +1018,7 @@ class SisilCharSymbolWithLabels
       character: "K+",
       withLabels: true,
       labelCharacters: "k",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1029,12 +1029,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "D",
       withLabels: true,
       labelCharacters: "da",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1043,12 +1043,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "De",
       withLabels: true,
       labelCharacters: "de/di",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1057,12 +1057,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.20,
       character: "Do",
       withLabels: true,
       labelCharacters: "do/du",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1071,12 +1071,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.18,
       character: "D+",
       withLabels: true,
       labelCharacters: "d",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1087,12 +1087,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "G",
       withLabels: true,
       labelCharacters: "ga",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1101,12 +1101,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "Ge",
       withLabels: true,
       labelCharacters: "ge/gi",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1115,12 +1115,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.20,
       character: "Go",
       withLabels: true,
       labelCharacters: "go/gu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1129,12 +1129,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.18,
       character: "G+",
       withLabels: true,
       labelCharacters: "g",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1150,7 +1150,7 @@ class SisilCharSymbolWithLabels
       character: "H",
       withLabels: true,
       labelCharacters: "ha",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1164,7 +1164,7 @@ class SisilCharSymbolWithLabels
       character: "He",
       withLabels: true,
       labelCharacters: "he/hi",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1178,7 +1178,7 @@ class SisilCharSymbolWithLabels
       character: "Ho",
       withLabels: true,
       labelCharacters: "ho/hu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1192,7 +1192,7 @@ class SisilCharSymbolWithLabels
       character: "H+",
       withLabels: true,
       labelCharacters: "h",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1208,7 +1208,7 @@ class SisilCharSymbolWithLabels
       character: "L",
       withLabels: true,
       labelCharacters: "la",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1222,7 +1222,7 @@ class SisilCharSymbolWithLabels
       character: "Le",
       withLabels: true,
       labelCharacters: "le/li",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1236,7 +1236,7 @@ class SisilCharSymbolWithLabels
       character: "Lo",
       withLabels: true,
       labelCharacters: "lo/lu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1250,7 +1250,7 @@ class SisilCharSymbolWithLabels
       character: "L+",
       withLabels: true,
       labelCharacters: "l",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1261,12 +1261,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.27,
       charOffsetY: 0.25,
       character: "M",
       withLabels: true,
       labelCharacters: "ma",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1275,12 +1275,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.27,
       charOffsetY: 0.25,
       character: "Me",
       withLabels: true,
       labelCharacters: "me/mi",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1289,12 +1289,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.27,
       charOffsetY: 0.22,
       character: "Mo",
       withLabels: true,
       labelCharacters: "mo/mu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1303,12 +1303,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.27,
       charOffsetY: 0.20,
       character: "M+",
       withLabels: true,
       labelCharacters: "m",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1319,12 +1319,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.22,
       character: "N",
       withLabels: true,
       labelCharacters: "na",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1333,12 +1333,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.22,
       character: "Ne",
       withLabels: true,
       labelCharacters: "ne/ni",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1347,12 +1347,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.20,
       character: "No",
       withLabels: true,
       labelCharacters: "no/nu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1361,12 +1361,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.28,
+      charOffsetX: 0.3,
       charOffsetY: 0.20,
       character: "N+",
       withLabels: true,
       labelCharacters: "n",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1377,12 +1377,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.22,
       character: "N",
       withLabels: true,
       labelCharacters: "nga",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1391,12 +1391,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.22,
       character: "Ne",
       withLabels: true,
       labelCharacters: "nge/ngi",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1405,12 +1405,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.22,
       character: "No",
       withLabels: true,
       labelCharacters: "ngo/ngu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1419,12 +1419,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.18,
       character: "N+",
       withLabels: true,
       labelCharacters: "ng",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1435,12 +1435,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "P",
       withLabels: true,
       labelCharacters: "pa",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1449,12 +1449,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.25,
       character: "Pe",
       withLabels: true,
       labelCharacters: "pe/pi",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1463,12 +1463,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.20,
       character: "Po",
       withLabels: true,
       labelCharacters: "po/pu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1477,12 +1477,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.28,
       charOffsetY: 0.16,
       character: "P+",
       withLabels: true,
       labelCharacters: "p",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1493,12 +1493,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "R",
       withLabels: true,
       labelCharacters: "ra",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1507,12 +1507,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "Re",
       withLabels: true,
       labelCharacters: "re/ri",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1521,12 +1521,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.20,
       character: "Ro",
       withLabels: true,
       labelCharacters: "ro/ru",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1535,12 +1535,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.18,
       character: "R+",
       withLabels: true,
       labelCharacters: "r",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1556,7 +1556,7 @@ class SisilCharSymbolWithLabels
       character: "S",
       withLabels: true,
       labelCharacters: "sa",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1570,7 +1570,7 @@ class SisilCharSymbolWithLabels
       character: "Se",
       withLabels: true,
       labelCharacters: "se/si",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1584,7 +1584,7 @@ class SisilCharSymbolWithLabels
       character: "So",
       withLabels: true,
       labelCharacters: "so/su",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1598,7 +1598,7 @@ class SisilCharSymbolWithLabels
       character: "S+",
       withLabels: true,
       labelCharacters: "s",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1614,7 +1614,7 @@ class SisilCharSymbolWithLabels
       character: "T",
       withLabels: true,
       labelCharacters: "ta",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1628,7 +1628,7 @@ class SisilCharSymbolWithLabels
       character: "Te",
       withLabels: true,
       labelCharacters: "te/ti",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1642,7 +1642,7 @@ class SisilCharSymbolWithLabels
       character: "To",
       withLabels: true,
       labelCharacters: "to/tu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1656,7 +1656,7 @@ class SisilCharSymbolWithLabels
       character: "T+",
       withLabels: true,
       labelCharacters: "t",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1667,12 +1667,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "W",
       withLabels: true,
       labelCharacters: "wa",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1681,12 +1681,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.25,
       character: "We",
       withLabels: true,
       labelCharacters: "we/wi",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1695,12 +1695,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.22,
       character: "Wo",
       withLabels: true,
       labelCharacters: "wo/wu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1709,12 +1709,12 @@ class SisilCharSymbolWithLabels
     return CharSymbol(
       width: width, 
       height: height,
-      charOffsetX: 0.3,
+      charOffsetX: 0.32,
       charOffsetY: 0.20,
       character: "W",
       withLabels: true,
       labelCharacters: "w",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1730,7 +1730,7 @@ class SisilCharSymbolWithLabels
       character: "Y",
       withLabels: true,
       labelCharacters: "ya",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1744,7 +1744,7 @@ class SisilCharSymbolWithLabels
       character: "Ye",
       withLabels: true,
       labelCharacters: "ye/yi",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1758,7 +1758,7 @@ class SisilCharSymbolWithLabels
       character: "Yo",
       withLabels: true,
       labelCharacters: "yo/yu",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 
@@ -1772,7 +1772,7 @@ class SisilCharSymbolWithLabels
       character: "Y",
       withLabels: true,
       labelCharacters: "y",
-      fontFamily: "Baybayin Sisil",
+      fontFamily: "Baybayin Deko",
       backgroundColor: uiState.charSymbolBackgroundColor,
       labelColor:  uiState.charSymbolLabelColor
     ); 

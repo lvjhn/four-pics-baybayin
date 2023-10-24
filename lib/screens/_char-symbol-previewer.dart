@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:four_pics_baybayin/charsymbols/sisil.dart';
+import 'package:four_pics_baybayin/charsymbols/sarimanok.dart';
 import 'package:four_pics_baybayin/components/bgi-box.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart';
@@ -16,6 +16,8 @@ class CharSymbolPreviewerScreen extends StatefulWidget
 class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
 {
   int foo = 1;
+  double size = 80;
+
 
   @override
   Widget build(BuildContext context) {
@@ -24,195 +26,195 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
       var symbols = <Widget>[];
 
       var noLabels = [
-        SisilCharSymbolNoLabels.createA(200, 200),
-        SisilCharSymbolNoLabels.createEI(200, 200),  
-        SisilCharSymbolNoLabels.createOU(200, 200),  
+        SarimanokCharSymbolNoLabels.createA(size, size),
+        SarimanokCharSymbolNoLabels.createEI(size, size),  
+        SarimanokCharSymbolNoLabels.createOU(size, size),  
         
         // B
-        SisilCharSymbolNoLabels.createBa(200, 200),
-        SisilCharSymbolNoLabels.createBeBi(200, 200),  
-        SisilCharSymbolNoLabels.createBoBu(200, 200),  
-        SisilCharSymbolNoLabels.createB(200, 200),
+        SarimanokCharSymbolNoLabels.createBa(size, size),
+        SarimanokCharSymbolNoLabels.createBeBi(size, size),  
+        SarimanokCharSymbolNoLabels.createBoBu(size, size),  
+        SarimanokCharSymbolNoLabels.createB(size, size),
 
         // K 
-        SisilCharSymbolNoLabels.createKa(200, 200),
-        SisilCharSymbolNoLabels.createKeKi(200, 200),  
-        SisilCharSymbolNoLabels.createKoKu(200, 200),  
-        SisilCharSymbolNoLabels.createK(200, 200),
+        SarimanokCharSymbolNoLabels.createKa(size, size),
+        SarimanokCharSymbolNoLabels.createKeKi(size, size),  
+        SarimanokCharSymbolNoLabels.createKoKu(size, size),  
+        SarimanokCharSymbolNoLabels.createK(size, size),
 
         // D 
-        SisilCharSymbolNoLabels.createDa(200, 200),
-        SisilCharSymbolNoLabels.createDeDi(200, 200),  
-        SisilCharSymbolNoLabels.createDoDu(200, 200),  
-        SisilCharSymbolNoLabels.createD(200, 200),
+        SarimanokCharSymbolNoLabels.createDa(size, size),
+        SarimanokCharSymbolNoLabels.createDeDi(size, size),  
+        SarimanokCharSymbolNoLabels.createDoDu(size, size),  
+        SarimanokCharSymbolNoLabels.createD(size, size),
 
         // G
-        SisilCharSymbolNoLabels.createGa(200, 200),
-        SisilCharSymbolNoLabels.createGeGi(200, 200),  
-        SisilCharSymbolNoLabels.createGoGu(200, 200),  
-        SisilCharSymbolNoLabels.createG(200, 200),
+        SarimanokCharSymbolNoLabels.createGa(size, size),
+        SarimanokCharSymbolNoLabels.createGeGi(size, size),  
+        SarimanokCharSymbolNoLabels.createGoGu(size, size),  
+        SarimanokCharSymbolNoLabels.createG(size, size),
 
         // H 
-        SisilCharSymbolNoLabels.createHa(200, 200),
-        SisilCharSymbolNoLabels.createHeHi(200, 200),  
-        SisilCharSymbolNoLabels.createHoHu(200, 200),  
-        SisilCharSymbolNoLabels.createH(200, 200),
+        SarimanokCharSymbolNoLabels.createHa(size, size),
+        SarimanokCharSymbolNoLabels.createHeHi(size, size),  
+        SarimanokCharSymbolNoLabels.createHoHu(size, size),  
+        SarimanokCharSymbolNoLabels.createH(size, size),
 
         // L
-        SisilCharSymbolNoLabels.createLa(200, 200),
-        SisilCharSymbolNoLabels.createLeLi(200, 200),  
-        SisilCharSymbolNoLabels.createLoLu(200, 200),  
-        SisilCharSymbolNoLabels.createL(200, 200),
+        SarimanokCharSymbolNoLabels.createLa(size, size),
+        SarimanokCharSymbolNoLabels.createLeLi(size, size),  
+        SarimanokCharSymbolNoLabels.createLoLu(size, size),  
+        SarimanokCharSymbolNoLabels.createL(size, size),
 
         // M
-        SisilCharSymbolNoLabels.createMa(200, 200),
-        SisilCharSymbolNoLabels.createMeMi(200, 200),  
-        SisilCharSymbolNoLabels.createMoMu(200, 200),  
-        SisilCharSymbolNoLabels.createL(200, 200),
+        SarimanokCharSymbolNoLabels.createMa(size, size),
+        SarimanokCharSymbolNoLabels.createMeMi(size, size),  
+        SarimanokCharSymbolNoLabels.createMoMu(size, size),  
+        SarimanokCharSymbolNoLabels.createM(size, size),
 
         // N
-        SisilCharSymbolNoLabels.createNa(200, 200),
-        SisilCharSymbolNoLabels.createNeNi(200, 200),  
-        SisilCharSymbolNoLabels.createNoNu(200, 200),  
-        SisilCharSymbolNoLabels.createN(200, 200),
+        SarimanokCharSymbolNoLabels.createNa(size, size),
+        SarimanokCharSymbolNoLabels.createNeNi(size, size),  
+        SarimanokCharSymbolNoLabels.createNoNu(size, size),  
+        SarimanokCharSymbolNoLabels.createN(size, size),
 
         // P
-        SisilCharSymbolNoLabels.createPa(200, 200),
-        SisilCharSymbolNoLabels.createPePi(200, 200),  
-        SisilCharSymbolNoLabels.createPoPu(200, 200),  
-        SisilCharSymbolNoLabels.createP(200, 200),
+        SarimanokCharSymbolNoLabels.createPa(size, size),
+        SarimanokCharSymbolNoLabels.createPePi(size, size),  
+        SarimanokCharSymbolNoLabels.createPoPu(size, size),  
+        SarimanokCharSymbolNoLabels.createP(size, size),
 
         // R
-        SisilCharSymbolNoLabels.createRa(200, 200),
-        SisilCharSymbolNoLabels.createReRi(200, 200),  
-        SisilCharSymbolNoLabels.createRoRu(200, 200),  
-        SisilCharSymbolNoLabels.createR(200, 200),
+        SarimanokCharSymbolNoLabels.createRa(size, size),
+        SarimanokCharSymbolNoLabels.createReRi(size, size),  
+        SarimanokCharSymbolNoLabels.createRoRu(size, size),  
+        SarimanokCharSymbolNoLabels.createR(size, size),
 
         // S 
-        SisilCharSymbolNoLabels.createRa(200, 200),
-        SisilCharSymbolNoLabels.createReRi(200, 200),  
-        SisilCharSymbolNoLabels.createRoRu(200, 200),  
-        SisilCharSymbolNoLabels.createR(200, 200),
+        SarimanokCharSymbolNoLabels.createRa(size, size),
+        SarimanokCharSymbolNoLabels.createReRi(size, size),  
+        SarimanokCharSymbolNoLabels.createRoRu(size, size),  
+        SarimanokCharSymbolNoLabels.createR(size, size),
 
         // T
-        SisilCharSymbolNoLabels.createTa(200, 200),
-        SisilCharSymbolNoLabels.createTeTi(200, 200),  
-        SisilCharSymbolNoLabels.createToTu(200, 200),  
-        SisilCharSymbolNoLabels.createT(200, 200),
+        SarimanokCharSymbolNoLabels.createTa(size, size),
+        SarimanokCharSymbolNoLabels.createTeTi(size, size),  
+        SarimanokCharSymbolNoLabels.createToTu(size, size),  
+        SarimanokCharSymbolNoLabels.createT(size, size),
 
         // W
-        SisilCharSymbolNoLabels.createWa(200, 200),
-        SisilCharSymbolNoLabels.createWeWi(200, 200),  
-        SisilCharSymbolNoLabels.createWoWu(200, 200),  
-        SisilCharSymbolNoLabels.createW(200, 200),
+        SarimanokCharSymbolNoLabels.createWa(size, size),
+        SarimanokCharSymbolNoLabels.createWeWi(size, size),  
+        SarimanokCharSymbolNoLabels.createWoWu(size, size),  
+        SarimanokCharSymbolNoLabels.createW(size, size),
         
         // Y
-        SisilCharSymbolNoLabels.createYa(200, 200),
-        SisilCharSymbolNoLabels.createYeYi(200, 200),  
-        SisilCharSymbolNoLabels.createYoYu(200, 200),  
-        SisilCharSymbolNoLabels.createY(200, 200),
+        SarimanokCharSymbolNoLabels.createYa(size, size),
+        SarimanokCharSymbolNoLabels.createYeYi(size, size),  
+        SarimanokCharSymbolNoLabels.createYoYu(size, size),  
+        SarimanokCharSymbolNoLabels.createY(size, size),
 
         // NG
-        SisilCharSymbolNoLabels.createNga(200, 200),
-        SisilCharSymbolNoLabels.createNgeNgi(200, 200),  
-        SisilCharSymbolNoLabels.createNgoNgu(200, 200),  
-        SisilCharSymbolNoLabels.createNg(200, 200),
+        SarimanokCharSymbolNoLabels.createNga(size, size),
+        SarimanokCharSymbolNoLabels.createNgeNgi(size, size),  
+        SarimanokCharSymbolNoLabels.createNgoNgu(size, size),  
+        SarimanokCharSymbolNoLabels.createNg(size, size),
       ];
 
       var withLabels = [
-        SisilCharSymbolWithLabels.createA(200, 200),
-        SisilCharSymbolWithLabels.createEI(200, 200),  
-        SisilCharSymbolWithLabels.createOU(200, 200),  
+        SarimanokCharSymbolWithLabels.createA(size, size),
+        SarimanokCharSymbolWithLabels.createEI(size, size),  
+        SarimanokCharSymbolWithLabels.createOU(size, size),  
         
         // B
-        SisilCharSymbolWithLabels.createBa(200, 200),
-        SisilCharSymbolWithLabels.createBeBi(200, 200),  
-        SisilCharSymbolWithLabels.createBoBu(200, 200),  
-        SisilCharSymbolWithLabels.createB(200, 200),
+        SarimanokCharSymbolWithLabels.createBa(size, size),
+        SarimanokCharSymbolWithLabels.createBeBi(size, size),  
+        SarimanokCharSymbolWithLabels.createBoBu(size, size),  
+        SarimanokCharSymbolWithLabels.createB(size, size),
 
         // K 
-        SisilCharSymbolWithLabels.createKa(200, 200),
-        SisilCharSymbolWithLabels.createKeKi(200, 200),  
-        SisilCharSymbolWithLabels.createKoKu(200, 200),  
-        SisilCharSymbolWithLabels.createK(200, 200),
+        SarimanokCharSymbolWithLabels.createKa(size, size),
+        SarimanokCharSymbolWithLabels.createKeKi(size, size),  
+        SarimanokCharSymbolWithLabels.createKoKu(size, size),  
+        SarimanokCharSymbolWithLabels.createK(size, size),
 
         // D 
-        SisilCharSymbolNoLabels.createDa(200, 200),
-        SisilCharSymbolNoLabels.createDeDi(200, 200),  
-        SisilCharSymbolNoLabels.createDoDu(200, 200),  
-        SisilCharSymbolNoLabels.createD(200, 200),
+        SarimanokCharSymbolWithLabels.createDa(size, size),
+        SarimanokCharSymbolWithLabels.createDeDi(size, size),  
+        SarimanokCharSymbolWithLabels.createDoDu(size, size),  
+        SarimanokCharSymbolWithLabels.createD(size, size),
 
         // G
-        SisilCharSymbolWithLabels.createGa(200, 200),
-        SisilCharSymbolWithLabels.createGeGi(200, 200),  
-        SisilCharSymbolWithLabels.createGoGu(200, 200),  
-        SisilCharSymbolWithLabels.createG(200, 200),
+        SarimanokCharSymbolWithLabels.createGa(size, size),
+        SarimanokCharSymbolWithLabels.createGeGi(size, size),  
+        SarimanokCharSymbolWithLabels.createGoGu(size, size),  
+        SarimanokCharSymbolWithLabels.createG(size, size),
 
         // H 
-        SisilCharSymbolWithLabels.createHa(200, 200),
-        SisilCharSymbolWithLabels.createHeHi(200, 200),  
-        SisilCharSymbolWithLabels.createHoHu(200, 200),  
-        SisilCharSymbolWithLabels.createH(200, 200),
+        SarimanokCharSymbolWithLabels.createHa(size, size),
+        SarimanokCharSymbolWithLabels.createHeHi(size, size),  
+        SarimanokCharSymbolWithLabels.createHoHu(size, size),  
+        SarimanokCharSymbolWithLabels.createH(size, size),
 
         // L
-        SisilCharSymbolWithLabels.createLa(200, 200),
-        SisilCharSymbolWithLabels.createLeLi(200, 200),  
-        SisilCharSymbolWithLabels.createLoLu(200, 200),  
-        SisilCharSymbolWithLabels.createL(200, 200),
+        SarimanokCharSymbolWithLabels.createLa(size, size),
+        SarimanokCharSymbolWithLabels.createLeLi(size, size),  
+        SarimanokCharSymbolWithLabels.createLoLu(size, size),  
+        SarimanokCharSymbolWithLabels.createL(size, size),
 
         // M
-        SisilCharSymbolWithLabels.createMa(200, 200),
-        SisilCharSymbolWithLabels.createMeMi(200, 200),  
-        SisilCharSymbolWithLabels.createMoMu(200, 200),  
-        SisilCharSymbolWithLabels.createL(200, 200),
+        SarimanokCharSymbolWithLabels.createMa(size, size),
+        SarimanokCharSymbolWithLabels.createMeMi(size, size),  
+        SarimanokCharSymbolWithLabels.createMoMu(size, size),  
+        SarimanokCharSymbolWithLabels.createM(size, size),
 
         // N
-        SisilCharSymbolWithLabels.createNa(200, 200),
-        SisilCharSymbolWithLabels.createNeNi(200, 200),  
-        SisilCharSymbolWithLabels.createNoNu(200, 200),  
-        SisilCharSymbolWithLabels.createN(200, 200),
+        SarimanokCharSymbolWithLabels.createNa(size, size),
+        SarimanokCharSymbolWithLabels.createNeNi(size, size),  
+        SarimanokCharSymbolWithLabels.createNoNu(size, size),  
+        SarimanokCharSymbolWithLabels.createN(size, size),
 
         // P
-        SisilCharSymbolWithLabels.createPa(200, 200),
-        SisilCharSymbolWithLabels.createPePi(200, 200),  
-        SisilCharSymbolWithLabels.createPoPu(200, 200),  
-        SisilCharSymbolWithLabels.createP(200, 200),
+        SarimanokCharSymbolWithLabels.createPa(size, size),
+        SarimanokCharSymbolWithLabels.createPePi(size, size),  
+        SarimanokCharSymbolWithLabels.createPoPu(size, size),  
+        SarimanokCharSymbolWithLabels.createP(size, size),
 
         // R
-        SisilCharSymbolWithLabels.createRa(200, 200),
-        SisilCharSymbolWithLabels.createReRi(200, 200),  
-        SisilCharSymbolWithLabels.createRoRu(200, 200),  
-        SisilCharSymbolWithLabels.createR(200, 200),
+        SarimanokCharSymbolWithLabels.createRa(size, size),
+        SarimanokCharSymbolWithLabels.createReRi(size, size),  
+        SarimanokCharSymbolWithLabels.createRoRu(size, size),  
+        SarimanokCharSymbolWithLabels.createR(size, size),
 
         // S 
-        SisilCharSymbolWithLabels.createRa(200, 200),
-        SisilCharSymbolWithLabels.createReRi(200, 200),  
-        SisilCharSymbolWithLabels.createRoRu(200, 200),  
-        SisilCharSymbolWithLabels.createR(200, 200),
+        SarimanokCharSymbolWithLabels.createRa(size, size),
+        SarimanokCharSymbolWithLabels.createReRi(size, size),  
+        SarimanokCharSymbolWithLabels.createRoRu(size, size),  
+        SarimanokCharSymbolWithLabels.createR(size, size),
 
         // T
-        SisilCharSymbolWithLabels.createTa(200, 200),
-        SisilCharSymbolWithLabels.createTeTi(200, 200),  
-        SisilCharSymbolWithLabels.createToTu(200, 200),  
-        SisilCharSymbolWithLabels.createT(200, 200),
+        SarimanokCharSymbolWithLabels.createTa(size, size),
+        SarimanokCharSymbolWithLabels.createTeTi(size, size),  
+        SarimanokCharSymbolWithLabels.createToTu(size, size),  
+        SarimanokCharSymbolWithLabels.createT(size, size),
 
         // W
-        SisilCharSymbolWithLabels.createWa(200, 200),
-        SisilCharSymbolWithLabels.createWeWi(200, 200),  
-        SisilCharSymbolWithLabels.createWoWu(200, 200),  
-        SisilCharSymbolWithLabels.createW(200, 200),
+        SarimanokCharSymbolWithLabels.createWa(size, size),
+        SarimanokCharSymbolWithLabels.createWeWi(size, size),  
+        SarimanokCharSymbolWithLabels.createWoWu(size, size),  
+        SarimanokCharSymbolWithLabels.createW(size, size),
         
         // Y
-        SisilCharSymbolWithLabels.createYa(200, 200),
-        SisilCharSymbolWithLabels.createYeYi(200, 200),  
-        SisilCharSymbolWithLabels.createYoYu(200, 200),  
-        SisilCharSymbolWithLabels.createY(200, 200),
+        SarimanokCharSymbolWithLabels.createYa(size, size),
+        SarimanokCharSymbolWithLabels.createYeYi(size, size),  
+        SarimanokCharSymbolWithLabels.createYoYu(size, size),  
+        SarimanokCharSymbolWithLabels.createY(size, size),
 
         // NG
-        SisilCharSymbolWithLabels.createNga(200, 200),
-        SisilCharSymbolWithLabels.createNgeNgi(200, 200),  
-        SisilCharSymbolWithLabels.createNgoNgu(200, 200),  
-        SisilCharSymbolWithLabels.createNg(200, 200),
+        SarimanokCharSymbolWithLabels.createNga(size, size),
+        SarimanokCharSymbolWithLabels.createNgeNgi(size, size),  
+        SarimanokCharSymbolWithLabels.createNgoNgu(size, size),  
+        SarimanokCharSymbolWithLabels.createNg(size, size),
       ];
 
       for(int i = 0; i < noLabels.length; i++) {
@@ -235,30 +237,12 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
       body: Consumer<UIState>(
         builder: (context, uiState, child) {
           return BGIBox( 
-            child: Column(
+            child: ListView( 
               children: [
-                SizedBox(
-                  height: 700,
-                  child: ListView( 
-                    children: [
-                      Column( 
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          ...makeSymbols()
-                        ]
-                      )
-                    ]
-                  )
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Column( 
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() { foo += 1; });
-                      },
-                      child: const Text("Refresh")
-                    )
+                    ...makeSymbols()
                   ]
                 )
               ]
