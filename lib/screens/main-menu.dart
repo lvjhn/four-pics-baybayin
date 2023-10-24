@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:animate_do/animate_do.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:four_pics_baybayin/components/modal-container.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
 import 'package:four_pics_baybayin/components/bgi-box.dart';
 import 'package:four_pics_baybayin/components/game-bar.dart';
@@ -77,110 +78,110 @@ class MainMenuScreenState extends State<MainMenuScreen>
       )
     );
   } 
-}
 
-Widget createLogoText(BuildContext context) {
-  return const Text(
-    "4 PICS BAYBAYIN",
-    style: TextStyle(
-      fontSize: 25,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-      shadows: [
-        Shadow(
-          color: Colors.black,     
-          blurRadius: 2.0,        
-          offset: Offset(2.0, 2.0), 
-        )
-      ]
-    )
-  );
-}
-
-List<Widget> createTitleAndLogo(BuildContext context) {
-  return [
-    Center(child: createLogoText(context)),
-    const SizedBox(height: 15),
-    Center(child: Image.asset("assets/logo/logo.png", width: 250)),
-  ];
-}
-
-
-Widget createPlayButton(BuildContext context) {
-  return SizedBox(
-    width: 250, 
-    height: 80,
-    child: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0),
-        ),
-        backgroundColor: Colors.yellowAccent
-      ),
-      child: Row(
-        children: [
-          Image.asset("assets/icons/icon-play.png", width: 50),
-          const SizedBox(width: 35),
-          const Text("PLAY", style: TextStyle(
-            color: Colors.black,
-            fontSize: 30
-          ))
+  Widget createLogoText(BuildContext context) {
+    return const Text(
+      "4 PICS BAYBAYIN",
+      style: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+        shadows: [
+          Shadow(
+            color: Colors.black,     
+            blurRadius: 2.0,        
+            offset: Offset(2.0, 2.0), 
+          )
         ]
-      ),   
-      onPressed: () {
-        debugPrint("Hello");
-        playSound("click-1");
-      }
-    )
-  );
-}
+      )
+    );
+  }
+
+  List<Widget> createTitleAndLogo(BuildContext context) {
+    return [
+      Center(child: createLogoText(context)),
+      const SizedBox(height: 15),
+      Center(child: Image.asset("assets/logo/logo.png", width: 250)),
+    ];
+  }
 
 
-Widget createProgressButton(BuildContext context) {
-  return SizedBox(
-    width: 250, 
-    height: 50,
-    child: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
+  Widget createPlayButton(BuildContext context) {
+    return SizedBox(
+      width: 250, 
+      height: 80,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0),
+          ),
+          backgroundColor: Colors.yellowAccent
         ),
-        backgroundColor: Colors.yellowAccent
-      ),
-      child: const Text("PROGRESS", style: 
-        TextStyle(
-          color: Colors.black,
-          fontSize: 20
-        )
-      ),
-      onPressed: () {
-        playSound("click-1");
-      }
-    )
-  );
-}
+        child: Row(
+          children: [
+            Image.asset("assets/icons/icon-play.png", width: 50),
+            const SizedBox(width: 35),
+            const Text("PLAY", style: TextStyle(
+              color: Colors.black,
+              fontSize: 30
+            ))
+          ]
+        ),   
+        onPressed: () {
+          debugPrint("Hello");
+          playSound("click-1");
+        }
+      )
+    );
+  }
 
 
-Widget createAboutButton(BuildContext context) {
-  return SizedBox(
-    width: 250, 
-    height: 50,
-    child: ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
+  Widget createProgressButton(BuildContext context) {
+    return SizedBox(
+      width: 250, 
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          backgroundColor: Colors.yellowAccent
         ),
-        backgroundColor: Colors.yellowAccent
-      ),
-      child: const Text("ABOUT", style: 
-        TextStyle(
-          color: Colors.black,
-          fontSize: 20
-        )
-      ),
-      onPressed: () {
-        playSound("click-1");
-      }
-    )
-  );
+        child: const Text("PROGRESS", style: 
+          TextStyle(
+            color: Colors.black,
+            fontSize: 20
+          )
+        ),
+        onPressed: () {
+          playSound("click-1");
+        }
+      )
+    );
+  }
+
+
+  Widget createAboutButton(BuildContext context) {
+    return SizedBox(
+      width: 250, 
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          backgroundColor: Colors.yellowAccent
+        ),
+        child: const Text("ABOUT", style: 
+          TextStyle(
+            color: Colors.black,
+            fontSize: 20
+          )
+        ),
+        onPressed: () {
+          playSound("click-1");
+        }
+      )
+    );
+  }
 }

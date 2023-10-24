@@ -1,11 +1,12 @@
 import "package:flutter/material.dart";
+import "package:four_pics_baybayin/char-symbols/@base.dart";
 import "package:four_pics_baybayin/components/char-symbol.dart";
 import "package:four_pics_baybayin/state/ui-state.dart";
 
-class RobotikaCharSymbolNoLabels 
+class RobotikaCharSymbolNoLabels extends CharSymbolBase
 {
   // VOWELS
-  static Widget createA(double width, double height) {
+  Widget createA(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -19,7 +20,7 @@ class RobotikaCharSymbolNoLabels
     ); 
   }
 
-  static Widget createEI(double width, double height) {
+  Widget createEI(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -33,7 +34,7 @@ class RobotikaCharSymbolNoLabels
     ); 
   }
 
-  static Widget createOU(double width, double height) {
+  Widget createOU(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -48,7 +49,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // B
-  static Widget createBa(double width, double height) {
+  Widget createBa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -61,7 +62,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createBeBi(double width, double height) {
+  Widget createBeBi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -74,7 +75,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createBoBu(double width, double height) {
+  Widget createBoBu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -87,7 +88,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createB(double width, double height) {
+  Widget createB(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -102,7 +103,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // K 
-  static Widget createKa(double width, double height) {
+  Widget createKa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -115,7 +116,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createKeKi(double width, double height) {
+  Widget createKeKi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -128,7 +129,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createKoKu(double width, double height) {
+  Widget createKoKu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -141,7 +142,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createK(double width, double height) {
+  Widget createK(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -156,7 +157,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // D 
-  static Widget createDa(double width, double height) {
+  Widget createDa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -169,7 +170,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createDeDi(double width, double height) {
+  Widget createDeDi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -182,7 +183,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createDoDu(double width, double height) {
+  Widget createDoDu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -195,7 +196,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createD(double width, double height) {
+  Widget createD(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -210,7 +211,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // G 
-  static Widget createGa(double width, double height) {
+  Widget createGa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -223,7 +224,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createGeGi(double width, double height) {
+  Widget createGeGi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -236,7 +237,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createGoGu(double width, double height) {
+  Widget createGoGu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -249,7 +250,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createG(double width, double height) {
+  Widget createG(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -264,7 +265,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // H 
-  static Widget createHa(double width, double height) {
+  Widget createHa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -277,7 +278,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createHeHi(double width, double height) {
+  Widget createHeHi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -290,7 +291,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createHoHu(double width, double height) {
+  Widget createHoHu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -303,7 +304,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createH(double width, double height) {
+  Widget createH(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -318,7 +319,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // L 
-  static Widget createLa(double width, double height) {
+  Widget createLa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -331,7 +332,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createLeLi(double width, double height) {
+  Widget createLeLi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -344,7 +345,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createLoLu(double width, double height) {
+  Widget createLoLu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -357,7 +358,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createL(double width, double height) {
+  Widget createL(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -372,7 +373,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // M 
-  static Widget createMa(double width, double height) {
+  Widget createMa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -385,7 +386,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createMeMi(double width, double height) {
+  Widget createMeMi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -398,7 +399,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createMoMu(double width, double height) {
+  Widget createMoMu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -411,7 +412,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createM(double width, double height) {
+  Widget createM(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -426,7 +427,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // N
-  static Widget createNa(double width, double height) {
+  Widget createNa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -439,7 +440,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNeNi(double width, double height) {
+  Widget createNeNi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -452,7 +453,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNoNu(double width, double height) {
+  Widget createNoNu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -465,7 +466,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createN(double width, double height) {
+  Widget createN(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -480,7 +481,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // NG
-  static Widget createNga(double width, double height) {
+  Widget createNga(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -493,7 +494,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNgeNgi(double width, double height) {
+  Widget createNgeNgi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -506,7 +507,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNgoNgu(double width, double height) {
+  Widget createNgoNgu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -519,7 +520,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNg(double width, double height) {
+  Widget createNg(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -534,7 +535,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // P
-  static Widget createPa(double width, double height) {
+  Widget createPa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -547,7 +548,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createPePi(double width, double height) {
+  Widget createPePi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -560,7 +561,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createPoPu(double width, double height) {
+  Widget createPoPu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -573,7 +574,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createP(double width, double height) {
+  Widget createP(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -588,7 +589,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // R
-  static Widget createRa(double width, double height) {
+  Widget createRa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -601,7 +602,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createReRi(double width, double height) {
+  Widget createReRi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -614,7 +615,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createRoRu(double width, double height) {
+  Widget createRoRu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -627,7 +628,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createR(double width, double height) {
+  Widget createR(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -642,7 +643,7 @@ class RobotikaCharSymbolNoLabels
   }
 
   // S
-  static Widget createSa(double width, double height) {
+  Widget createSa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -655,7 +656,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createSeSi(double width, double height) {
+  Widget createSeSi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -668,7 +669,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createSoSu(double width, double height) {
+  Widget createSoSu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -681,7 +682,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createS(double width, double height) {
+  Widget createS(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -696,7 +697,7 @@ class RobotikaCharSymbolNoLabels
   }
   
   // T
-  static Widget createTa(double width, double height) {
+  Widget createTa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -709,7 +710,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createTeTi(double width, double height) {
+  Widget createTeTi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -722,7 +723,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createToTu(double width, double height) {
+  Widget createToTu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -735,7 +736,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createT(double width, double height) {
+  Widget createT(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -750,7 +751,7 @@ class RobotikaCharSymbolNoLabels
   }
   
   // W
-  static Widget createWa(double width, double height) {
+  Widget createWa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -763,7 +764,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createWeWi(double width, double height) {
+  Widget createWeWi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -776,7 +777,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createWoWu(double width, double height) {
+  Widget createWoWu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -789,7 +790,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createW(double width, double height) {
+  Widget createW(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -804,7 +805,7 @@ class RobotikaCharSymbolNoLabels
   }
   
   // Y
-  static Widget createYa(double width, double height) {
+  Widget createYa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -817,7 +818,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createYeYi(double width, double height) {
+  Widget createYeYi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -830,7 +831,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createYoYu(double width, double height) {
+  Widget createYoYu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -843,7 +844,7 @@ class RobotikaCharSymbolNoLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createY(double width, double height) {
+  Widget createY(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -860,10 +861,10 @@ class RobotikaCharSymbolNoLabels
 
 // ---------------------------------------------------------------------------//
 
-class RobotikaCharSymbolWithLabels 
+class RobotikaCharSymbolWithLabels extends CharSymbolBase
 {
   // VOWELS
-  static Widget createA(double width, double height) {
+  Widget createA(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -878,7 +879,7 @@ class RobotikaCharSymbolWithLabels
     ); 
   }
 
-  static Widget createEI(double width, double height) {
+  Widget createEI(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -893,7 +894,7 @@ class RobotikaCharSymbolWithLabels
     ); 
   }
 
-  static Widget createOU(double width, double height) {
+  Widget createOU(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -909,7 +910,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // B
-  static Widget createBa(double width, double height) {
+  Widget createBa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -923,7 +924,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createBeBi(double width, double height) {
+  Widget createBeBi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -937,7 +938,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createBoBu(double width, double height) {
+  Widget createBoBu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -951,7 +952,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createB(double width, double height) {
+  Widget createB(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -967,7 +968,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // K 
-  static Widget createKa(double width, double height) {
+  Widget createKa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -981,7 +982,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createKeKi(double width, double height) {
+  Widget createKeKi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -995,7 +996,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createKoKu(double width, double height) {
+  Widget createKoKu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1009,7 +1010,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createK(double width, double height) {
+  Widget createK(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1025,7 +1026,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // D 
-  static Widget createDa(double width, double height) {
+  Widget createDa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1039,7 +1040,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createDeDi(double width, double height) {
+  Widget createDeDi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1053,7 +1054,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createDoDu(double width, double height) {
+  Widget createDoDu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1067,7 +1068,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createD(double width, double height) {
+  Widget createD(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1083,7 +1084,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // G 
-  static Widget createGa(double width, double height) {
+  Widget createGa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1097,7 +1098,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createGeGi(double width, double height) {
+  Widget createGeGi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1111,7 +1112,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createGoGu(double width, double height) {
+  Widget createGoGu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1125,7 +1126,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createG(double width, double height) {
+  Widget createG(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1141,7 +1142,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // H 
-  static Widget createHa(double width, double height) {
+  Widget createHa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1155,7 +1156,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createHeHi(double width, double height) {
+  Widget createHeHi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1169,7 +1170,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createHoHu(double width, double height) {
+  Widget createHoHu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1183,7 +1184,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createH(double width, double height) {
+  Widget createH(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1199,7 +1200,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // L 
-  static Widget createLa(double width, double height) {
+  Widget createLa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1213,7 +1214,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createLeLi(double width, double height) {
+  Widget createLeLi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1227,7 +1228,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createLoLu(double width, double height) {
+  Widget createLoLu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1241,7 +1242,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createL(double width, double height) {
+  Widget createL(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1257,7 +1258,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // M 
-  static Widget createMa(double width, double height) {
+  Widget createMa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1271,7 +1272,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createMeMi(double width, double height) {
+  Widget createMeMi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1285,7 +1286,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createMoMu(double width, double height) {
+  Widget createMoMu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1299,7 +1300,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createM(double width, double height) {
+  Widget createM(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1315,7 +1316,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // N
-  static Widget createNa(double width, double height) {
+  Widget createNa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1329,7 +1330,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNeNi(double width, double height) {
+  Widget createNeNi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1343,7 +1344,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNoNu(double width, double height) {
+  Widget createNoNu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1357,7 +1358,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createN(double width, double height) {
+  Widget createN(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1373,7 +1374,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // NG
-  static Widget createNga(double width, double height) {
+  Widget createNga(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1387,7 +1388,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNgeNgi(double width, double height) {
+  Widget createNgeNgi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1401,7 +1402,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNgoNgu(double width, double height) {
+  Widget createNgoNgu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1415,7 +1416,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createNg(double width, double height) {
+  Widget createNg(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1431,7 +1432,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // P
-  static Widget createPa(double width, double height) {
+  Widget createPa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1445,7 +1446,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createPePi(double width, double height) {
+  Widget createPePi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1459,7 +1460,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createPoPu(double width, double height) {
+  Widget createPoPu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1473,7 +1474,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createP(double width, double height) {
+  Widget createP(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1489,7 +1490,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // R
-  static Widget createRa(double width, double height) {
+  Widget createRa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1503,7 +1504,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createReRi(double width, double height) {
+  Widget createReRi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1517,7 +1518,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createRoRu(double width, double height) {
+  Widget createRoRu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1531,7 +1532,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createR(double width, double height) {
+  Widget createR(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1547,7 +1548,7 @@ class RobotikaCharSymbolWithLabels
   }
 
   // S
-  static Widget createSa(double width, double height) {
+  Widget createSa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1561,7 +1562,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createSeSi(double width, double height) {
+  Widget createSeSi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1575,7 +1576,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createSoSu(double width, double height) {
+  Widget createSoSu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1589,7 +1590,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createS(double width, double height) {
+  Widget createS(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1605,7 +1606,7 @@ class RobotikaCharSymbolWithLabels
   }
   
   // T
-  static Widget createTa(double width, double height) {
+  Widget createTa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1619,7 +1620,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createTeTi(double width, double height) {
+  Widget createTeTi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1633,7 +1634,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createToTu(double width, double height) {
+  Widget createToTu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1647,7 +1648,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createT(double width, double height) {
+  Widget createT(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1663,7 +1664,7 @@ class RobotikaCharSymbolWithLabels
   }
   
   // W
-  static Widget createWa(double width, double height) {
+  Widget createWa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1677,7 +1678,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createWeWi(double width, double height) {
+  Widget createWeWi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1691,7 +1692,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createWoWu(double width, double height) {
+  Widget createWoWu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1705,7 +1706,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createW(double width, double height) {
+  Widget createW(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1721,7 +1722,7 @@ class RobotikaCharSymbolWithLabels
   }
   
   // Y
-  static Widget createYa(double width, double height) {
+  Widget createYa(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1735,7 +1736,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createYeYi(double width, double height) {
+  Widget createYeYi(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1749,7 +1750,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createYoYu(double width, double height) {
+  Widget createYoYu(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,
@@ -1763,7 +1764,7 @@ class RobotikaCharSymbolWithLabels
       labelColor:  uiState.charSymbolLabelColor
     ); 
   }
-  static Widget createY(double width, double height) {
+  Widget createY(double width, double height) {
     return CharSymbol(
       width: width, 
       height: height,

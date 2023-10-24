@@ -55,32 +55,33 @@ class SplashScreenState extends State<SplashScreen>
       )
     );
   } 
-}
 
-Widget createLogoText(BuildContext context) {
-  return const Text(
-    "4 PICS BAYBAYIN",
-    style: TextStyle(
-      fontSize: 25,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-      shadows: [
-        Shadow(
-          color: Colors.black,     
-          blurRadius: 2.0,        
-          offset: Offset(2.0, 2.0), 
-        )
-      ]
-    )
-  );
-}
+  Widget createLogoText(BuildContext context) {
+    return const Text(
+      "4 PICS BAYBAYIN",
+      style: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+        shadows: [
+          Shadow(
+            color: Colors.black,     
+            blurRadius: 2.0,        
+            offset: Offset(2.0, 2.0), 
+          )
+        ]
+      )
+    );
+  }
 
-Widget createLogoImage(BuildContext context) {
-  return ShrinkGrowAnimation(
-    child: Image.asset("assets/logo/logo.png"),
-    duration: 1000, 
-    shrinkSize: 225,
-    growSize: 250
-  );
+  Widget createLogoImage(BuildContext context) {
+    return ShrinkGrowAnimation(
+      child: Image.asset("assets/logo/logo.png"),
+      duration: 1000, 
+      shrinkSize: 225,
+      growSize: 250
+    );
+  }
+
 }
 

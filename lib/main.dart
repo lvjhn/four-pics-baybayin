@@ -1,16 +1,20 @@
+import 'dart:core';
+
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/helpers/globals.dart';
 import 'package:four_pics_baybayin/screens/main-menu.dart';
-import 'package:four_pics_baybayin/screens/settings.dart'; 
+import 'package:four_pics_baybayin/screens/settings.dart';
+import 'package:get_storage/get_storage.dart'; 
 import 'package:provider/provider.dart';
 import 'package:four_pics_baybayin/helpers/load-image.dart';
 
-import 'package:four_pics_baybayin/state/ui-state.dart' show uiState;
+import 'package:four_pics_baybayin/state/ui-state.dart';
 
 import 'package:four_pics_baybayin/screens/splash.dart' 
   show SplashScreen;
 import 'package:four_pics_baybayin/screens/_char-symbol-previewer.dart' 
   show CharSymbolPreviewerScreen;
+import 'package:shared_preferences/shared_preferences.dart';
 
 List<String> preloads = [
   "assets/icons/icon-back.png",
@@ -31,9 +35,12 @@ List<String> preloads = [
   "assets/icons/icon-switch.png"
 ];
 
-
-
 Future<void> main() async {
+  await GetStorage.init();
+
+  uiState.loadSetings();
+
+  // Preload Images
   WidgetsFlutterBinding.ensureInitialized();
 
   await loadImage(const AssetImage("assets/background-patterns/denim.webp"));

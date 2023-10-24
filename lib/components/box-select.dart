@@ -35,7 +35,8 @@ class BoxSelectState extends State<BoxSelect>
                 Colors.green : 
                 Color.fromRGBO(234, 234, 234, 1.0),
               width: 3
-            )
+            ),
+            borderRadius: BorderRadius.circular(15)
           ),
           child: InkWell(
             child: widget.items[i],  
@@ -45,7 +46,7 @@ class BoxSelectState extends State<BoxSelect>
           )
         )
       );
-      actualItems.add(const SizedBox(width: 5));
+      actualItems.add(const SizedBox(width: 10));
     } 
     
     return Container(
