@@ -71,28 +71,29 @@ class GameBarState extends State<GameBar>
       )
     );
   }
-}
 
-Widget createSettingsIcon(BuildContext context) {
-  return InkWell(
-    child: Image.asset("assets/icons/icon-settings.png", width: 35),
-    onTap: () {
-      playSound("click-1");
-      goto(context, const SettingsScreen());
-    }
-  );
-}
-
-Widget createHomeIcon(BuildContext context, bool visible) {
-  return Visibility(
-    visible: visible,
-    child: InkWell( 
-      child: Image.asset("assets/icons/icon-home.png", width: 35),
+  Widget createSettingsIcon(BuildContext context) {
+    return InkWell(
+      child: Image.asset("assets/icons/icon-settings.png", width: 35),
       onTap: () {
         playSound("click-1");
-        goto(context, const MainMenuScreen());
+        goto(context, const SettingsScreen());
       }
-    )
-  );
+    );
+  }
+
+  Widget createHomeIcon(BuildContext context, bool visible) {
+    return Visibility(
+      visible: visible,
+      child: InkWell( 
+        child: Image.asset("assets/icons/icon-home.png", width: 35),
+        onTap: () {
+          playSound("click-1");
+          goto(context, const MainMenuScreen());
+        }
+      )
+    );
+  }
+
 }
 

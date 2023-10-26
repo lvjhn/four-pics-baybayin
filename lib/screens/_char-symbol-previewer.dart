@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/char-symbols/sisil.dart';
 import 'package:four_pics_baybayin/components/bgi-box.dart';
+import 'package:four_pics_baybayin/data/CharacterDefinitions.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart';
 
@@ -245,7 +246,8 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
                 Column( 
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ...makeSymbols()
+                    // ...makeSymbols()
+                    CharacterDefinitions(SisilCharSymbolNoLabels()).createCharacter("a", size, size)
                   ]
                 )
               ]

@@ -2,6 +2,7 @@ import 'dart:core';
 
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/helpers/globals.dart';
+import 'package:four_pics_baybayin/screens/level-selector.dart';
 import 'package:four_pics_baybayin/screens/main-menu.dart';
 import 'package:four_pics_baybayin/screens/settings.dart';
 import 'package:get_storage/get_storage.dart'; 
@@ -63,14 +64,6 @@ class Root extends StatefulWidget
 
 class RootState extends State<Root> 
 {
-  Widget currentScreen = const MainMenuScreen();
-
-  void setScreen(Widget screen) {
-    setState(() {
-      currentScreen = screen;
-    });
-  }
-  
   @override 
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -81,7 +74,7 @@ class RootState extends State<Root>
         theme: ThemeData(
           fontFamily: "Lexend"
         ),  
-        home: currentScreen
+        home: const CharSymbolPreviewerScreen( ) // uiState.currentScreen
       )
     );
   }

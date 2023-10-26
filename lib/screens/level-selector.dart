@@ -32,6 +32,8 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
 {
   late Image logoImage; 
   
+  int value = 0;
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Consumer<UIState>(
@@ -43,14 +45,24 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                   children: [
                     // GAMEBAR SECTION
                     const GameBar(isHomeIconVisible: true),
-
+                  
                     // HEADER SECTION 
                     createHeaderSection(context), 
                     
                     // PUZZLE SELECTION SECTION
-                    Expanded(
-                      child: createPuzzleSelectionSection(context)
-                    )
+                    const Expanded(
+                      child: Text("<TODO : PUZZLE-SELECTION-SECTION>")
+                    ),
+                    
+                    Text(value.toString()),
+                    ElevatedButton(
+                      onPressed: () {
+                        setState(() {
+                          value += 1;
+                        });
+                      }, 
+                      child: const Text("Increase")
+                    ),
                   ]
                 ),
                 createCompletionIndicator(context)
@@ -263,55 +275,6 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
             )
           ]
         )
-      )
-    );
-  }
-
-  Widget createPuzzleSelectionSection(BuildContext context) {
-    double spacing = 20.0;
-
-    return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              createCard(context),
-              SizedBox(width: spacing),
-              createCard(context),
-            ],
-          ),
-          SizedBox(height: spacing),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              createCard(context),
-              SizedBox(width: spacing),
-              createCard(context),
-            ],
-          )
-        ]
-      )
-    );
-  }
-
-  Widget createCard(BuildContext context) {
-    return Container(
-      width: 140, 
-      height: 200, 
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(5),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.5),
-            spreadRadius: 3,
-            blurRadius: 2,
-            offset: Offset(0, 3), // changes position of shadow
-          ),
-        ]
       )
     );
   }

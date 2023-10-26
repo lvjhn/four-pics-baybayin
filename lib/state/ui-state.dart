@@ -6,14 +6,17 @@ import 'package:four_pics_baybayin/char-symbols/sejong.dart';
 import 'package:four_pics_baybayin/char-symbols/sisil.dart';
 import 'package:four_pics_baybayin/components/modal-dialog.dart';
 import 'package:four_pics_baybayin/helpers/globals.dart';
+import 'package:four_pics_baybayin/screens/main-menu.dart';
+import 'package:four_pics_baybayin/screens/splash.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class UIState extends ChangeNotifier
-{
+class UIState extends ChangeNotifier {
   Color charSymbolBackgroundColor = Color.fromRGBO(234, 234, 234, 0.9);
   Color charSymbolLabelColor = Colors.black;
-  
+
+  Widget currentScreen = const SplashScreen();
+
   List<String> backgroundPatterns = [
     "assets/background-patterns/denim.webp",
     "assets/background-patterns/5-dots.webp",
@@ -28,24 +31,24 @@ class UIState extends ChangeNotifier
   ];
 
   var tilesets = [
-    [SisilCharSymbolNoLabels(), SisilCharSymbolWithLabels()], 
+    [SisilCharSymbolNoLabels(), SisilCharSymbolWithLabels()],
     [DekoCharSymbolNoLabels(), DekoCharSymbolWithLabels()],
-    [RobotikaCharSymbolNoLabels(), RobotikaCharSymbolWithLabels()], 
-    [SarimanokCharSymbolNoLabels(), SarimanokCharSymbolWithLabels()], 
+    [RobotikaCharSymbolNoLabels(), RobotikaCharSymbolWithLabels()],
+    [SarimanokCharSymbolNoLabels(), SarimanokCharSymbolWithLabels()],
     [SejongCharSymbolNoLabels(), SejongCharSymbolWithLabels()]
   ];
- 
+
   /** ===== SETTINGS ===== */
   Map<String, bool> flags = {
-    "enableSoundEffects" : true, 
-    "showCharacterLabels" : true, 
-  }; 
+    "enableSoundEffects": true,
+    "showCharacterLabels": true,
+  };
 
   int backgroundPattern = 0;
   int tileFont = 0;
   /** ===================== */
 
-  void enableFlag(String flag)  {
+  void enableFlag(String flag) {
     flags[flag] = true;
     saveSettings();
     notifyListeners();
@@ -56,9 +59,9 @@ class UIState extends ChangeNotifier
     saveSettings();
     notifyListeners();
   }
-  
+
   void toggleFlag(String flag) {
-    if(flags[flag]! == false) {
+    if (flags[flag]! == false) {
       enableFlag(flag);
     } else {
       disableFlag(flag);
@@ -79,43 +82,33 @@ class UIState extends ChangeNotifier
 
   void saveSettings() {
     final storage = GetStorage();
-    
-    storage.write(
-      'enableSoundEffects', 
-      flags["enableSoundEffects"]! ? "true" : "false"
-    );
 
     storage.write(
-      'showCharacterLabels', 
-      flags["showCharacterLabels"]! ? "true" : "false"
-    );
+        'enableSoundEffects', flags["enableSoundEffects"]! ? "true" : "false");
 
-    storage.write(
-      'tileFont', 
-      tileFont.toString()
-    );
+    storage.write('showCharacterLabels',
+        flags["showCharacterLabels"]! ? "true" : "false");
 
-    storage.write(
-      'backgroundPattern',
-      backgroundPattern.toString()
-    );
+    storage.write('tileFont', tileFont.toString());
+
+    storage.write('backgroundPattern', backgroundPattern.toString());
   }
 
   void loadSetings() {
     final storage = GetStorage();
-    
-    flags["enableSoundEffects"] = 
-      (storage.read("enableSoundEffects") ?? "true") == "true" ? true : false;
 
-    flags["showCharacterLabels"] = 
-      (storage.read("showCharacterLabels") ?? "true") == "true" ? true : false; 
+    flags["enableSoundEffects"] =
+        (storage.read("enableSoundEffects") ?? "true") == "true" ? true : false;
 
-    tileFont = 
-      int.parse(storage.read("tileFont") ?? "0"); 
+    flags["showCharacterLabels"] =
+        (storage.read("showCharacterLabels") ?? "true") == "true"
+            ? true
+            : false;
 
-    backgroundPattern = 
-      int.parse(storage.read("backgroundPattern") ?? "0"); 
+    tileFont = int.parse(storage.read("tileFont") ?? "0");
+
+    backgroundPattern = int.parse(storage.read("backgroundPattern") ?? "0");
   }
 }
- 
+
 var uiState = UIState();
