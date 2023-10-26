@@ -1,7 +1,7 @@
 
 class LevelDefinitions 
 {
-  var levels = [
+  static var levels = [
     {
       "word": "aso",
       "syllables": "a-so"

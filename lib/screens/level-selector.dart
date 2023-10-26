@@ -11,6 +11,7 @@ import 'package:four_pics_baybayin/char-symbols/sejong.dart';
 import 'package:four_pics_baybayin/char-symbols/sisil.dart';
 import 'package:four_pics_baybayin/components/general/four-images.dart';
 import 'package:four_pics_baybayin/components/level-selector/puzzle-selection-card.dart';
+import 'package:four_pics_baybayin/components/level-selector/puzzle-selector.dart';
 import 'package:four_pics_baybayin/components/topbar/back-bar.dart';
 import 'package:four_pics_baybayin/components/general/box-select.dart';
 import 'package:four_pics_baybayin/components/general/custom-switch.dart';
@@ -51,21 +52,36 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                     // HEADER SECTION 
                     createHeaderSection(context), 
                     
-                    const SizedBox(height: 30), 
                     
-                    PuzzleSelectionCard(
-                      image1: "assets/puzzles/1.1-aso.jpeg",
-                      image2: "assets/puzzles/1.2-aso.jpeg",
-                      image3: "assets/puzzles/1.3-aso.jpeg",
-                      image4: "assets/puzzles/1.4-aso.jpeg",
-                      puzzleNo: 1, 
-                      isSolved: false,
-                      isSelectable: true,
-                      correctWord: "SALITA",
-                      onSelect: () {
-                        playSound("click-1");
-                      }
-                    )
+                    // PuzzleSelectionCard(
+                    //   image1: "assets/puzzles/1.1-aso.jpeg",
+                    //   image2: "assets/puzzles/1.2-aso.jpeg",
+                    //   image3: "assets/puzzles/1.3-aso.jpeg",
+                    //   image4: "assets/puzzles/1.4-aso.jpeg",
+                    //   puzzleNo: 1, 
+                    //   isSolved: false,
+                    //   isSelectable: true,
+                    //   correctWord: "SALITA",
+                    //   onSelect: () {
+                    //     playSound("click-1");
+                    //   }
+                    // )  
+
+                    Expanded( 
+                      child: Center(
+                        child: Container(
+                          width: 325, 
+                          child: FittedBox(
+                            child: PuzzleSelector(
+                              level: 1, 
+                              onSelect: (int i) {
+
+                              }
+                            )
+                          )
+                        )
+                      )
+                    ),
 
                     // // PUZZLE SELECTION SECTION
                     // const Expanded(

@@ -110,9 +110,9 @@ class PuzzleSelectionCardState extends State<PuzzleSelectionCard>
               ]
             ),
             const SizedBox(height: 10),
-            const Text(
-              "# 1", 
-              style: TextStyle(
+            Text(
+              "# " + widget.puzzleNo.toString(), 
+              style: const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold
               )
