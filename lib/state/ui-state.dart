@@ -4,7 +4,7 @@ import 'package:four_pics_baybayin/char-symbols/robotika.dart';
 import 'package:four_pics_baybayin/char-symbols/sarimanok.dart';
 import 'package:four_pics_baybayin/char-symbols/sejong.dart';
 import 'package:four_pics_baybayin/char-symbols/sisil.dart';
-import 'package:four_pics_baybayin/components/modal-dialog.dart';
+import 'package:four_pics_baybayin/components/backdrop/modal-dialog.dart';
 import 'package:four_pics_baybayin/helpers/globals.dart';
 import 'package:four_pics_baybayin/screens/main-menu.dart';
 import 'package:four_pics_baybayin/screens/splash.dart';

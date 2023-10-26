@@ -9,14 +9,16 @@ import 'package:four_pics_baybayin/char-symbols/robotika.dart';
 import 'package:four_pics_baybayin/char-symbols/sarimanok.dart';
 import 'package:four_pics_baybayin/char-symbols/sejong.dart';
 import 'package:four_pics_baybayin/char-symbols/sisil.dart';
-import 'package:four_pics_baybayin/components/back-bar.dart';
-import 'package:four_pics_baybayin/components/box-select.dart';
-import 'package:four_pics_baybayin/components/custom-switch.dart';
-import 'package:four_pics_baybayin/components/modal-container.dart';
-import 'package:four_pics_baybayin/components/modal-dialog.dart';
+import 'package:four_pics_baybayin/components/general/four-images.dart';
+import 'package:four_pics_baybayin/components/level-selector/puzzle-selection-card.dart';
+import 'package:four_pics_baybayin/components/topbar/back-bar.dart';
+import 'package:four_pics_baybayin/components/general/box-select.dart';
+import 'package:four_pics_baybayin/components/general/custom-switch.dart';
+import 'package:four_pics_baybayin/components/backdrop/modal-container.dart';
+import 'package:four_pics_baybayin/components/backdrop/modal-dialog.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
-import 'package:four_pics_baybayin/components/bgi-box.dart';
-import 'package:four_pics_baybayin/components/game-bar.dart';
+import 'package:four_pics_baybayin/components/backdrop/bgi-box.dart';
+import 'package:four_pics_baybayin/components/topbar/game-bar.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart'; 
 
@@ -49,20 +51,29 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                     // HEADER SECTION 
                     createHeaderSection(context), 
                     
-                    // PUZZLE SELECTION SECTION
-                    const Expanded(
-                      child: Text("<TODO : PUZZLE-SELECTION-SECTION>")
-                    ),
+                    const SizedBox(height: 30), 
                     
-                    Text(value.toString()),
-                    ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          value += 1;
-                        });
-                      }, 
-                      child: const Text("Increase")
-                    ),
+                    PuzzleSelectionCard(
+                      image1: "assets/puzzles/1.1-aso.jpeg",
+                      image2: "assets/puzzles/1.2-aso.jpeg",
+                      image3: "assets/puzzles/1.3-aso.jpeg",
+                      image4: "assets/puzzles/1.4-aso.jpeg",
+                      puzzleNo: 1, 
+                      isSolved: false,
+                      isSelectable: true,
+                      correctWord: "SALITA",
+                      onSelect: () {
+                        playSound("click-1");
+                      }
+                    )
+
+                    // // PUZZLE SELECTION SECTION
+                    // const Expanded(
+                    //   child: Text("<TODO : PUZZLE-SELECTION-SECTION>")
+                    // ),
+
+                    
+                    
                   ]
                 ),
                 createCompletionIndicator(context)

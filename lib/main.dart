@@ -74,7 +74,7 @@ class RootState extends State<Root>
         theme: ThemeData(
           fontFamily: "Lexend"
         ),  
-        home: const CharSymbolPreviewerScreen( ) // uiState.currentScreen
+        home: const LevelSelectorScreen( ) // uiState.currentScreen
       )
     );
   }

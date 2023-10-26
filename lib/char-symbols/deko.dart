@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:four_pics_baybayin/char-symbols/@base.dart";
-import "package:four_pics_baybayin/components/char-symbol.dart";
+import 'package:four_pics_baybayin/components/symbols/char-symbol.dart';
 import "package:four_pics_baybayin/state/ui-state.dart";
 
 class DekoCharSymbolNoLabels extends CharSymbolBase
