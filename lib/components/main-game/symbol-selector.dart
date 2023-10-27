@@ -44,28 +44,28 @@ class SymbolSelectorState extends State<SymbolSelector>
             children: [
               createSymbol(context, 0, gameState.getCurrentPuzzleSymbols()[0]),
               SizedBox(width: spacing),
-              createSymbol(context, 2, gameState.getCurrentPuzzleSymbols()[1]),
+              createSymbol(context, 1, gameState.getCurrentPuzzleSymbols()[1]),
               SizedBox(width: spacing),
-              createSymbol(context, 3, gameState.getCurrentPuzzleSymbols()[2]),
+              createSymbol(context, 2, gameState.getCurrentPuzzleSymbols()[2]),
               SizedBox(width: spacing),
-              createSymbol(context, 4, gameState.getCurrentPuzzleSymbols()[3]),
+              createSymbol(context, 3, gameState.getCurrentPuzzleSymbols()[3]),
               SizedBox(width: spacing),
-              createSymbol(context, 5, gameState.getCurrentPuzzleSymbols()[4]),
+              createSymbol(context, 4, gameState.getCurrentPuzzleSymbols()[4]),
             ]
           ),
           SizedBox(height: spacing), 
           Row(
             mainAxisAlignment: MainAxisAlignment.center, 
             children: [
-              createSymbol(context, 0, gameState.getCurrentPuzzleSymbols()[5]),
+              createSymbol(context, 5, gameState.getCurrentPuzzleSymbols()[5]),
               SizedBox(width: spacing),
-              createSymbol(context, 2, gameState.getCurrentPuzzleSymbols()[6]),
+              createSymbol(context, 6, gameState.getCurrentPuzzleSymbols()[6]),
               SizedBox(width: spacing),
-              createSymbol(context, 3, gameState.getCurrentPuzzleSymbols()[7]),
+              createSymbol(context, 7, gameState.getCurrentPuzzleSymbols()[7]),
               SizedBox(width: spacing),
-              createSymbol(context, 4, gameState.getCurrentPuzzleSymbols()[8]),
+              createSymbol(context, 8, gameState.getCurrentPuzzleSymbols()[8]),
               SizedBox(width: spacing),
-              createSymbol(context, 5, gameState.getCurrentPuzzleSymbols()[9]),
+              createSymbol(context, 9, gameState.getCurrentPuzzleSymbols()[9]),
             ]
           )
         ]
@@ -78,6 +78,7 @@ class SymbolSelectorState extends State<SymbolSelector>
       onTap: () {
         if(character != "-") {
           playSound("click-1");
+          widget.onSelect(index, character);
         }
       },
       child: Container(

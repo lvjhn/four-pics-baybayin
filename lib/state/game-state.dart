@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/data/LevelDefinitions.dart';
@@ -109,7 +110,11 @@ class GameState extends ChangeNotifier
   }
 
   String getCurrentWord() {
-    return LevelDefinitions.levels[currentLevel]["word"]!;
+    return LevelDefinitions.levels[getCurrentPuzzleNo() - 1]["word"]!;
+  }
+
+  List<String> getCurrentSyllables() {
+    return LevelDefinitions.levels[getCurrentPuzzleNo() - 1]["syllables"]!.split("-");
   }
 
   PuzzleState getCurrentPuzzleState() {
@@ -142,20 +147,92 @@ class GameState extends ChangeNotifier
     return getCurrentPuzzleState().symbols;
   }
 
+  List<String> syllables = [
+    "a", "e", "i", 
+    "ba", "be", "bo", "b", 
+    "ka", "ke", "ko", "k", 
+    "da", "de", "do", "d", 
+    "ga", "ge", "go", "g", 
+    "ha", "he", "ho", "h", 
+    "la", "le", "lo", "l", 
+    "ma", "me", "mo", "m", 
+    "na", "ne", "no", "n", 
+    "Na", "Ne", "No", "N", 
+    "pa", "pe", "po", "p", 
+    "ra", "re", "ro", "r", 
+    "sa", "se", "so", "s", 
+    "ta", "te", "to", "t", 
+    "wa", "we", "wo", "w", 
+    "ya", "ye", "yo", "y" 
+  ];
+
+  String generateRandomSyllable() {
+    return syllables[Random().nextInt(syllables.length)];
+  }
+
   void preparePuzzleState(bool notify) {
     PuzzleState puzzleState = getCurrentPuzzleState(); 
+
     if(puzzleState.input.isEmpty) {
-      puzzleState.symbols = [
-        "-", "bo", "i", "ga", "-", 
-        "da", "me", "-", "de", "la"
-      ];
-      puzzleState.input = ["i", "-", "da"];
-      puzzleState.locations = [-1, -1, -1];
+      
+      puzzleState.input = [];
+      puzzleState.locations = [];
+
+      debugPrint("Current Syllables: " + getCurrentSyllables().toString());
+
+      for(int i = 0; i < getCurrentSyllables().length; i++) {
+        puzzleState.input.add("-");
+        puzzleState.locations.add(-1);
+      } 
+      
+      puzzleState.symbols = generateSymbolSet();
+      
     }
+
     if(notify) {
       notifyListeners();
     }
   }
+
+  List<String> generateSymbolSet() {
+    List<String> symbols = [];
+    List<String> syllables = getCurrentSyllables();
+    
+    for(int i = 0; i < syllables.length; i++) {
+      symbols.add(syllables[i]);
+    }
+
+    for(int i = syllables.length; i < 10; i++) {
+      symbols.add(generateRandomSyllable());
+    }
+
+    symbols.shuffle();
+
+    return symbols; 
+  }
+
+  void selectSymbol(int index, String character) {
+    getCurrentPuzzleState().symbols[index] = "-";
+
+    for(int i = 0; i < getCurrentPuzzleInput().length;i ++) {
+      if(getCurrentPuzzleInput()[i] == "-") {
+        getCurrentPuzzleState().input[i] = character;
+        getCurrentPuzzleState().locations[i] = index;
+        break;
+      }
+    }
+
+    notifyListeners();
+  }
+
+  void removeInputCharacter(int index) {
+    String character = getCurrentPuzzleInput()[index];
+    getCurrentPuzzleState().input[index] = "-"; 
+    int location = getCurrentPuzzleState().locations[index]; 
+    getCurrentPuzzleState().symbols[location] = character;
+    notifyListeners();
+  }
+
 
   void save() {
     final storage = GetStorage();

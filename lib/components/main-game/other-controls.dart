@@ -5,8 +5,15 @@ import 'package:four_pics_baybayin/state/ui-state.dart';
 class OtherControls extends StatefulWidget 
 {
   const OtherControls({ 
-    super.key
+    super.key,
+    required this.onRemoveExtraCharacter, 
+    required this.onRevealACharacter, 
+    required this.onRemoveExtraCharacters
   });
+
+  final Function onRemoveExtraCharacter; 
+  final Function onRevealACharacter; 
+  final Function onRemoveExtraCharacters;
 
   @override 
   State<OtherControls> createState() => OtherControlsState(); 
@@ -20,11 +27,17 @@ class OtherControlsState extends State<OtherControls>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          createHintButton("A*", Colors.redAccent), 
+          createHintButton("A-", Colors.redAccent, () {
+            widget.onRemoveExtraCharacter();
+          }), 
           const SizedBox(width: 5),
-          createHintButton("A-", Colors.blueAccent),
+          createHintButton("A+", Colors.blueAccent, () {
+            widget.onRevealACharacter();
+          }),
           const SizedBox(width: 5),
-          createHintButton("A+", const Color.fromARGB(255, 2, 122, 64)),
+          createHintButton("A*", const Color.fromARGB(255, 2, 122, 64), () {
+            widget.onRemoveExtraCharacters();
+          }),
           const SizedBox(width: 10),
           createAttemptsIndicator()
         ]
@@ -32,10 +45,11 @@ class OtherControlsState extends State<OtherControls>
     );
   }
 
-  Widget createHintButton(String label, Color color) {
+  Widget createHintButton(String label, Color color, Function action) {
     return HintButton(
       label: label, 
-      color: color
+      color: color,
+      action: action
     );
   }
 

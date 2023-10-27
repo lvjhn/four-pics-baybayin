@@ -8,11 +8,13 @@ class HintButton extends StatefulWidget
   const HintButton({ 
     super.key,
     required this.color,
-    required this.label
+    required this.label,
+    required this.action
   });
 
   final Color color; 
   final String label;
+  final Function action;
 
   @override 
   State<HintButton> createState() => HintButtonState(); 
@@ -30,7 +32,7 @@ class HintButtonState extends State<HintButton>
       }, 
       onTapUp: (TapUpDetails tapUpDetails) {
         setState(() { isTapped = false; });
-        // widget.onSelect();
+        widget.action();
       },
       child: Container(
         width: 40, 

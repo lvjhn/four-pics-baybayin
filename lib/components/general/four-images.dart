@@ -65,7 +65,7 @@ class FourImagesState extends State<FourImages>
 
 
   Widget createImage(String src) {
-    double borderRadiusPerc = 0.05; 
+    double borderRadiusPerc = 0.025; 
 
     return Container(
       width: boxSize,

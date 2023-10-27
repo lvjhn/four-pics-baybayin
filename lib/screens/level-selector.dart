@@ -36,7 +36,11 @@ class LevelSelectorScreen extends StatefulWidget
 }
 
 class LevelSelectorScreenState extends State<LevelSelectorScreen>
+  with AutomaticKeepAliveClientMixin
 {
+  @override
+  bool get wantKeepAlive => true; 
+
   late Image logoImage; 
   
   int value = 0;

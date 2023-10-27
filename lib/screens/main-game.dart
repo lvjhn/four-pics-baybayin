@@ -26,7 +26,11 @@ class MainGameScreen extends StatefulWidget
 }
 
 class MainGameScreenState extends State<MainGameScreen>
+  with AutomaticKeepAliveClientMixin
 {
+  @override
+  bool get wantKeepAlive => true; 
+
   GlobalKey<ModalContainerState> mainModal = GlobalKey<ModalContainerState>();
   late Widget modalContent;
   
@@ -65,13 +69,7 @@ class MainGameScreenState extends State<MainGameScreen>
                         isShown: false,
                         child: showGameLayers(context)
                       )
-                    ),
-
-                    // BOTTOMBAR SECTION
-                    const BottomBackBar(
-                      title: "BACK TO LEVEL SELECTION SCREEN",
-                      target: LevelSelectorScreen(), 
-                    ) 
+                    )
                   ]
                 )
               ]
@@ -311,6 +309,9 @@ class MainGameScreenState extends State<MainGameScreen>
     String currentWord = 
       gameState.getCurrentWord();
 
+    debugPrint("Current Puzzle: " + gameState.currentPuzzle.toString());
+    debugPrint("Current Word: " + currentWord);
+
     String syllablesString = 
       LevelDefinitions.levels[gameState.getCurrentPuzzleNo() - 1]["syllables"]!;
 
@@ -326,61 +327,83 @@ class MainGameScreenState extends State<MainGameScreen>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        
-        // IMAGE SECTION
-        FourImages(
-          image1: "assets/puzzles/$puzzleNo.1-$currentWord.jpeg", 
-          image2: "assets/puzzles/$puzzleNo.2-$currentWord.jpeg", 
-          image3: "assets/puzzles/$puzzleNo.3-$currentWord.jpeg", 
-          image4: "assets/puzzles/$puzzleNo.4-$currentWord.jpeg", 
-          width: 280
-        ), 
+        Expanded(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // IMAGE SECTION
+              FourImages(
+                image1: "assets/puzzles/$puzzleNo.1-$currentWord.jpeg", 
+                image2: "assets/puzzles/$puzzleNo.2-$currentWord.jpeg", 
+                image3: "assets/puzzles/$puzzleNo.3-$currentWord.jpeg", 
+                image4: "assets/puzzles/$puzzleNo.4-$currentWord.jpeg", 
+                width: 280
+              ), 
 
-        const SizedBox(height: 40),
+              const SizedBox(height: 40),
 
-        // INPUT WORD 
-        InputWord(
-          key: inputWord,
-          tileFont: uiState.getCurrentTileFont(),
-          correct: correctSyllables, 
-          current: currentPuzzleInput,
-          locations: [6, -1, 2], 
-          onRemove: (int index, String character, int location) {
-            debugPrint("Index: $index, Character: $character");
-          },
-          onCorrect: () {
+              // INPUT WORD 
+              InputWord(
+                key: inputWord,
+                tileFont: uiState.getCurrentTileFont(),
+                correct: correctSyllables, 
+                current: currentPuzzleInput,
+                locations: [6, -1, 2], 
+                onRemove: (int index, String character, int location) {
+                  debugPrint("Removing character $location -> $character from input.");
+                  gameState.removeInputCharacter(index);
+                },
+                onCorrect: () {
 
-          },
-          onInvalid: () {
+                },
+                onInvalid: () {
 
-          }, 
-        ), 
+                }, 
+              ), 
 
-        // ElevatedButton(
-        //   onPressed: () {
-        //     playSound("error");
-        //     inputWord.currentState?.shake();
-        //   }, 
-        //   child: const Text("Shake Input Word")
-        // ), 
+              // ElevatedButton(
+              //   onPressed: () {
+              //     playSound("error");
+              //     inputWord.currentState?.shake();
+              //   }, 
+              //   child: const Text("Shake Input Word")
+              // ), 
 
-        const SizedBox(height: 60),
+              const SizedBox(height: 60),
 
-        // SYMBOL SELECTION 
-        SymbolSelector(
-          tileFont: uiState.getCurrentTileFont(),
-          characters: currentSymbols,
-          onSelect: () {
+              // SYMBOL SELECTION 
+              SymbolSelector(
+                tileFont: uiState.getCurrentTileFont(),
+                characters: currentSymbols,
+                onSelect: (int i, String character) {
+                  debugPrint("Selecting symbol $i -> $character");
+                  gameState.selectSymbol(i, character);
+                }
+              ), 
 
-          }
-        ), 
+              const SizedBox(height: 20),
 
-        const SizedBox(height: 20),
+              // OTHER CONTROLS 
+              OtherControls(
+                onRemoveExtraCharacter: () {
+                  debugPrint("Removing extra character."); 
+                }, 
+                onRevealACharacter: () {
+                  debugPrint("Revealing a character.");
+                }, 
+                onRemoveExtraCharacters: () {
+                  debugPrint("Removing extra characters.");
+                }
+              )
+            ]
+          )
+        ),
 
-        // OTHER CONTROLS 
-        OtherControls(
-
-        )
+        // BOTTOMBAR SECTION
+        const BottomBackBar(
+          title: "BACK TO LEVEL SELECTION SCREEN",
+          target: LevelSelectorScreen(), 
+        ) 
       ]
   );
 
