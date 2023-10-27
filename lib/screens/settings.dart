@@ -282,6 +282,9 @@ class SettingsScreenState extends State<SettingsScreen>
           ), 
           ElevatedButton(
             child: const Text("RESET"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.redAccent
+            ),
             onPressed: () {
               playSound("click-1");
               setState(() {

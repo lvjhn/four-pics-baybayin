@@ -36,6 +36,9 @@ class SymbolSelectorState extends State<SymbolSelector>
   @override
   Widget build(BuildContext context) {
     double spacing = 5;
+
+    debugPrint(gameState.getCurrentPuzzleSymbols().toString());
+
     return Container(
       child: Column(
         children: [
@@ -55,7 +58,7 @@ class SymbolSelectorState extends State<SymbolSelector>
           ),
           SizedBox(height: spacing), 
           Row(
-            mainAxisAlignment: MainAxisAlignment.center, 
+            mainAxisAlignment: MainAxisAlignment.center,  
             children: [
               createSymbol(context, 5, gameState.getCurrentPuzzleSymbols()[5]),
               SizedBox(width: spacing),
@@ -78,6 +81,11 @@ class SymbolSelectorState extends State<SymbolSelector>
       onTap: () {
         if(character != "-") {
           playSound("click-1");
+          
+          if(gameState.isInputFilled()) {
+            return;
+          }
+
           widget.onSelect(index, character);
         }
       },
@@ -92,7 +100,7 @@ class SymbolSelectorState extends State<SymbolSelector>
             width: character == "-" ? 0.5 : 0
           )
         ),
-        child: character == "-" ? 
+        child: character == "-" || character == Null ? 
           const Text("") : 
           CharacterDefinitions(widget.tileFont)
             .createCharacter(character, 50, 50)

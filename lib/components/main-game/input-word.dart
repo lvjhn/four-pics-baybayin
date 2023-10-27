@@ -4,6 +4,8 @@ import 'package:four_pics_baybayin/char-symbols/sisil.dart';
 import 'package:four_pics_baybayin/components/general/shake-widget.dart';
 import 'package:four_pics_baybayin/data/CharacterDefinitions.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
+import 'package:four_pics_baybayin/state/game-state.dart';
+import 'package:four_pics_baybayin/state/progress-state.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart'; 
 
 class InputWord extends StatefulWidget 
@@ -36,11 +38,39 @@ class InputWordState extends State<InputWord>
 {
   late CharSymbolBase tileFont;
   final shakeKey = GlobalKey<ShakeWidgetState>();
+  
 
   @override 
   void initState() {
     super.initState(); 
     tileFont = uiState.getCurrentTileFont();
+
+    bool hasChecked = false; 
+
+    if (mounted) {
+      if(gameState.isInputFilled() && hasChecked == false) {
+        hasChecked = true;
+        checkInput();
+      }
+    }
+  }
+ 
+
+  bool isCorrect() {
+    for(int i = 0; i < widget.current.length; i++) {
+      if(widget.current[i] != widget.correct[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  void checkInput() {
+    if(isCorrect()) {
+      widget.onCorrect();
+    } else {
+      widget.onInvalid(); 
+    }
   }
   
   void shake() {
@@ -58,7 +88,8 @@ class InputWordState extends State<InputWord>
       if(i != widget.current.length - 1) {
         input.add(SizedBox(width: spacing));
       }
-    }
+    } 
+
 
     return ShakeWidget(
       key: shakeKey,

@@ -25,14 +25,17 @@ class PuzzleProgress
 
 class PuzzleProgressesState
 {
-  late List<dynamic> progress; 
+  late List<PuzzleProgress> progress; 
 
   PuzzleProgressesState(
     this.progress
   );
   
   PuzzleProgressesState.fromJSON(Map<String, dynamic> json)
-      : progress = json["progress"] as List<dynamic>;
+      : progress =  
+        List<dynamic>.from(json['progress'])
+            .map<PuzzleProgress>((i) => PuzzleProgress.fromJSON(i))
+            .toList();
 
   Map<String, dynamic> toJson() => {
     "progress" : progress
@@ -55,6 +58,14 @@ class ProgressState extends ChangeNotifier
     }
 
     progressState = PuzzleProgressesState(progressDefaults);
+  }
+
+  void increaseAttempt(bool notify, int puzzleNo) {
+    debugPrint("Increasing attempts");
+    progressState.progress[puzzleNo - 1].attempts += 1; 
+    if(notify) {
+      notifyListeners();
+    }
   }
 
   void save() {

@@ -170,8 +170,8 @@ class GameState extends ChangeNotifier
     return syllables[Random().nextInt(syllables.length)];
   }
 
-  void preparePuzzleState(bool notify) {
-    PuzzleState puzzleState = getCurrentPuzzleState(); 
+  void preparePuzzleState(bool notify, PuzzleState state) {
+    PuzzleState puzzleState = state; 
 
     if(puzzleState.input.isEmpty) {
       
@@ -186,7 +186,6 @@ class GameState extends ChangeNotifier
       } 
       
       puzzleState.symbols = generateSymbolSet();
-      
     }
 
     if(notify) {
@@ -194,9 +193,26 @@ class GameState extends ChangeNotifier
     }
   }
 
+  bool isInputFilled() {
+    for(int i = 0; i < getCurrentPuzzleInput().length; i++) {
+      if(getCurrentPuzzleInput()[i] == "-") {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  void preparePuzzleStates() {
+    preparePuzzleState(false, puzzles.puzzleA);
+    preparePuzzleState(false, puzzles.puzzleB);
+    preparePuzzleState(false, puzzles.puzzleC);
+    preparePuzzleState(false, puzzles.puzzleD);
+  }
+
   List<String> generateSymbolSet() {
     List<String> symbols = [];
     List<String> syllables = getCurrentSyllables();
+
     
     for(int i = 0; i < syllables.length; i++) {
       symbols.add(syllables[i]);

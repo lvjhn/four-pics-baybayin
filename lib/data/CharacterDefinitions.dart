@@ -83,6 +83,15 @@ class CharacterDefinitions
       "nu" : () => charSymbolSet.createNoNu(width, height), 
       "n"  : () => charSymbolSet.createN(width, height), 
 
+      
+      // N
+      "Na" : () => charSymbolSet.createNga(width, height), 
+      "Ne" : () => charSymbolSet.createNgeNgi(width, height), 
+      "Ni" : () => charSymbolSet.createNgeNgi(width, height), 
+      "No" : () => charSymbolSet.createNgoNgu(width, height), 
+      "Nu" : () => charSymbolSet.createNgoNgu(width, height), 
+      "N"  : () => charSymbolSet.createN(width, height), 
+
       // P 
       "pa" : () => charSymbolSet.createPa(width, height), 
       "pe" : () => charSymbolSet.createPePi(width, height), 

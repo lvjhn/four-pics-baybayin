@@ -4,6 +4,7 @@ import 'package:four_pics_baybayin/components/backdrop/modal-container.dart';
 import 'package:four_pics_baybayin/components/backdrop/modal-dialog.dart';
 import 'package:four_pics_baybayin/components/bottombar/bottom-back-bar.dart';
 import 'package:four_pics_baybayin/components/general/four-images.dart';
+import 'package:four_pics_baybayin/components/main-game/cost-specifier.dart';
 import 'package:four_pics_baybayin/components/main-game/input-word.dart';
 import 'package:four_pics_baybayin/components/main-game/other-controls.dart';
 import 'package:four_pics_baybayin/components/main-game/symbol-selector.dart';
@@ -37,7 +38,7 @@ class MainGameScreenState extends State<MainGameScreen>
   @override 
   void initState() {
     super.initState();
-    modalContent = createRemoveAllCharactersModal(context);
+    modalContent = createRemoveExtraCharacterModal(context);
   }
 
   Widget showGameLayers(BuildContext context) {
@@ -285,10 +286,84 @@ class MainGameScreenState extends State<MainGameScreen>
     );
   }
 
-  Widget createRemoveAllCharactersModal(BuildContext context) {
+  Widget createRemoveExtraCharacterModal(BuildContext context) {
     return ModalDialog(
       width: 300, 
-      title: "SUCCESSFULLY RESET DATA",
+      title: "REMOVE EXTRA CHARACTER",
+      container: mainModal,
+      child:  Container(
+        margin: const EdgeInsets.all(14), 
+        child:  Center(
+          child: Column(
+            children: [
+              Container( 
+                margin: const EdgeInsets.all(14),
+                child: const Text(
+                  "This will reveal a character from the set that is in the word."
+                ), 
+              ),
+              const SizedBox(height: 20),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CostSpecifier(cost: 50)
+                ]
+              ),
+              const SizedBox(height: 20),
+              Container( 
+                margin: const EdgeInsets.symmetric(horizontal: 14),
+                child:  Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          playSound("click-1");
+                          mainModal.currentState!.hide();
+                        },
+                        child: const Text("CANCEL"),
+                      )
+                    ), 
+                    const SizedBox(width: 10),
+                    Expanded( 
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.redAccent
+                        ),
+                        onPressed: () {
+                          playSound("click-1");
+                        },
+                        child: const Text("CONFIRM"),
+                      )
+                    )
+                  ]
+                )
+              ),
+              const SizedBox(height: 14)
+            ]
+          )
+        )
+      ),
+    );
+  }
+
+  Widget createRevealACharacterModal(BuildContext context) {
+    return ModalDialog(
+      width: 300, 
+      title: "REVEAL A CHARACTER",
+      container: mainModal,
+      child:  Container(
+        margin: const EdgeInsets.all(14), 
+        child: const Center(
+          child: Text("Game data has been reset successfully.")
+        )
+      ),
+    );
+  }
+
+  Widget createRemoveExtraCharactersModal(BuildContext context) {
+    return ModalDialog(
+      width: 300, 
+      title: "REMOVE EXTRA CHARACTERS",
       container: mainModal,
       child:  Container(
         margin: const EdgeInsets.all(14), 
@@ -301,7 +376,7 @@ class MainGameScreenState extends State<MainGameScreen>
 
   Widget createMainLayer() {
   
-    gameState.preparePuzzleState(false);
+    gameState.preparePuzzleState(false, gameState.getCurrentPuzzleState());
 
     int puzzleNo = 
       gameState.getCurrentPuzzleNo();
@@ -320,8 +395,7 @@ class MainGameScreenState extends State<MainGameScreen>
     List<String> currentSymbols = gameState.getCurrentPuzzleSymbols();
 
     GlobalKey<InputWordState> inputWord = GlobalKey<InputWordState>();
-
-    debugPrint(currentPuzzleInput.toString());
+    
   
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -354,11 +428,11 @@ class MainGameScreenState extends State<MainGameScreen>
                   gameState.removeInputCharacter(index);
                 },
                 onCorrect: () {
-
+                  debugPrint("Correct guess detected");
                 },
                 onInvalid: () {
-
-                }, 
+                  debugPrint("Invalid guess detected");
+                }
               ), 
 
               // ElevatedButton(
@@ -378,6 +452,10 @@ class MainGameScreenState extends State<MainGameScreen>
                 onSelect: (int i, String character) {
                   debugPrint("Selecting symbol $i -> $character");
                   gameState.selectSymbol(i, character);
+                  if(gameState.isInputFilled()) {
+                    int puzzleNo = gameState.getCurrentPuzzleNo();
+                    progressState.increaseAttempt(true, puzzleNo);
+                  }
                 }
               ), 
 
@@ -386,14 +464,27 @@ class MainGameScreenState extends State<MainGameScreen>
               // OTHER CONTROLS 
               OtherControls(
                 onRemoveExtraCharacter: () {
-                  debugPrint("Removing extra character."); 
+                  debugPrint("Removing extra character.");
+                  setState(() {
+                    modalContent = createRemoveExtraCharacterModal(context);
+                    mainModal.currentState?.show(); 
+                  }); 
                 }, 
                 onRevealACharacter: () {
                   debugPrint("Revealing a character.");
+                  setState(() {
+                    modalContent = createRevealACharacterModal(context); 
+                    mainModal.currentState?.show(); 
+                  });
                 }, 
                 onRemoveExtraCharacters: () {
                   debugPrint("Removing extra characters.");
-                }
+                  setState(() {
+                    modalContent = createRemoveExtraCharactersModal(context);
+                    mainModal.currentState?.show(); 
+                  });
+                },
+                attempts: progressState.progressState.progress[puzzleNo - 1].attempts
               )
             ]
           )
@@ -402,7 +493,7 @@ class MainGameScreenState extends State<MainGameScreen>
         // BOTTOMBAR SECTION
         const BottomBackBar(
           title: "BACK TO LEVEL SELECTION SCREEN",
-          target: LevelSelectorScreen(), 
+          target: LevelSelectorScreen()
         ) 
       ]
   );

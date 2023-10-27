@@ -98,10 +98,10 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
         SisilCharSymbolNoLabels().createR(size, size),
 
         // S 
-        SisilCharSymbolNoLabels().createRa(size, size),
-        SisilCharSymbolNoLabels().createReRi(size, size),  
-        SisilCharSymbolNoLabels().createRoRu(size, size),  
-        SisilCharSymbolNoLabels().createR(size, size),
+        SisilCharSymbolNoLabels().createSa(size, size),
+        SisilCharSymbolNoLabels().createSeSi(size, size),  
+        SisilCharSymbolNoLabels().createSoSu(size, size),  
+        SisilCharSymbolNoLabels().createS(size, size),
 
         // T
         SisilCharSymbolNoLabels().createTa(size, size),
@@ -196,10 +196,10 @@ class CharSymbolPreviewerScreenState extends State<CharSymbolPreviewerScreen>
         SisilCharSymbolWithLabels().createR(size, size),
 
         // S 
-        SisilCharSymbolWithLabels().createRa(size, size),
-        SisilCharSymbolWithLabels().createReRi(size, size),  
-        SisilCharSymbolWithLabels().createRoRu(size, size),  
-        SisilCharSymbolWithLabels().createR(size, size),
+        SisilCharSymbolWithLabels().createSa(size, size),
+        SisilCharSymbolWithLabels().createSeSi(size, size),  
+        SisilCharSymbolWithLabels().createSoSu(size, size),  
+        SisilCharSymbolWithLabels().createS(size, size),
 
         // T
         SisilCharSymbolWithLabels().createTa(size, size),

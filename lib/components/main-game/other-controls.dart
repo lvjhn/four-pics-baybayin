@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/components/main-game/hint-button.dart';
+import 'package:four_pics_baybayin/state/progress-state.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart'; 
 
 class OtherControls extends StatefulWidget 
@@ -8,12 +9,14 @@ class OtherControls extends StatefulWidget
     super.key,
     required this.onRemoveExtraCharacter, 
     required this.onRevealACharacter, 
-    required this.onRemoveExtraCharacters
+    required this.onRemoveExtraCharacters, 
+    required this.attempts
   });
 
   final Function onRemoveExtraCharacter; 
   final Function onRevealACharacter; 
   final Function onRemoveExtraCharacters;
+  final int attempts;
 
   @override 
   State<OtherControls> createState() => OtherControlsState(); 
@@ -71,10 +74,10 @@ class OtherControlsState extends State<OtherControls>
                 bottomLeft: Radius.circular(3), 
               )
             ),
-            child: const Center( 
+            child: Center( 
               child: Text(
-                "5",
-                style: TextStyle(
+                widget.attempts.toString(),
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 12,
                   color: Colors.white

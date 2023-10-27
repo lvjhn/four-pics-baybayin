@@ -48,9 +48,12 @@ Future<void> main() async {
   gameState.preSave(); 
   progressState.preSave();
 
+
   uiState.loadSetings();
   progressState.load(); 
   gameState.load();
+
+  gameState.preparePuzzleStates();
 
   // Preload Images
   WidgetsFlutterBinding.ensureInitialized();
@@ -87,7 +90,7 @@ class RootState extends State<Root>
         theme: ThemeData(
           fontFamily: "Lexend"
         ),  
-        home: const MainGameScreen( ) // uiState.currentScreen
+        home: const LevelSelectorScreen( ) // uiState.currentScreen
       )
     );
   }
