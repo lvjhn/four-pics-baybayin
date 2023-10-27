@@ -2,9 +2,13 @@ import 'dart:core';
 
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/helpers/globals.dart';
+import 'package:four_pics_baybayin/helpers/reset-game-data.dart';
 import 'package:four_pics_baybayin/screens/level-selector.dart';
+import 'package:four_pics_baybayin/screens/main-game.dart';
 import 'package:four_pics_baybayin/screens/main-menu.dart';
 import 'package:four_pics_baybayin/screens/settings.dart';
+import 'package:four_pics_baybayin/state/game-state.dart';
+import 'package:four_pics_baybayin/state/progress-state.dart';
 import 'package:get_storage/get_storage.dart'; 
 import 'package:provider/provider.dart';
 import 'package:four_pics_baybayin/helpers/load-image.dart';
@@ -39,7 +43,14 @@ List<String> preloads = [
 Future<void> main() async {
   await GetStorage.init();
 
+  resetGameData();
+
+  gameState.preSave(); 
+  progressState.preSave();
+
   uiState.loadSetings();
+  progressState.load(); 
+  gameState.load();
 
   // Preload Images
   WidgetsFlutterBinding.ensureInitialized();
@@ -68,13 +79,15 @@ class RootState extends State<Root>
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => uiState)
+        ChangeNotifierProvider(create: (context) => uiState),
+        ChangeNotifierProvider(create: (context) => gameState),
+        ChangeNotifierProvider(create: (context) => progressState)
       ],
       child: MaterialApp(
         theme: ThemeData(
           fontFamily: "Lexend"
         ),  
-        home: const LevelSelectorScreen( ) // uiState.currentScreen
+        home: const MainGameScreen( ) // uiState.currentScreen
       )
     );
   }

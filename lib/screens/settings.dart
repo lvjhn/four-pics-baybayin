@@ -33,7 +33,6 @@ class SettingsScreenState extends State<SettingsScreen>
   late Image logoImage; 
   
   GlobalKey<ModalContainerState> mainModal = GlobalKey<ModalContainerState>();
-  
   late Widget modalContent;
 
   List<int> durations = [500, 1000, 1500]; 
@@ -60,6 +59,7 @@ class SettingsScreenState extends State<SettingsScreen>
                   child: ModalContainer(
                     key: (() => mainModal)(),
                     modalContent: modalContent,
+                    isShown: false,
                     child: ListView(
                       padding: EdgeInsets.zero,
                       children: [

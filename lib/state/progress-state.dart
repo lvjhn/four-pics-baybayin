@@ -9,11 +9,11 @@ class PuzzleProgress
   late String solvedOn; 
 
   PuzzleProgress(
-    int attempts,
-    String solvedOn
+    this.attempts,
+    this.solvedOn
   );
 
-  PuzzleProgress.toJSON(Map<String, dynamic> json)
+  PuzzleProgress.fromJSON(Map<String, dynamic> json)
       : attempts = json['attempts'] as int,
         solvedOn = json['solvedOn'] as String;
 
@@ -25,14 +25,14 @@ class PuzzleProgress
 
 class PuzzleProgressesState
 {
-  late List<PuzzleProgress> progress; 
+  late List<dynamic> progress; 
 
   PuzzleProgressesState(
-    List<PuzzleProgress> progress
+    this.progress
   );
   
-  PuzzleProgressesState.toJSON(Map<String, dynamic> json)
-      : progress = json["progress"] as List<PuzzleProgress>;
+  PuzzleProgressesState.fromJSON(Map<String, dynamic> json)
+      : progress = json["progress"] as List<dynamic>;
 
   Map<String, dynamic> toJson() => {
     "progress" : progress
@@ -44,6 +44,10 @@ class ProgressState extends ChangeNotifier
   late PuzzleProgressesState progressState;
 
   ProgressState() {
+    init();
+  }
+
+  void init() {
     List<PuzzleProgress> progressDefaults = [];
 
     for(int i = 0; i < 200; i++) {
@@ -60,7 +64,32 @@ class ProgressState extends ChangeNotifier
 
   void load() {
     final storage = GetStorage();
-    progressState = 
-      jsonDecode(storage.read("progress-state")) as PuzzleProgressesState;
+
+    var progressStateMap = 
+      jsonDecode(storage.read("progress-state")) as Map<String, dynamic>;
+    progressState =  
+      PuzzleProgressesState.fromJSON(progressStateMap); 
+
+  }
+
+  void preSave() {
+    final storage = GetStorage();
+    if(storage.read("progress-state") == Null) {
+      return;
+    }
+    save();
+  }
+
+  void clear() {
+    final storage = GetStorage(); 
+    storage.remove("progress-state"); 
+  }
+
+  void reset() {
+    clear(); 
+    init(); 
+    save();
   }
 }
+
+var progressState = ProgressState();

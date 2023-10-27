@@ -71,6 +71,7 @@ class PuzzleSelectorState extends State<PuzzleSelector>
                   correctWord: "SALITA",
                   onSelect: () {
                     playSound("click-1");
+                    widget.onSelect(0);
                   }
                 )  
               ), 
@@ -87,6 +88,7 @@ class PuzzleSelectorState extends State<PuzzleSelector>
                   correctWord: "SALITA",
                   onSelect: () {
                     playSound("click-1");
+                    widget.onSelect(1);
                   }
                 )  
               )
@@ -107,6 +109,7 @@ class PuzzleSelectorState extends State<PuzzleSelector>
                   correctWord: "SALITA",
                   onSelect: () {
                     playSound("click-1");
+                    widget.onSelect(2);
                   }
                 )  
               ), 
@@ -123,6 +126,7 @@ class PuzzleSelectorState extends State<PuzzleSelector>
                   correctWord: "SALITA",
                   onSelect: () {
                     playSound("click-1");
+                    widget.onSelect(3);
                   }
                 )  
               )

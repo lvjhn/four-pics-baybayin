@@ -76,20 +76,20 @@ class CharacterDefinitions
       "m"  : () => charSymbolSet.createM(width, height), 
 
       // N
-      "Na" : () => charSymbolSet.createNa(width, height), 
-      "Ne" : () => charSymbolSet.createNeNi(width, height), 
-      "Ni" : () => charSymbolSet.createNeNi(width, height), 
-      "No" : () => charSymbolSet.createNoNu(width, height), 
-      "Nu" : () => charSymbolSet.createNoNu(width, height), 
-      "N"  : () => charSymbolSet.createN(width, height), 
+      "na" : () => charSymbolSet.createNa(width, height), 
+      "ne" : () => charSymbolSet.createNeNi(width, height), 
+      "ni" : () => charSymbolSet.createNeNi(width, height), 
+      "no" : () => charSymbolSet.createNoNu(width, height), 
+      "nu" : () => charSymbolSet.createNoNu(width, height), 
+      "n"  : () => charSymbolSet.createN(width, height), 
 
       // P 
-      "Pa" : () => charSymbolSet.createPa(width, height), 
-      "Pe" : () => charSymbolSet.createPePi(width, height), 
-      "Pi" : () => charSymbolSet.createPePi(width, height), 
-      "Po" : () => charSymbolSet.createPoPu(width, height), 
-      "Pu" : () => charSymbolSet.createPoPu(width, height), 
-      "P"  : () => charSymbolSet.createP(width, height), 
+      "pa" : () => charSymbolSet.createPa(width, height), 
+      "pe" : () => charSymbolSet.createPePi(width, height), 
+      "pi" : () => charSymbolSet.createPePi(width, height), 
+      "po" : () => charSymbolSet.createPoPu(width, height), 
+      "pu" : () => charSymbolSet.createPoPu(width, height), 
+      "p"  : () => charSymbolSet.createP(width, height), 
 
       // R
       "ra" : () => charSymbolSet.createRa(width, height), 

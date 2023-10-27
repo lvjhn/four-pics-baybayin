@@ -1,89 +1,79 @@
-import 'dart:async';
-
-import 'package:animate_do/animate_do.dart';
-import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:four_pics_baybayin/char-symbols/@base.dart';
-import 'package:four_pics_baybayin/char-symbols/deko.dart';
-import 'package:four_pics_baybayin/char-symbols/robotika.dart';
-import 'package:four_pics_baybayin/char-symbols/sarimanok.dart';
-import 'package:four_pics_baybayin/char-symbols/sejong.dart';
-import 'package:four_pics_baybayin/char-symbols/sisil.dart';
-import 'package:four_pics_baybayin/components/general/four-images.dart';
-import 'package:four_pics_baybayin/components/level-selector/puzzle-selection-card.dart';
-import 'package:four_pics_baybayin/components/level-selector/puzzle-selector.dart';
-import 'package:four_pics_baybayin/components/topbar/back-bar.dart';
-import 'package:four_pics_baybayin/components/general/box-select.dart';
-import 'package:four_pics_baybayin/components/general/custom-switch.dart';
+import 'package:four_pics_baybayin/components/backdrop/bgi-box.dart';
 import 'package:four_pics_baybayin/components/backdrop/modal-container.dart';
 import 'package:four_pics_baybayin/components/backdrop/modal-dialog.dart';
-import 'package:four_pics_baybayin/helpers/audio-player.dart';
-import 'package:four_pics_baybayin/components/backdrop/bgi-box.dart';
+import 'package:four_pics_baybayin/components/bottombar/bottom-back-bar.dart';
+import 'package:four_pics_baybayin/components/general/four-images.dart';
+import 'package:four_pics_baybayin/components/main-game/input-word.dart';
+import 'package:four_pics_baybayin/components/main-game/other-controls.dart';
+import 'package:four_pics_baybayin/components/main-game/symbol-selector.dart';
 import 'package:four_pics_baybayin/components/topbar/game-bar.dart';
-import 'package:four_pics_baybayin/helpers/goto.dart';
-import 'package:four_pics_baybayin/screens/main-game.dart';
-import 'package:four_pics_baybayin/screens/main-menu.dart';
+import 'package:four_pics_baybayin/data/CharacterDefinitions.dart';
+import 'package:four_pics_baybayin/data/LevelDefinitions.dart';
+import 'package:four_pics_baybayin/helpers/audio-player.dart';
+import 'package:four_pics_baybayin/screens/level-selector.dart';
 import 'package:four_pics_baybayin/state/game-state.dart';
+import 'package:four_pics_baybayin/state/progress-state.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
-import 'package:provider/provider.dart'; 
+import 'package:provider/provider.dart';
 
-class LevelSelectorScreen extends StatefulWidget 
+class MainGameScreen extends StatefulWidget 
 {
-  const LevelSelectorScreen({super.key});
+  const MainGameScreen({super.key});
 
   @override 
-  State<LevelSelectorScreen> createState() => LevelSelectorScreenState();
+  State<MainGameScreen> createState() => MainGameScreenState();
 }
 
-class LevelSelectorScreenState extends State<LevelSelectorScreen>
+class MainGameScreenState extends State<MainGameScreen>
 {
-  late Image logoImage; 
+  GlobalKey<ModalContainerState> mainModal = GlobalKey<ModalContainerState>();
+  late Widget modalContent;
   
-  int value = 0;
+  @override 
+  void initState() {
+    super.initState();
+    modalContent = createRemoveAllCharactersModal(context);
+  }
+
+  Widget showGameLayers(BuildContext context) {
+    return Stack(
+      children: [
+        createMainLayer()
+      ]
+    );
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Consumer<UIState>(
-        builder: (context, uiState, child) {
+      body: Consumer3<UIState, GameState, ProgressState>(
+        builder: (context, uiState, gameState, progressState, child) {
           return BGIBox( 
             child: Stack(
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // GAMEBAR SECTION
                     const GameBar(isHomeIconVisible: true),
-                  
-                    // HEADER SECTION 
-                    createHeaderSection(context), 
-                    
-                    Expanded( 
-                      child: Center(
-                        child: Container(
-                          width: 325, 
-                          child: FittedBox(
-                            child: PuzzleSelector(
-                              level: gameState.currentLevel, 
-                              onSelect: (int i) {
-                                gameState.setCurrentPuzzle(i); 
-                                debugPrint("hello");
-                                goto(context, const MainGameScreen());
-                              }
-                            )
-                          )
-                        )
+
+                    // MAIN GAME SECTION 
+                    Expanded(
+                      child: ModalContainer(
+                        key: mainModal, 
+                        modalContent: modalContent,
+                        isShown: false,
+                        child: showGameLayers(context)
                       )
                     ),
 
-                    // // PUZZLE SELECTION SECTION
-                    // const Expanded(
-                    //   child: Text("<TODO : PUZZLE-SELECTION-SECTION>")
-                    // ),
-
-                    
-                    
+                    // BOTTOMBAR SECTION
+                    const BottomBackBar(
+                      title: "BACK TO LEVEL SELECTION SCREEN",
+                      target: LevelSelectorScreen(), 
+                    ) 
                   ]
-                ),
-                createCompletionIndicator(context)
+                )
               ]
             )
           );
@@ -295,5 +285,104 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
         )
       )
     );
+  }
+
+  Widget createRemoveAllCharactersModal(BuildContext context) {
+    return ModalDialog(
+      width: 300, 
+      title: "SUCCESSFULLY RESET DATA",
+      container: mainModal,
+      child:  Container(
+        margin: const EdgeInsets.all(14), 
+        child: const Center(
+          child: Text("Game data has been reset successfully.")
+        )
+      ),
+    );
+  }
+
+  Widget createMainLayer() {
+  
+    gameState.preparePuzzleState(false);
+
+    int puzzleNo = 
+      gameState.getCurrentPuzzleNo();
+    
+    String currentWord = 
+      gameState.getCurrentWord();
+
+    String syllablesString = 
+      LevelDefinitions.levels[gameState.getCurrentPuzzleNo() - 1]["syllables"]!;
+
+    List<String> correctSyllables = syllablesString.split("-");
+    List<String> currentPuzzleInput = gameState.getCurrentPuzzleInput(); 
+    List<String> currentSymbols = gameState.getCurrentPuzzleSymbols();
+
+    GlobalKey<InputWordState> inputWord = GlobalKey<InputWordState>();
+
+    debugPrint(currentPuzzleInput.toString());
+  
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        
+        // IMAGE SECTION
+        FourImages(
+          image1: "assets/puzzles/$puzzleNo.1-$currentWord.jpeg", 
+          image2: "assets/puzzles/$puzzleNo.2-$currentWord.jpeg", 
+          image3: "assets/puzzles/$puzzleNo.3-$currentWord.jpeg", 
+          image4: "assets/puzzles/$puzzleNo.4-$currentWord.jpeg", 
+          width: 280
+        ), 
+
+        const SizedBox(height: 40),
+
+        // INPUT WORD 
+        InputWord(
+          key: inputWord,
+          tileFont: uiState.getCurrentTileFont(),
+          correct: correctSyllables, 
+          current: currentPuzzleInput,
+          locations: [6, -1, 2], 
+          onRemove: (int index, String character, int location) {
+            debugPrint("Index: $index, Character: $character");
+          },
+          onCorrect: () {
+
+          },
+          onInvalid: () {
+
+          }, 
+        ), 
+
+        // ElevatedButton(
+        //   onPressed: () {
+        //     playSound("error");
+        //     inputWord.currentState?.shake();
+        //   }, 
+        //   child: const Text("Shake Input Word")
+        // ), 
+
+        const SizedBox(height: 60),
+
+        // SYMBOL SELECTION 
+        SymbolSelector(
+          tileFont: uiState.getCurrentTileFont(),
+          characters: currentSymbols,
+          onSelect: () {
+
+          }
+        ), 
+
+        const SizedBox(height: 20),
+
+        // OTHER CONTROLS 
+        OtherControls(
+
+        )
+      ]
+  );
+
   }
 }

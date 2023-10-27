@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:four_pics_baybayin/char-symbols/@base.dart';
 import 'package:four_pics_baybayin/char-symbols/deko.dart';
 import 'package:four_pics_baybayin/char-symbols/robotika.dart';
 import 'package:four_pics_baybayin/char-symbols/sarimanok.dart';
@@ -12,7 +13,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UIState extends ChangeNotifier {
-  Color charSymbolBackgroundColor = Color.fromRGBO(234, 234, 234, 0.9);
+  Color charSymbolBackgroundColor = Colors.white;
   Color charSymbolLabelColor = Colors.black;
 
   Widget currentScreen = const SplashScreen();
@@ -47,6 +48,11 @@ class UIState extends ChangeNotifier {
   int backgroundPattern = 0;
   int tileFont = 0;
   /** ===================== */
+
+  CharSymbolBase getCurrentTileFont() {
+    int hasLabelIndex = uiState.flags["showCharacterLabels"]! ? 1 : 0;
+    return uiState.tilesets[uiState.tileFont][hasLabelIndex];
+  }
 
   void enableFlag(String flag) {
     flags[flag] = true;
@@ -84,10 +90,14 @@ class UIState extends ChangeNotifier {
     final storage = GetStorage();
 
     storage.write(
-        'enableSoundEffects', flags["enableSoundEffects"]! ? "true" : "false");
+      'enableSoundEffects', 
+      flags["enableSoundEffects"]! ? "true" : "false"
+    );
 
-    storage.write('showCharacterLabels',
-        flags["showCharacterLabels"]! ? "true" : "false");
+    storage.write(
+      'showCharacterLabels',
+      flags["showCharacterLabels"]! ? "true" : "false"
+    );
 
     storage.write('tileFont', tileFont.toString());
 
@@ -108,6 +118,14 @@ class UIState extends ChangeNotifier {
     tileFont = int.parse(storage.read("tileFont") ?? "0");
 
     backgroundPattern = int.parse(storage.read("backgroundPattern") ?? "0");
+  }
+
+  void reset() {
+    final storage = GetStorage();
+    storage.remove("showCharacterLabels");
+    storage.remove("enableSoundEffects"); 
+    storage.remove("backgroundPattern"); 
+    storage.remove("tileFont");
   }
 }
 

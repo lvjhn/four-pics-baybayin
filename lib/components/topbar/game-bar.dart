@@ -4,6 +4,7 @@ import 'package:four_pics_baybayin/components/general/status-indicator.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
 import 'package:four_pics_baybayin/screens/main-menu.dart';
 import 'package:four_pics_baybayin/screens/settings.dart';
+import 'package:four_pics_baybayin/state/game-state.dart';
 
 
 class GameBar extends StatefulWidget 
@@ -51,13 +52,13 @@ class GameBarState extends State<GameBar>
           StatusIndicator(
             key: levelSI,
             icon: Image.asset("assets/icons/icon-medal.png", width: 40),
-            value: 3 
+            value: gameState.currentLevel
           ),
           const SizedBox(width: 5),
           StatusIndicator(
             key: coinSI,
             icon: Image.asset("assets/icons/icon-coin.png", width: 40),
-            value: 3
+            value: gameState.coins
           ),
 
           // ElevatedButton(

@@ -7,11 +7,13 @@ class ModalContainer extends StatefulWidget
   const ModalContainer({ 
     super.key,
     required this.child,
-    required this.modalContent
+    required this.modalContent, 
+    this.isShown = true
   });
 
   final Widget child;
   final Widget modalContent;
+  final bool isShown;
 
   @override 
   State<ModalContainer> createState() => ModalContainerState(); 
@@ -19,7 +21,13 @@ class ModalContainer extends StatefulWidget
 
 class ModalContainerState extends State<ModalContainer> 
 {
-  bool isVisible = false; 
+  late bool isVisible;
+
+  @override 
+  void initState() {
+    super.initState();
+    isVisible = widget.isShown;
+  }
 
   void hide() { 
     setState(() { isVisible = false; });
@@ -38,7 +46,7 @@ class ModalContainerState extends State<ModalContainer>
           visible: isVisible,
           child: Container(
             width: double.infinity,
-            height: double.infinity,
+            height: double.maxFinite,
             decoration: const BoxDecoration(
               color: Color.fromRGBO(0, 0, 0, 0.9)
             ),
