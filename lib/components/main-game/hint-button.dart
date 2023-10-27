@@ -9,12 +9,14 @@ class HintButton extends StatefulWidget
     super.key,
     required this.color,
     required this.label,
-    required this.action
+    required this.action, 
+    required this.enabled
   });
 
   final Color color; 
   final String label;
   final Function action;
+  final bool enabled;
 
   @override 
   State<HintButton> createState() => HintButtonState(); 
@@ -31,14 +33,16 @@ class HintButtonState extends State<HintButton>
         setState(() { isTapped = true; });
       }, 
       onTapUp: (TapUpDetails tapUpDetails) {
-        setState(() { isTapped = false; });
-        widget.action();
+        if(widget.enabled) {
+          setState(() { isTapped = false; });
+          widget.action();
+        }
       },
       child: Container(
         width: 40, 
         height: 40,
         decoration: BoxDecoration(
-          color: widget.color,
+          color: widget.enabled ? widget.color : Colors.grey,
           borderRadius: BorderRadius.circular(5),
           boxShadow: [
             BoxShadow(

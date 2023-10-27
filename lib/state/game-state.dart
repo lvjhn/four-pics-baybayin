@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:four_pics_baybayin/components/topbar/game-bar.dart';
 import 'package:four_pics_baybayin/data/LevelDefinitions.dart';
 import 'package:get_storage/get_storage.dart'; 
 
@@ -11,12 +12,14 @@ class PuzzleState
   late List<String> symbols;
   late List<String> input;
   late List<int> locations;
+  late List<bool> fixed;
 
   PuzzleState(
     this.puzzleNo, 
     this.symbols, 
     this.input,
-    this.locations
+    this.locations,
+    this.fixed
   );
 
   PuzzleState.fromJson(Map<String, dynamic> json)
@@ -32,6 +35,10 @@ class PuzzleState
         locations = 
           List<dynamic>.from(json['locations'])
             .map<int>((i) => int.parse(i))
+            .toList(),
+        fixed = 
+          List<dynamic>.from(json['fixed'])
+            .map<bool>((i) => bool.parse(i))
             .toList();
 
   Map<String, dynamic> toJson() {
@@ -39,7 +46,8 @@ class PuzzleState
       "puzzleNo" : puzzleNo,
       'symbols'  : symbols,
       'input'    : input, 
-      'locations' : locations
+      'locations' : locations,
+      'fixed'    : fixed
     };
   }
 }
@@ -87,18 +95,17 @@ class GameState extends ChangeNotifier
   void init() {
     currentLevel = 1;
     currentPuzzle = 1;
-    coins = 100;
+    coins = 1000;
     puzzles = PuzzlesState(
-      PuzzleState(1, [], [], []),
-      PuzzleState(2, [], [], []),
-      PuzzleState(3, [], [], []),
-      PuzzleState(4, [], [], [])
+      PuzzleState(1, [], [], [], []),
+      PuzzleState(2, [], [], [], []),
+      PuzzleState(3, [], [], [], []),
+      PuzzleState(4, [], [], [], [])
     );
   }
 
   void setCurrentPuzzle(int puzzleNo) {
     currentPuzzle = puzzleNo;
-    notifyListeners();
   }
 
   int getPuzzleNo(int i) {
@@ -170,11 +177,33 @@ class GameState extends ChangeNotifier
     return syllables[Random().nextInt(syllables.length)];
   }
 
+  int countEmptySymbols() {
+    int count = 0; 
+    List<String> symbols = getCurrentPuzzleState().symbols;
+    for(int i = 0; i < symbols.length; i++) {
+      if(symbols[i] == "-") {
+        count += 1;
+      }
+    }
+    return count;
+  }
+
+  bool matchingSymbolsToSyllables() {
+    List<String> syllables = getCurrentSyllables();
+    List<String> symbols = getCurrentPuzzleState().symbols;
+    for(int i = 0; i < symbols.length; i++) {
+      if(symbols[i] == "-") continue;
+      if(syllables.contains(symbols[i]) == false) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   void preparePuzzleState(bool notify, PuzzleState state) {
     PuzzleState puzzleState = state; 
 
     if(puzzleState.input.isEmpty) {
-      
       puzzleState.input = [];
       puzzleState.locations = [];
 
@@ -183,6 +212,7 @@ class GameState extends ChangeNotifier
       for(int i = 0; i < getCurrentSyllables().length; i++) {
         puzzleState.input.add("-");
         puzzleState.locations.add(-1);
+        puzzleState.fixed.add(false);
       } 
       
       puzzleState.symbols = generateSymbolSet();
@@ -209,6 +239,24 @@ class GameState extends ChangeNotifier
     preparePuzzleState(false, puzzles.puzzleD);
   }
 
+  void decreaseCoins(int amount, GlobalKey<GameBarState> gameBar) {
+    coins -= amount; 
+    gameBar.currentState?.coinSI?.currentState?.setValue(coins);
+    Future.delayed(const Duration(milliseconds: 550), () {
+      save();
+      notifyListeners();
+    });
+  }
+
+  void increaseCoins(int amount, GlobalKey<GameBarState> gameBar) {
+    coins += amount; 
+    gameBar.currentState?.coinSI?.currentState?.setValue(coins);
+    Future.delayed(const Duration(milliseconds: 550), () {
+      save();
+      notifyListeners();
+    });
+  }
+
   List<String> generateSymbolSet() {
     List<String> symbols = [];
     List<String> syllables = getCurrentSyllables();
@@ -227,18 +275,35 @@ class GameState extends ChangeNotifier
     return symbols; 
   }
 
-  void selectSymbol(int index, String character) {
+  void selectSymbol(
+    int index, 
+    String character, 
+    { 
+      bool toInput = true, 
+      bool isFixed = false,
+      int toSlot = -1
+    }
+  ) {
     getCurrentPuzzleState().symbols[index] = "-";
 
-    for(int i = 0; i < getCurrentPuzzleInput().length;i ++) {
-      if(getCurrentPuzzleInput()[i] == "-") {
-        getCurrentPuzzleState().input[i] = character;
-        getCurrentPuzzleState().locations[i] = index;
-        break;
+    if(toInput && toSlot != - 1) {
+      getCurrentPuzzleState().input[toSlot] = character;
+      getCurrentPuzzleState().locations[toSlot] = index;
+      getCurrentPuzzleState().fixed[toSlot] = isFixed;
+    }
+    else if(toInput) {
+      for(int i = 0; i < getCurrentPuzzleInput().length;i ++) {
+        if(getCurrentPuzzleInput()[i] == "-") {
+          getCurrentPuzzleState().input[i] = character;
+          getCurrentPuzzleState().locations[i] = index;
+          getCurrentPuzzleState().fixed[i] = isFixed;
+          break;
+        }
       }
     }
 
-    notifyListeners();
+    save();
+    inputWordsState.notifyListeners();
   }
 
   void removeInputCharacter(int index) {
@@ -246,7 +311,8 @@ class GameState extends ChangeNotifier
     getCurrentPuzzleState().input[index] = "-"; 
     int location = getCurrentPuzzleState().locations[index]; 
     getCurrentPuzzleState().symbols[location] = character;
-    notifyListeners();
+    save();
+    inputWordsState.notifyListeners();
   }
 
 
@@ -291,4 +357,10 @@ class GameState extends ChangeNotifier
   }
 }
 
+class InputWordsState extends ChangeNotifier 
+{
+  
+}
+
+var inputWordsState = InputWordsState();
 var gameState = GameState();

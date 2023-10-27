@@ -67,7 +67,7 @@ class ProgressState extends ChangeNotifier
       notifyListeners();
     }
   }
-
+  
   void save() {
     final storage = GetStorage();
     storage.write("progress-state", jsonEncode(progressState));

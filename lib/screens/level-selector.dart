@@ -36,7 +36,6 @@ class LevelSelectorScreen extends StatefulWidget
 }
 
 class LevelSelectorScreenState extends State<LevelSelectorScreen>
-  with AutomaticKeepAliveClientMixin
 {
   @override
   bool get wantKeepAlive => true; 
@@ -69,7 +68,6 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                               level: gameState.currentLevel, 
                               onSelect: (int i) {
                                 gameState.setCurrentPuzzle(i); 
-                                debugPrint("hello");
                                 goto(context, const MainGameScreen());
                               }
                             )

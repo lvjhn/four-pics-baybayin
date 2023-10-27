@@ -10,13 +10,20 @@ class OtherControls extends StatefulWidget
     required this.onRemoveExtraCharacter, 
     required this.onRevealACharacter, 
     required this.onRemoveExtraCharacters, 
-    required this.attempts
+    required this.attempts, 
+    required this.enableRemoveExtraCharacter, 
+    required this.enableRevealACharacter, 
+    required this.enableRemoveAllCharacters
   });
 
   final Function onRemoveExtraCharacter; 
   final Function onRevealACharacter; 
   final Function onRemoveExtraCharacters;
   final int attempts;
+
+  final bool enableRemoveExtraCharacter;
+  final bool enableRevealACharacter; 
+  final bool enableRemoveAllCharacters;
 
   @override 
   State<OtherControls> createState() => OtherControlsState(); 
@@ -32,15 +39,15 @@ class OtherControlsState extends State<OtherControls>
         children: [
           createHintButton("A-", Colors.redAccent, () {
             widget.onRemoveExtraCharacter();
-          }), 
+          }, widget.enableRemoveExtraCharacter), 
           const SizedBox(width: 5),
           createHintButton("A+", Colors.blueAccent, () {
             widget.onRevealACharacter();
-          }),
+          }, widget.enableRevealACharacter),
           const SizedBox(width: 5),
           createHintButton("A*", const Color.fromARGB(255, 2, 122, 64), () {
             widget.onRemoveExtraCharacters();
-          }),
+          }, widget.enableRemoveAllCharacters),
           const SizedBox(width: 10),
           createAttemptsIndicator()
         ]
@@ -48,11 +55,12 @@ class OtherControlsState extends State<OtherControls>
     );
   }
 
-  Widget createHintButton(String label, Color color, Function action) {
+  Widget createHintButton(String label, Color color, Function action, bool enabled) {
     return HintButton(
       label: label, 
       color: color,
-      action: action
+      action: action,
+      enabled: enabled
     );
   }
 

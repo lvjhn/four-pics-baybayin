@@ -24,6 +24,7 @@ class MainMenuScreenState extends State<MainMenuScreen>
 {
   late Image logoImage; 
 
+
   List<int> durations = [500, 1000, 1500]; 
   
   @override 

@@ -40,7 +40,7 @@ class BoxSelectState extends State<BoxSelect>
           ),
           child: InkWell(
             child: widget.items[i],  
-            onTap: () {
+            onTapUp: (TapUpDetails tapUpDetails) {
               widget.onChange!(i);
             }
           )

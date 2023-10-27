@@ -21,21 +21,21 @@ class CostSpecifierState extends State<CostSpecifier>
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          width: 45, 
+        Container( 
           decoration: const BoxDecoration(
             color: Color.fromARGB(255, 48, 44, 44),
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(3), 
               bottomLeft: Radius.circular(3), 
-            )
+            ),
           ),
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           child: const Center( 
             child: Text(
               "COST",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 12,
+                fontSize: 16,
                 color: Colors.white
               )
             )
@@ -50,13 +50,24 @@ class CostSpecifierState extends State<CostSpecifier>
               bottomRight: Radius.circular(3), 
             )
           ),
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           child: Center( 
-            child: Text(
-              widget.cost.toString(),
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 11
-              )
+            child: Row( 
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  widget.cost.toString(),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16
+                  )
+                ),
+                const SizedBox(width: 2.5),
+                Image.asset(
+                  "assets/icons/icon-coin.png",
+                  height: 16
+                )
+              ]
             )
           )
         )

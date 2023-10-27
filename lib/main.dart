@@ -84,13 +84,14 @@ class RootState extends State<Root>
       providers: [
         ChangeNotifierProvider(create: (context) => uiState),
         ChangeNotifierProvider(create: (context) => gameState),
-        ChangeNotifierProvider(create: (context) => progressState)
+        ChangeNotifierProvider(create: (context) => progressState), 
+        ChangeNotifierProvider(create: (context) => inputWordsState)
       ],
       child: MaterialApp(
         theme: ThemeData(
           fontFamily: "Lexend"
         ),  
-        home: const LevelSelectorScreen( ) // uiState.currentScreen
+        home: const SplashScreen( ) // uiState.currentScreen
       )
     );
   }

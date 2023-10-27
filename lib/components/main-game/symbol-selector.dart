@@ -37,7 +37,6 @@ class SymbolSelectorState extends State<SymbolSelector>
   Widget build(BuildContext context) {
     double spacing = 5;
 
-    debugPrint(gameState.getCurrentPuzzleSymbols().toString());
 
     return Container(
       child: Column(

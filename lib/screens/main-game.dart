@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/components/backdrop/bgi-box.dart';
 import 'package:four_pics_baybayin/components/backdrop/modal-container.dart';
@@ -5,6 +8,7 @@ import 'package:four_pics_baybayin/components/backdrop/modal-dialog.dart';
 import 'package:four_pics_baybayin/components/bottombar/bottom-back-bar.dart';
 import 'package:four_pics_baybayin/components/general/four-images.dart';
 import 'package:four_pics_baybayin/components/main-game/cost-specifier.dart';
+import 'package:four_pics_baybayin/components/main-game/hint-modal.dart';
 import 'package:four_pics_baybayin/components/main-game/input-word.dart';
 import 'package:four_pics_baybayin/components/main-game/other-controls.dart';
 import 'package:four_pics_baybayin/components/main-game/symbol-selector.dart';
@@ -34,6 +38,8 @@ class MainGameScreenState extends State<MainGameScreen>
 
   GlobalKey<ModalContainerState> mainModal = GlobalKey<ModalContainerState>();
   late Widget modalContent;
+
+  var gameBar = GlobalKey<GameBarState>();
   
   @override 
   void initState() {
@@ -60,7 +66,7 @@ class MainGameScreenState extends State<MainGameScreen>
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // GAMEBAR SECTION
-                    const GameBar(isHomeIconVisible: true),
+                    GameBar(key: gameBar, isHomeIconVisible: true),
 
                     // MAIN GAME SECTION 
                     Expanded(
@@ -210,6 +216,83 @@ class MainGameScreenState extends State<MainGameScreen>
       )
     );
   }
+
+  void removeExtraCharacter() {
+    debugPrint("Removing extra character...");
+    List<String> input = gameState.getCurrentPuzzleState().input;
+    List<String> syllables = gameState.getCurrentSyllables();
+    List<String> symbols = gameState.getCurrentPuzzleState().symbols;
+    List<int> validIndices = [];
+    for(int i = 0; i < symbols.length; i++) {
+      String symbol = symbols[i];
+      debugPrint("Checking $symbol...");
+      if(syllables.contains(symbol) == false) {
+        validIndices.add(i);
+      }
+    }
+    debugPrint("Syllables: " + syllables.toString());
+    debugPrint("Symbols: " + symbols.toString());
+    debugPrint("Valid indices: " + validIndices.toString());
+    int removeIndex = validIndices[Random().nextInt(validIndices.length)];
+    gameState.selectSymbol(removeIndex, symbols[removeIndex], toInput: false );
+  }
+
+  void revealACharacter() {
+    debugPrint("Revealing a character...");
+    List<String> input = gameState.getCurrentPuzzleState().input;
+    List<String> syllables = gameState.getCurrentSyllables();
+    List<String> symbols = gameState.getCurrentPuzzleState().symbols;
+
+    List<int> validIndices = [];
+
+    for(int i = 0; i < symbols.length; i++) {
+      String symbol = symbols[i];
+      debugPrint("Checking $symbol...");
+      if(syllables.contains(symbol) == true) {
+        validIndices.add(i);
+      }
+    }
+
+    int removeIndex = validIndices[Random().nextInt(validIndices.length)];
+
+    int slotIndex = -1; 
+
+    for(int i = 0; i < syllables.length; i++) {
+      if(syllables[i] == symbols[removeIndex]) {
+        slotIndex = i;
+      }
+    }
+
+    gameState.selectSymbol(
+      removeIndex, 
+      symbols[removeIndex], 
+      toInput: true, 
+      isFixed: true, 
+      toSlot: slotIndex
+    );
+    
+    gameState.selectSymbol(removeIndex, symbols[removeIndex], toInput: false);
+  }
+
+  void removeExtraCharacters() {
+    debugPrint("Removing extra characters..");
+    List<String> input = gameState.getCurrentPuzzleState().input;
+    List<String> syllables = gameState.getCurrentSyllables();
+    List<String> symbols = gameState.getCurrentPuzzleState().symbols;
+    List<int> validIndices = [];
+
+    for(int i = 0; i < symbols.length; i++) {
+      String symbol = symbols[i];
+      debugPrint("Checking $symbol...");
+      if(syllables.contains(symbol) == false) {
+        validIndices.add(i);
+      }
+    }
+
+    for(int i = 0; i < validIndices.length; i++) {
+      gameState.selectSymbol(validIndices[i], symbols[i], toInput: false );
+    }
+  }
   
   Widget createCompletionIndicator(BuildContext context) {
     return Positioned(
@@ -287,90 +370,35 @@ class MainGameScreenState extends State<MainGameScreen>
   }
 
   Widget createRemoveExtraCharacterModal(BuildContext context) {
-    return ModalDialog(
-      width: 300, 
-      title: "REMOVE EXTRA CHARACTER",
+    return HintModal(
+      title: "REMOVE EXTRA CHARACTER", 
+      description: "This will remove a character from the set that is not in the word.",
       container: mainModal,
-      child:  Container(
-        margin: const EdgeInsets.all(14), 
-        child:  Center(
-          child: Column(
-            children: [
-              Container( 
-                margin: const EdgeInsets.all(14),
-                child: const Text(
-                  "This will reveal a character from the set that is in the word."
-                ), 
-              ),
-              const SizedBox(height: 20),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CostSpecifier(cost: 50)
-                ]
-              ),
-              const SizedBox(height: 20),
-              Container( 
-                margin: const EdgeInsets.symmetric(horizontal: 14),
-                child:  Row(
-                  children: [
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: () {
-                          playSound("click-1");
-                          mainModal.currentState!.hide();
-                        },
-                        child: const Text("CANCEL"),
-                      )
-                    ), 
-                    const SizedBox(width: 10),
-                    Expanded( 
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.redAccent
-                        ),
-                        onPressed: () {
-                          playSound("click-1");
-                        },
-                        child: const Text("CONFIRM"),
-                      )
-                    )
-                  ]
-                )
-              ),
-              const SizedBox(height: 14)
-            ]
-          )
-        )
-      ),
+      cost: 50, 
+      mainAction: () { removeExtraCharacter(); }, 
+      gameBar: gameBar
     );
   }
 
   Widget createRevealACharacterModal(BuildContext context) {
-    return ModalDialog(
-      width: 300, 
-      title: "REVEAL A CHARACTER",
+    return HintModal(
+      title: "REVEAL A CHARACTER", 
+      description: "This will reveal a character that is in the word.",
       container: mainModal,
-      child:  Container(
-        margin: const EdgeInsets.all(14), 
-        child: const Center(
-          child: Text("Game data has been reset successfully.")
-        )
-      ),
+      cost: 150, 
+      mainAction: () { revealACharacter(); }, 
+      gameBar: gameBar
     );
   }
 
   Widget createRemoveExtraCharactersModal(BuildContext context) {
-    return ModalDialog(
-      width: 300, 
-      title: "REMOVE EXTRA CHARACTERS",
+    return HintModal(
+      title: "REMOVE EXTRA CHARACTERS", 
+      description: "This will remove extra characters from the set that is in the word.",
       container: mainModal,
-      child:  Container(
-        margin: const EdgeInsets.all(14), 
-        child: const Center(
-          child: Text("Game data has been reset successfully.")
-        )
-      ),
+      cost: 300, 
+      mainAction: () { removeExtraCharacters(); }, 
+      gameBar: gameBar
     );
   }
 
@@ -384,9 +412,6 @@ class MainGameScreenState extends State<MainGameScreen>
     String currentWord = 
       gameState.getCurrentWord();
 
-    debugPrint("Current Puzzle: " + gameState.currentPuzzle.toString());
-    debugPrint("Current Word: " + currentWord);
-
     String syllablesString = 
       LevelDefinitions.levels[gameState.getCurrentPuzzleNo() - 1]["syllables"]!;
 
@@ -396,7 +421,8 @@ class MainGameScreenState extends State<MainGameScreen>
 
     GlobalKey<InputWordState> inputWord = GlobalKey<InputWordState>();
     
-  
+    final locations = gameState.getCurrentPuzzleState().locations;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -417,21 +443,27 @@ class MainGameScreenState extends State<MainGameScreen>
               const SizedBox(height: 40),
 
               // INPUT WORD 
-              InputWord(
-                key: inputWord,
-                tileFont: uiState.getCurrentTileFont(),
-                correct: correctSyllables, 
-                current: currentPuzzleInput,
-                locations: [6, -1, 2], 
-                onRemove: (int index, String character, int location) {
-                  debugPrint("Removing character $location -> $character from input.");
-                  gameState.removeInputCharacter(index);
-                },
-                onCorrect: () {
-                  debugPrint("Correct guess detected");
-                },
-                onInvalid: () {
-                  debugPrint("Invalid guess detected");
+              Consumer<InputWordsState>(
+                builder: (context, inputWordsState, child) {
+                  return InputWord(
+                    key: inputWord,
+                    tileFont: uiState.getCurrentTileFont(),
+                    correct: correctSyllables, 
+                    current: currentPuzzleInput,
+                    locations: locations, 
+                    onRemove: (int index, String character, int location) {
+                      debugPrint("Removing character $location -> $character from input.");
+                      gameState.removeInputCharacter(index);
+                    },
+                    onCorrect: () {
+                      debugPrint("Correct guess detected");
+                    },
+                    onInvalid: () {
+                      debugPrint("Invalid guess detected");
+
+                      // playSound("error");
+                    }
+                  );
                 }
               ), 
 
@@ -446,19 +478,33 @@ class MainGameScreenState extends State<MainGameScreen>
               const SizedBox(height: 60),
 
               // SYMBOL SELECTION 
-              SymbolSelector(
-                tileFont: uiState.getCurrentTileFont(),
-                characters: currentSymbols,
-                onSelect: (int i, String character) {
-                  debugPrint("Selecting symbol $i -> $character");
-                  gameState.selectSymbol(i, character);
-                  if(gameState.isInputFilled()) {
-                    int puzzleNo = gameState.getCurrentPuzzleNo();
-                    progressState.increaseAttempt(true, puzzleNo);
-                  }
-                }
-              ), 
+              Consumer<InputWordsState>(
+                builder: (context, inputWordsState, child) {
+                  return SymbolSelector(
+                    tileFont: uiState.getCurrentTileFont(),
+                    characters: currentSymbols,
+                    onSelect: (int i, String character) {
+                      debugPrint("Selecting symbol $i -> $character");
+                      gameState.selectSymbol(i, character);
+                      debugPrint(gameState.getCurrentPuzzleState().fixed.toString());
 
+                      if(gameState.isInputFilled()) {
+                        if(inputWord.currentState?.isCorrect() == false) {
+                          inputWord.currentState?.shake();
+                          playSound("error");
+                        }
+
+                        Future.delayed(const Duration(milliseconds: 500), (){
+                          int puzzleNo = gameState.getCurrentPuzzleNo();
+                          progressState.increaseAttempt(true, puzzleNo);
+                        });
+                      }
+                    }
+                  );
+                }
+              ),
+
+         
               const SizedBox(height: 20),
 
               // OTHER CONTROLS 
@@ -484,7 +530,44 @@ class MainGameScreenState extends State<MainGameScreen>
                     mainModal.currentState?.show(); 
                   });
                 },
-                attempts: progressState.progressState.progress[puzzleNo - 1].attempts
+               
+                attempts: progressState.progressState.progress[puzzleNo - 1].attempts,
+               
+                enableRemoveExtraCharacter: (() {
+                  int noEmptySymbols = gameState.countEmptySymbols();
+                  List<String> syllables = gameState.getCurrentSyllables();
+                  
+                  bool minimalSymbols = 10 - noEmptySymbols < syllables.length;
+                  bool matchingCharsets = gameState.matchingSymbolsToSyllables();
+                  
+                  debugPrint("Matching Charsets: " + matchingCharsets.toString());
+
+                  if(matchingCharsets || minimalSymbols) {
+                    return false;
+                  } else{
+                    return true;
+                  }
+                })(),
+                enableRevealACharacter: (() {
+                  List<String> syllables = gameState.getCurrentSyllables();
+                  List<String> input = gameState.getCurrentPuzzleInput();
+                  return !listEquals(syllables, input);
+                })(),
+                enableRemoveAllCharacters: (() {
+                  int noEmptySymbols = gameState.countEmptySymbols();
+                  List<String> syllables = gameState.getCurrentSyllables();
+                  
+                  bool minimalSymbols = 10 - noEmptySymbols < syllables.length;
+                  bool matchingCharsets = gameState.matchingSymbolsToSyllables();
+                  
+                  debugPrint("Matching Charsets: " + matchingCharsets.toString());
+
+                  if(matchingCharsets || minimalSymbols) {
+                    return false;
+                  } else{
+                    return true;
+                  }
+                })()
               )
             ]
           )
@@ -494,7 +577,24 @@ class MainGameScreenState extends State<MainGameScreen>
         const BottomBackBar(
           title: "BACK TO LEVEL SELECTION SCREEN",
           target: LevelSelectorScreen()
-        ) 
+        ), 
+
+        Row(
+          children: [
+            ElevatedButton( 
+              onPressed: () {
+                gameState.decreaseCoins(50, gameBar);
+              },
+              child: const Text("-")
+            ),
+            ElevatedButton( 
+              onPressed: () {
+                gameState.increaseCoins(50, gameBar);
+              },
+              child: const Text("+")
+            )
+          ]
+        )
       ]
   );
 

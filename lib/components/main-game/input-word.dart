@@ -45,11 +45,9 @@ class InputWordState extends State<InputWord>
     super.initState(); 
     tileFont = uiState.getCurrentTileFont();
 
-    bool hasChecked = false; 
 
     if (mounted) {
-      if(gameState.isInputFilled() && hasChecked == false) {
-        hasChecked = true;
+      if(gameState.isInputFilled()) {
         checkInput();
       }
     }
@@ -109,9 +107,11 @@ class InputWordState extends State<InputWord>
   Widget createSlot(BuildContext context, int index, String character) {
     return GestureDetector(
       onTap: () {
-        if(character != "-") {
-          playSound("click-1");
-          widget.onRemove(index, character, widget.locations[index]);
+        if(gameState.getCurrentPuzzleState().fixed[index] == false) {
+          if(character != "-") {
+            playSound("click-1");
+            widget.onRemove(index, character, widget.locations[index]);
+          }
         }
       },
       child: Container(
@@ -122,7 +122,9 @@ class InputWordState extends State<InputWord>
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.5),
+              color: gameState.getCurrentPuzzleState().fixed[index] ? 
+                Colors.green :
+                Colors.black.withOpacity(0.5),
               spreadRadius: 2,
               blurRadius: 2,
               offset: const Offset(0, 3)

@@ -97,4 +97,3 @@ class GameBarState extends State<GameBar>
   }
 
 }
-
