@@ -58,8 +58,10 @@ class PuzzleSelectionCardState extends State<PuzzleSelectionCard>
         setState(() { isTapped = true; });
       }, 
       onTapUp: (TapUpDetails tapUpDetails) {
-        setState(() { isTapped = false; });
-        widget.onSelect();
+        if(widget.isSelectable) {
+          setState(() { isTapped = false; });
+          widget.onSelect();
+        }
       },
       child: Container(
         width: widget.width, 
@@ -97,7 +99,8 @@ class PuzzleSelectionCardState extends State<PuzzleSelectionCard>
                     image2: widget.image2, 
                     image3: widget.image3, 
                     image4: widget.image4, 
-                    width: widget.width * 0.8
+                    width: widget.width * 0.8,
+                    selectable: false
                   )
                 ),
                 Positioned(
@@ -133,7 +136,7 @@ class PuzzleSelectionCardState extends State<PuzzleSelectionCard>
       correctWordIndicator = Text(
         widget.correctWord,
         style: const TextStyle(
-          fontSize: 25,
+          fontSize: 20,
           fontWeight: FontWeight.bold
         )
       );

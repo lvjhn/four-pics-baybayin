@@ -42,6 +42,8 @@ dependencies:
   audioplayers: ^5.2.0
   just_audio: ^0.9.35
   get_storage: ^2.1.1
+  intl: ^0.18.1
+  accordion: ^2.6.0
 
 dev_dependencies:
   flutter_test:

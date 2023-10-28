@@ -77,7 +77,7 @@ class SymbolSelectorState extends State<SymbolSelector>
 
   Widget createSymbol(BuildContext context, int index, String character) {
     return GestureDetector(
-      onTap: () {
+      onTapDown: (TapDownDetails details) {
         if(character != "-") {
           playSound("click-1");
           

@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/components/topbar/game-bar.dart';
 import 'package:four_pics_baybayin/data/LevelDefinitions.dart';
+import 'package:four_pics_baybayin/state/progress-state.dart';
 import 'package:get_storage/get_storage.dart'; 
 
 class PuzzleState 
@@ -34,11 +35,11 @@ class PuzzleState
             .toList(), 
         locations = 
           List<dynamic>.from(json['locations'])
-            .map<int>((i) => int.parse(i))
+            .map<int>((i) => int.parse(i.toString()))
             .toList(),
         fixed = 
           List<dynamic>.from(json['fixed'])
-            .map<bool>((i) => bool.parse(i))
+            .map<bool>((i) => bool.parse(i.toString()))
             .toList();
 
   Map<String, dynamic> toJson() {
@@ -121,7 +122,21 @@ class GameState extends ChangeNotifier
   }
 
   List<String> getCurrentSyllables() {
-    return LevelDefinitions.levels[getCurrentPuzzleNo() - 1]["syllables"]!.split("-");
+    return getSyllables(getCurrentPuzzleNo());
+  }
+
+  List<String> getSyllables(int puzzleNo) {
+    var syllables = 
+      LevelDefinitions.levels[puzzleNo - 1]["syllables"]!.split("-");
+
+    for(int i = 0; i < syllables.length; i++) {
+      var syllable = syllables[i];
+      if(syllable.length > 1 && syllable.substring(0, 2) == "ng") {
+        syllables[i] = syllable.replaceFirst("ng", "N");
+      }
+    }
+
+    return syllables;
   }
 
   PuzzleState getCurrentPuzzleState() {
@@ -177,6 +192,8 @@ class GameState extends ChangeNotifier
     return syllables[Random().nextInt(syllables.length)];
   }
 
+  
+
   int countEmptySymbols() {
     int count = 0; 
     List<String> symbols = getCurrentPuzzleState().symbols;
@@ -201,6 +218,7 @@ class GameState extends ChangeNotifier
   }
 
   void preparePuzzleState(bool notify, PuzzleState state) {
+ 
     PuzzleState puzzleState = state; 
 
     if(puzzleState.input.isEmpty) {
@@ -233,9 +251,20 @@ class GameState extends ChangeNotifier
   }
 
   void preparePuzzleStates() {
+    puzzles = PuzzlesState(
+      PuzzleState(1, [], [], [], []),
+      PuzzleState(2, [], [], [], []),
+      PuzzleState(3, [], [], [], []),
+      PuzzleState(4, [], [], [], [])
+    );
+
+    currentPuzzle = 0;
     preparePuzzleState(false, puzzles.puzzleA);
+    currentPuzzle = 1;
     preparePuzzleState(false, puzzles.puzzleB);
+    currentPuzzle = 2;
     preparePuzzleState(false, puzzles.puzzleC);
+    currentPuzzle = 3;
     preparePuzzleState(false, puzzles.puzzleD);
   }
 
@@ -257,13 +286,20 @@ class GameState extends ChangeNotifier
     });
   }
 
+  int computeCurrentPuzzleReward() {
+    int attempts = progressState.forCurrentPuzzle().attempts;
+    return computeRewardForPuzzleAttempt(attempts);
+  }
+
   List<String> generateSymbolSet() {
     List<String> symbols = [];
     List<String> syllables = getCurrentSyllables();
 
+    debugPrint(syllables.toString());
     
     for(int i = 0; i < syllables.length; i++) {
-      symbols.add(syllables[i]);
+      var syllable = syllables[i];
+      symbols.add(syllable);
     }
 
     for(int i = syllables.length; i < 10; i++) {
@@ -271,6 +307,7 @@ class GameState extends ChangeNotifier
     }
 
     symbols.shuffle();
+
 
     return symbols; 
   }
@@ -315,6 +352,42 @@ class GameState extends ChangeNotifier
     inputWordsState.notifyListeners();
   }
 
+  String getWordForPuzzle(int puzzleNo) {
+    return LevelDefinitions.levels[puzzleNo - 1]["word"]!.toUpperCase();
+  }
+
+  int computeRewardForPuzzleAttempt(int attempts) {
+    if(attempts >= 10) {
+      return 5;
+    } else {
+      return [
+        50,
+        45,
+        40,
+        35,
+        30,
+        25,
+        20,
+        15,
+        10
+      ][attempts - 1];
+    }
+  }
+
+  int computeRewardForLevelAttempt(int averageAttempt) {
+    return computeRewardForPuzzleAttempt(averageAttempt) * 4;
+  }
+
+  void moveToNextLevel(notify) {
+    currentLevel += 1; 
+    
+    preparePuzzleStates();
+
+    save();
+    if(notify) {
+      notifyListeners();
+    }
+  }
 
   void save() {
     final storage = GetStorage();
@@ -335,9 +408,9 @@ class GameState extends ChangeNotifier
 
   void preSave() {
     final storage = GetStorage();
-    if(storage.read("game-state") == Null &&
-       storage.read("current-level") == Null && 
-       storage.read("coins") == Null) {
+    if(storage.read("game-state") != Null &&
+       storage.read("current-level") != Null && 
+       storage.read("coins") != Null) {
       return;
     }
     save();
@@ -350,10 +423,13 @@ class GameState extends ChangeNotifier
     storage.remove("coins");
   }
 
-  void reset() {
+  void reset(bool notify) {
     clear(); 
     init(); 
     save();
+    if(notify) {
+      notifyListeners();
+    }
   }
 }
 

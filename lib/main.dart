@@ -43,11 +43,10 @@ List<String> preloads = [
 Future<void> main() async {
   await GetStorage.init();
 
-  resetGameData();
+  // resetGameData();
 
   gameState.preSave(); 
   progressState.preSave();
-
 
   uiState.loadSetings();
   progressState.load(); 
@@ -91,7 +90,8 @@ class RootState extends State<Root>
         theme: ThemeData(
           fontFamily: "Lexend"
         ),  
-        home: const SplashScreen( ) // uiState.currentScreen
+        home: const MainMenuScreen()
+        // home: uiState.currentScreen
       )
     );
   }

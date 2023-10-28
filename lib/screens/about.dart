@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:accordion/accordion.dart';
+import 'package:accordion/controllers.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
@@ -29,20 +31,19 @@ import 'package:four_pics_baybayin/state/progress-state.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart'; 
 
-class LevelSelectorScreen extends StatefulWidget 
+class AboutScreen extends StatefulWidget 
 {
-  const LevelSelectorScreen({super.key});
+  const AboutScreen({super.key});
 
   @override 
-  State<LevelSelectorScreen> createState() => LevelSelectorScreenState();
+  State<AboutScreen> createState() => AboutScreenState();
 }
 
-class LevelSelectorScreenState extends State<LevelSelectorScreen>
+class AboutScreenState extends State<AboutScreen>
 {
   @override
   bool get wantKeepAlive => true; 
 
-  late Image logoImage; 
   
   int value = 0;
 
@@ -50,13 +51,6 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
   void initState() {
     super.initState(); 
 
-    if(mounted) {
-      if(progressState.countCompletedInLevel() == 4) {
-        goto(context, const MainGameScreen(
-          overlayLayer: "level-done",
-        ));
-      }
-    }
   }
 
   Widget build(BuildContext context) {
@@ -76,17 +70,10 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                     
                     Expanded( 
                       child: Center(
-                        child: Container(
-                          width: 325, 
-                          child: FittedBox(
-                            child: PuzzleSelector(
-                              level: gameState.currentLevel, 
-                              onSelect: (int i) {
-                                gameState.setCurrentPuzzle(i); 
-                                goto(context, const MainGameScreen());
-                              }
-                            )
-                          )
+                        child: Column(
+                          children: [
+                            createAccordion()
+                          ]
                         )
                       )
                     ),
@@ -99,8 +86,7 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                     
                     
                   ]
-                ),
-                createCompletionIndicator(context)
+                )
               ]
             )
           );
@@ -152,9 +138,9 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                                 topRight: Radius.circular(5),
                               )
                             ),
-                            child:  Center(
+                            child: Center(
                               child: Text(
-                                "PUZZLES $levelStart-$levelEnd",
+                                "     4 PICS BAYBAYIN",
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20
@@ -181,12 +167,14 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                                     padding: const EdgeInsets.all(2.5),
                                     child: Container(
                                       margin: const EdgeInsets.only(left: 36),
-                                      child: const Text(
-                                        "AVG. ATTEMPTS / PUZZLE",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold
+                                      child: Center(
+                                        child: const Text(
+                                          "VERSION",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold
+                                          )
                                         )
                                       )
                                     )
@@ -204,7 +192,7 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                                     padding: const EdgeInsets.all(2.5),
                                     child: Center(
                                       child: Text(
-                                        progressState.computeLevelAverageAttempts(currentLevel).toString(),
+                                        "1.0",
                                         style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 12,
@@ -226,7 +214,7 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                       top: 25, 
                       left: 0,
                       child: Image.asset(
-                        "assets/icons/icon-open-box.png", 
+                        "assets/icons/icon-info.png", 
                         width: 100
                       )
                     )
@@ -315,6 +303,75 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
           ]
         )
       )
+    );
+  }
+
+  Widget createAccordion() {
+    return Accordion(
+      headerBorderColor: const Color.fromARGB(255, 179, 185, 189),
+      headerBorderColorOpened: Colors.transparent,
+      // headerBorderWidth: 1,
+      headerBackgroundColorOpened: Color.fromARGB(255, 0, 0, 0),
+      contentBackgroundColor: Colors.white,
+      contentBorderColor: Colors.white,
+      contentBorderWidth: 3,
+      contentHorizontalPadding: 10,
+      scaleWhenAnimating: true,
+      openAndCloseAnimation: true,
+      headerPadding:
+          const EdgeInsets.symmetric(vertical: 7, horizontal: 15),
+      sectionOpeningHapticFeedback: SectionHapticFeedback.heavy,
+      sectionClosingHapticFeedback: SectionHapticFeedback.light,
+      children: [
+        createSection(
+          title: 'IMAGES',
+          description: const Text("hello")
+        ),
+        createSection(
+          title: 'BAYBAYIN FONTS',
+          description: const Text("hello")
+        ),
+        createSection(
+          title: 'UI FONT',
+          description: const Text("hello")
+        ),
+        createSection(
+          title: 'SOUND EFFECTS',
+          description: const Text("hello")
+        ),
+        createSection(
+          title: 'BACKGROUND PATTERNS',
+          description: const Text("hello")
+        ),
+        createSection(
+          title: 'BAYBAYIN FONTS',
+          description: const Text("hello")
+        ),
+        createSection(
+          title: 'PACKAGE AND LIBRARIES',
+          description: const Text("hello")
+        ),
+        createSection(
+          title: 'PROGRAMMING / CODING',
+          description: const Text("hello")
+        ),
+      ]
+    );
+  }
+
+  AccordionSection createSection({ required String title, required Widget description })  {
+    return AccordionSection(
+      isOpen: true,
+      contentVerticalPadding: 20,
+      header:  Text(
+        title,
+        style: TextStyle(
+          color: Color.fromARGB(255, 227, 230, 233), 
+          fontWeight: FontWeight.bold
+        )
+      ),
+      content: description,
+      onOpenSection: () {},
     );
   }
 }

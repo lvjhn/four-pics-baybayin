@@ -4,11 +4,14 @@ import 'package:animate_do/animate_do.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:four_pics_baybayin/components/backdrop/modal-container.dart';
+import 'package:four_pics_baybayin/components/general/main-menu-button.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
 import 'package:four_pics_baybayin/components/backdrop/bgi-box.dart';
 import 'package:four_pics_baybayin/components/topbar/game-bar.dart';
 import 'package:four_pics_baybayin/helpers/goto.dart';
+import 'package:four_pics_baybayin/screens/about.dart';
 import 'package:four_pics_baybayin/screens/level-selector.dart';
+import 'package:four_pics_baybayin/screens/progress.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart'; 
 
@@ -24,8 +27,11 @@ class MainMenuScreenState extends State<MainMenuScreen>
 {
   late Image logoImage; 
 
-
   List<int> durations = [500, 1000, 1500]; 
+
+  bool isPlayButtonTapped = false; 
+  bool isProgressButtonTapped = false; 
+  bool isAboutButtonTapped = true; 
   
   @override 
   void initState() {
@@ -112,26 +118,22 @@ class MainMenuScreenState extends State<MainMenuScreen>
   Widget createPlayButton(BuildContext context) {
     return SizedBox(
       width: 250, 
-      height: 80,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20.0),
-          ),
-          backgroundColor: Colors.yellowAccent
+      height: 90,
+      child: MainMenuButton(
+        child:  Center( 
+          child: Row(
+            children: [
+              const SizedBox(width: 20),
+              Image.asset("assets/icons/icon-play.png", width: 50),
+              const SizedBox(width: 35),
+              const Text("PLAY", style: TextStyle(
+                color: Colors.black,
+                fontSize: 30
+              ))
+            ]
+          )   
         ),
-        child: Row(
-          children: [
-            Image.asset("assets/icons/icon-play.png", width: 50),
-            const SizedBox(width: 35),
-            const Text("PLAY", style: TextStyle(
-              color: Colors.black,
-              fontSize: 30
-            ))
-          ]
-        ),   
         onPressed: () {
-          debugPrint("Hello");
           playSound("click-1");
           goto(context, const LevelSelectorScreen());
         }
@@ -144,21 +146,20 @@ class MainMenuScreenState extends State<MainMenuScreen>
     return SizedBox(
       width: 250, 
       height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          backgroundColor: Colors.yellowAccent
-        ),
-        child: const Text("PROGRESS", style: 
-          TextStyle(
-            color: Colors.black,
-            fontSize: 20
+      child: MainMenuButton(
+        child: const Center( 
+          child:  Text(
+            "PROGRESS", 
+            style: 
+              TextStyle(
+                color: Colors.black,
+                fontSize: 20
+              )
           )
         ),
         onPressed: () {
           playSound("click-1");
+          goto(context, const ProgressScreen());
         }
       )
     );
@@ -169,21 +170,20 @@ class MainMenuScreenState extends State<MainMenuScreen>
     return SizedBox(
       width: 250, 
       height: 50,
-      child: ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          backgroundColor: Colors.yellowAccent
-        ),
-        child: const Text("ABOUT", style: 
-          TextStyle(
-            color: Colors.black,
-            fontSize: 20
+      child: MainMenuButton(
+        child: const Center( 
+          child:  Text(
+            "ABOUT", 
+            style: 
+              TextStyle(
+                color: Colors.black,
+                fontSize: 20
+              )
           )
         ),
         onPressed: () {
           playSound("click-1");
+          goto(context, const AboutScreen());
         }
       )
     );

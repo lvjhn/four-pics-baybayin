@@ -17,49 +17,62 @@ import 'package:four_pics_baybayin/components/general/box-select.dart';
 import 'package:four_pics_baybayin/components/general/custom-switch.dart';
 import 'package:four_pics_baybayin/components/backdrop/modal-container.dart';
 import 'package:four_pics_baybayin/components/backdrop/modal-dialog.dart';
+import 'package:four_pics_baybayin/data/LevelDefinitions.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
 import 'package:four_pics_baybayin/components/backdrop/bgi-box.dart';
 import 'package:four_pics_baybayin/components/topbar/game-bar.dart';
 import 'package:four_pics_baybayin/helpers/goto.dart';
 import 'package:four_pics_baybayin/screens/main-game.dart';
 import 'package:four_pics_baybayin/screens/main-menu.dart';
+import 'package:four_pics_baybayin/screens/solve-info.dart';
 import 'package:four_pics_baybayin/screens/splash.dart';
 import 'package:four_pics_baybayin/state/game-state.dart';
 import 'package:four_pics_baybayin/state/progress-state.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart'; 
 
-class LevelSelectorScreen extends StatefulWidget 
+class ProgressScreen extends StatefulWidget 
 {
-  const LevelSelectorScreen({super.key});
+  const ProgressScreen({
+    super.key, 
+    this.viewLevel = -1
+  });
+
+  final int viewLevel;
 
   @override 
-  State<LevelSelectorScreen> createState() => LevelSelectorScreenState();
+  State<ProgressScreen> createState() => ProgressScreenState();
 }
 
-class LevelSelectorScreenState extends State<LevelSelectorScreen>
+class ProgressScreenState extends State<ProgressScreen>
 {
   @override
   bool get wantKeepAlive => true; 
 
   late Image logoImage; 
+
+  late int viewLevel;
+  int maxLevel = (LevelDefinitions.levels.length ~/ 4).toInt();
   
   int value = 0;
+
+  bool isLeftTapped = false; 
+  bool isRightTapped = false;
 
   @override 
   void initState() {
     super.initState(); 
 
-    if(mounted) {
-      if(progressState.countCompletedInLevel() == 4) {
-        goto(context, const MainGameScreen(
-          overlayLayer: "level-done",
-        ));
-      }
+    if(widget.viewLevel == -1) {
+      viewLevel = gameState.currentLevel;
+    } else {
+      viewLevel = widget.viewLevel;
     }
   }
 
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Consumer<UIState>(
         builder: (context, uiState, child) {
@@ -75,32 +88,103 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                     createHeaderSection(context), 
                     
                     Expanded( 
-                      child: Center(
-                        child: Container(
-                          width: 325, 
-                          child: FittedBox(
+                      child: Stack(
+                        children: [ 
+                          Center(
                             child: PuzzleSelector(
-                              level: gameState.currentLevel, 
+                              level: viewLevel, 
+                              enableSelectUnlocked: true,
                               onSelect: (int i) {
-                                gameState.setCurrentPuzzle(i); 
-                                goto(context, const MainGameScreen());
+                                debugPrint("Selecting $i");
+                                
+                                goto(context, SolveInfo(
+                                  level: viewLevel, 
+                                  puzzle: i 
+                                ));
                               }
                             )
+                          ), 
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Row(
+                                  children: [
+                                    const SizedBox(width: 15),
+                                    Visibility(
+                                      visible: viewLevel > 1,  
+                                      child: InkWell(
+                                        onTapDown: (TapDownDetails details) {
+                                          if(viewLevel == 1) {
+                                            return; 
+                                          }
+                                          playSound("click-1");
+
+                                          setState(() {
+                                            viewLevel -= 1;
+                                            isLeftTapped = true;
+                                          });
+                                        },
+                                        onTapUp: (TapUpDetails details) {
+                                          setState(() {
+                                            isLeftTapped = false;
+                                          });
+                                        },
+                                        child:  Icon(
+                                          Icons.chevron_left, 
+                                          size: 50,
+                                          color: isLeftTapped ?
+                                            Colors.white :
+                                            Colors.yellow
+                                        )
+                                      )
+                                    ),
+                                    const Expanded(
+                                      child: Text("")
+                                    ),
+                                    Visibility(
+                                      visible: 
+                                        !(viewLevel == maxLevel || 
+                                          viewLevel == gameState.currentLevel),
+                                      child: InkWell(
+                                        onTapDown: (TapDownDetails details) {
+                                          playSound("click-1");
+                                          setState(() {
+                                            viewLevel += 1;
+                                            isRightTapped = true;
+                                          });
+                                        },
+                                        onTapUp: (TapUpDetails details) {
+                                          setState(() {
+                                            isRightTapped = false;
+                                          });
+                                        },
+                                        child:  Icon(
+                                          Icons.chevron_right, 
+                                          size: 50,
+                                          color: isRightTapped ?
+                                            Colors.white :
+                                            Colors.yellow
+                                        )
+                                      )
+                                    ),
+                                    SizedBox(width: 15),
+                                  ]
+                                )
+                              ],
+                            )
                           )
-                        )
+                        ]
                       )
                     ),
 
-                    // // PUZZLE SELECTION SECTION
-                    // const Expanded(
-                    //   child: Text("<TODO : PUZZLE-SELECTION-SECTION>")
-                    // ),
 
-                    
+                   
                     
                   ]
                 ),
-                createCompletionIndicator(context)
+               
+                
               ]
             )
           );
@@ -154,7 +238,7 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                             ),
                             child:  Center(
                               child: Text(
-                                "PUZZLES $levelStart-$levelEnd",
+                                "Level $viewLevel of $maxLevel" ,
                                 style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20
@@ -204,7 +288,7 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                                     padding: const EdgeInsets.all(2.5),
                                     child: Center(
                                       child: Text(
-                                        progressState.computeLevelAverageAttempts(currentLevel).toString(),
+                                        progressState.computeLevelAverageAttempts(viewLevel).toString(),
                                         style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 12,
@@ -226,7 +310,7 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
                       top: 25, 
                       left: 0,
                       child: Image.asset(
-                        "assets/icons/icon-open-box.png", 
+                        "assets/icons/icon-medal.png", 
                         width: 100
                       )
                     )
@@ -241,80 +325,4 @@ class LevelSelectorScreenState extends State<LevelSelectorScreen>
     );
   }
   
-  Widget createCompletionIndicator(BuildContext context) {
-    int solved = progressState.countCompletedInLevel(); 
-
-    return Positioned(
-      top: 220, 
-      left: 0,
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-          color: Colors.transparent
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              width: 170,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(25),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.5),
-                    blurRadius: 4,
-                    offset: Offset(0, 3), // changes position of shadow
-                  )   
-                ]
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 5
-                    ),
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(25),
-                        bottomLeft: Radius.circular(25)
-                      )
-                    ),
-                    child: Text("$solved/4")
-                  ),
-                  Expanded(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                        vertical: 5
-                      ),
-                      decoration: const BoxDecoration(
-                        color: Color.fromRGBO(20, 20, 20, 1.0),
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(25),
-                          bottomRight: Radius.circular(25)
-                        )
-                      ),
-                      child: const Center(
-                        child: Text(
-                          "COMPLETED",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14
-                          )
-                        )
-                      )
-                    )
-                  )
-                ]
-              )
-            )
-          ]
-        )
-      )
-    );
-  }
 }

@@ -5,7 +5,7 @@ class StatusIndicator extends StatefulWidget
   const StatusIndicator({ 
     super.key, 
     required this.icon,
-    required this.value 
+    required this.value
   });
 
   final Image icon; 

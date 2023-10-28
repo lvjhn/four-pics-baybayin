@@ -81,7 +81,8 @@ class InputWordState extends State<InputWord>
 
     List<Widget> input = []; 
 
-    for(int i = 0; i < widget.current.length; i++) {
+
+    for(int i = 0; i < widget.correct.length; i++) {
       input.add(createSlot(context, i, widget.current[i])); 
       if(i != widget.current.length - 1) {
         input.add(SizedBox(width: spacing));
@@ -106,7 +107,7 @@ class InputWordState extends State<InputWord>
 
   Widget createSlot(BuildContext context, int index, String character) {
     return GestureDetector(
-      onTap: () {
+      onTapDown: (TapDownDetails details) {
         if(gameState.getCurrentPuzzleState().fixed[index] == false) {
           if(character != "-") {
             playSound("click-1");

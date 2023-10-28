@@ -90,7 +90,7 @@ class CharacterDefinitions
       "Ni" : () => charSymbolSet.createNgeNgi(width, height), 
       "No" : () => charSymbolSet.createNgoNgu(width, height), 
       "Nu" : () => charSymbolSet.createNgoNgu(width, height), 
-      "N"  : () => charSymbolSet.createN(width, height), 
+      "N"  : () => charSymbolSet.createNg(width, height), 
 
       // P 
       "pa" : () => charSymbolSet.createPa(width, height), 

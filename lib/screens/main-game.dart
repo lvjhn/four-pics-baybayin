@@ -10,13 +10,17 @@ import 'package:four_pics_baybayin/components/general/four-images.dart';
 import 'package:four_pics_baybayin/components/main-game/cost-specifier.dart';
 import 'package:four_pics_baybayin/components/main-game/hint-modal.dart';
 import 'package:four_pics_baybayin/components/main-game/input-word.dart';
+import 'package:four_pics_baybayin/components/main-game/level-done.dart';
 import 'package:four_pics_baybayin/components/main-game/other-controls.dart';
+import 'package:four_pics_baybayin/components/main-game/puzzle-solved.dart';
 import 'package:four_pics_baybayin/components/main-game/symbol-selector.dart';
 import 'package:four_pics_baybayin/components/topbar/game-bar.dart';
 import 'package:four_pics_baybayin/data/CharacterDefinitions.dart';
 import 'package:four_pics_baybayin/data/LevelDefinitions.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
+import 'package:four_pics_baybayin/helpers/goto.dart';
 import 'package:four_pics_baybayin/screens/level-selector.dart';
+import 'package:four_pics_baybayin/screens/main-menu.dart';
 import 'package:four_pics_baybayin/state/game-state.dart';
 import 'package:four_pics_baybayin/state/progress-state.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
@@ -24,7 +28,12 @@ import 'package:provider/provider.dart';
 
 class MainGameScreen extends StatefulWidget 
 {
-  const MainGameScreen({super.key});
+  const MainGameScreen({
+    super.key,
+    this.overlayLayer = "<hidden>"
+  });
+
+  final String overlayLayer;
 
   @override 
   State<MainGameScreen> createState() => MainGameScreenState();
@@ -40,17 +49,22 @@ class MainGameScreenState extends State<MainGameScreen>
   late Widget modalContent;
 
   var gameBar = GlobalKey<GameBarState>();
+  late String overlayLayer;
   
+  GlobalKey<InputWordState> inputWord = GlobalKey<InputWordState>();
+
   @override 
   void initState() {
     super.initState();
     modalContent = createRemoveExtraCharacterModal(context);
+    overlayLayer = widget.overlayLayer;
   }
 
   Widget showGameLayers(BuildContext context) {
     return Stack(
       children: [
-        createMainLayer()
+        createMainLayer(),
+        createOverlayLayer()
       ]
     );
   }
@@ -217,6 +231,39 @@ class MainGameScreenState extends State<MainGameScreen>
     );
   }
 
+  void submitInput() {
+    int puzzleNo = gameState.getCurrentPuzzleNo();
+
+    if(gameState.isInputFilled()) {
+      if(progressState.forCurrentPuzzle().attempts == 0) {
+        progressState.increaseAttempt(true, puzzleNo);
+      } else {
+        progressState.increaseAttempt(true, puzzleNo);
+      }
+
+      if(inputWord.currentState?.isCorrect() == false) {
+        inputWord.currentState?.shake();
+        playSound("error");
+      } 
+      
+      else {
+        int attempts = progressState.forCurrentPuzzle().attempts;
+        int reward = gameState.computeRewardForPuzzleAttempt(attempts);
+
+        debugPrint("Claimed reward $reward for $attempts attempts.");
+
+        playSound("solved");
+        setState(() { overlayLayer = "puzzle-solved"; });
+        gameState.increaseCoins(
+          reward, 
+          gameBar
+        );
+        progressState.markAsSolved(puzzleNo);
+      }
+
+    }
+  }
+
   void removeExtraCharacter() {
     debugPrint("Removing extra character...");
     List<String> input = gameState.getCurrentPuzzleState().input;
@@ -235,6 +282,7 @@ class MainGameScreenState extends State<MainGameScreen>
     debugPrint("Valid indices: " + validIndices.toString());
     int removeIndex = validIndices[Random().nextInt(validIndices.length)];
     gameState.selectSymbol(removeIndex, symbols[removeIndex], toInput: false );
+    submitInput();
   }
 
   void revealACharacter() {
@@ -272,6 +320,8 @@ class MainGameScreenState extends State<MainGameScreen>
     );
     
     gameState.selectSymbol(removeIndex, symbols[removeIndex], toInput: false);
+    
+    submitInput();
   }
 
   void removeExtraCharacters() {
@@ -292,6 +342,8 @@ class MainGameScreenState extends State<MainGameScreen>
     for(int i = 0; i < validIndices.length; i++) {
       gameState.selectSymbol(validIndices[i], symbols[i], toInput: false );
     }
+    
+    submitInput();
   }
   
   Widget createCompletionIndicator(BuildContext context) {
@@ -412,16 +464,17 @@ class MainGameScreenState extends State<MainGameScreen>
     String currentWord = 
       gameState.getCurrentWord();
 
-    String syllablesString = 
-      LevelDefinitions.levels[gameState.getCurrentPuzzleNo() - 1]["syllables"]!;
-
-    List<String> correctSyllables = syllablesString.split("-");
+    List<String> correctSyllables = gameState.getCurrentSyllables();
     List<String> currentPuzzleInput = gameState.getCurrentPuzzleInput(); 
     List<String> currentSymbols = gameState.getCurrentPuzzleSymbols();
+    
 
-    GlobalKey<InputWordState> inputWord = GlobalKey<InputWordState>();
     
     final locations = gameState.getCurrentPuzzleState().locations;
+
+    debugPrint("Current Syllables: " + correctSyllables.toString());
+    debugPrint("Current Input: " + currentPuzzleInput.toString());
+    debugPrint("Current Symbols: " + currentSymbols.toString());
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -437,7 +490,8 @@ class MainGameScreenState extends State<MainGameScreen>
                 image2: "assets/puzzles/$puzzleNo.2-$currentWord.jpeg", 
                 image3: "assets/puzzles/$puzzleNo.3-$currentWord.jpeg", 
                 image4: "assets/puzzles/$puzzleNo.4-$currentWord.jpeg", 
-                width: 280
+                width: 280,
+                selectable: true,
               ), 
 
               const SizedBox(height: 40),
@@ -487,18 +541,7 @@ class MainGameScreenState extends State<MainGameScreen>
                       debugPrint("Selecting symbol $i -> $character");
                       gameState.selectSymbol(i, character);
                       debugPrint(gameState.getCurrentPuzzleState().fixed.toString());
-
-                      if(gameState.isInputFilled()) {
-                        if(inputWord.currentState?.isCorrect() == false) {
-                          inputWord.currentState?.shake();
-                          playSound("error");
-                        }
-
-                        Future.delayed(const Duration(milliseconds: 500), (){
-                          int puzzleNo = gameState.getCurrentPuzzleNo();
-                          progressState.increaseAttempt(true, puzzleNo);
-                        });
-                      }
+                      submitInput();
                     }
                   );
                 }
@@ -540,7 +583,6 @@ class MainGameScreenState extends State<MainGameScreen>
                   bool minimalSymbols = 10 - noEmptySymbols < syllables.length;
                   bool matchingCharsets = gameState.matchingSymbolsToSyllables();
                   
-                  debugPrint("Matching Charsets: " + matchingCharsets.toString());
 
                   if(matchingCharsets || minimalSymbols) {
                     return false;
@@ -548,11 +590,13 @@ class MainGameScreenState extends State<MainGameScreen>
                     return true;
                   }
                 })(),
+
                 enableRevealACharacter: (() {
                   List<String> syllables = gameState.getCurrentSyllables();
                   List<String> input = gameState.getCurrentPuzzleInput();
                   return !listEquals(syllables, input);
                 })(),
+
                 enableRemoveAllCharacters: (() {
                   int noEmptySymbols = gameState.countEmptySymbols();
                   List<String> syllables = gameState.getCurrentSyllables();
@@ -560,7 +604,6 @@ class MainGameScreenState extends State<MainGameScreen>
                   bool minimalSymbols = 10 - noEmptySymbols < syllables.length;
                   bool matchingCharsets = gameState.matchingSymbolsToSyllables();
                   
-                  debugPrint("Matching Charsets: " + matchingCharsets.toString());
 
                   if(matchingCharsets || minimalSymbols) {
                     return false;
@@ -579,24 +622,54 @@ class MainGameScreenState extends State<MainGameScreen>
           target: LevelSelectorScreen()
         ), 
 
-        Row(
-          children: [
-            ElevatedButton( 
-              onPressed: () {
-                gameState.decreaseCoins(50, gameBar);
-              },
-              child: const Text("-")
-            ),
-            ElevatedButton( 
-              onPressed: () {
-                gameState.increaseCoins(50, gameBar);
-              },
-              child: const Text("+")
-            )
-          ]
-        )
+        // DEV. ONLY CONTROLS
+        // Row(
+        //   children: [
+        //     ElevatedButton( 
+        //       onPressed: () {
+        //         gameState.decreaseCoins(50, gameBar);
+        //       },
+        //       child: const Text("-")
+        //     ),
+        //     ElevatedButton( 
+        //       onPressed: () {
+        //         gameState.increaseCoins(50, gameBar);
+        //       },
+        //       child: const Text("+")
+        //     )
+        //   ]
+        // )
       ]
-  );
+    );
+  }
 
+  Widget createOverlayLayer() {
+    if(overlayLayer == "puzzle-solved") {
+      return createPuzzleSolvedLayer();
+    } 
+    else if(overlayLayer == "level-done") {
+      return createLevelDoneLayer();
+    }
+    else {
+      return const Text("");
+    }
+  } 
+
+  Widget createPuzzleSolvedLayer() {
+    return PuzzleSolved(
+      onNext: () {
+        goto(context, const LevelSelectorScreen());
+      }
+    );
+  }
+
+  Widget createLevelDoneLayer() {
+    return  LevelDone(
+      onNext: () {
+        debugPrint("Moving on to the next level...");
+        gameState.moveToNextLevel(false);
+        goto(context, const LevelSelectorScreen());
+      }
+    );
   }
 }

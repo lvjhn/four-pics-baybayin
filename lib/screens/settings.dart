@@ -17,6 +17,10 @@ import 'package:four_pics_baybayin/components/backdrop/modal-dialog.dart';
 import 'package:four_pics_baybayin/helpers/audio-player.dart';
 import 'package:four_pics_baybayin/components/backdrop/bgi-box.dart';
 import 'package:four_pics_baybayin/components/topbar/game-bar.dart';
+import 'package:four_pics_baybayin/helpers/goto.dart';
+import 'package:four_pics_baybayin/helpers/reset-game-data.dart';
+import 'package:four_pics_baybayin/screens/main-game.dart';
+import 'package:four_pics_baybayin/screens/main-menu.dart';
 import 'package:four_pics_baybayin/state/ui-state.dart';
 import 'package:provider/provider.dart'; 
 
@@ -290,6 +294,7 @@ class SettingsScreenState extends State<SettingsScreen>
               setState(() {
                 modalContent = createResetGameModal(context);
               });
+              resetGameData(true);
               mainModal.currentState!.show();
             }
           )
@@ -350,14 +355,29 @@ class SettingsScreenState extends State<SettingsScreen>
   }
 
   Widget createResettedGameModal(BuildContext context) {
+  
     return ModalDialog(
       width: 300, 
       title: "SUCCESSFULLY RESET DATA",
       container: mainModal,
       child:  Container(
         margin: const EdgeInsets.all(14), 
-        child: const Center(
-          child: Text("Game data has been reset successfully.")
+        child: Column(
+          children: [
+            const Center(
+              child: Text("Game data has been reset successfully.")
+            ), 
+            const SizedBox(height: 5),
+            SizedBox(
+              width: 250,
+              child: ElevatedButton(
+                onPressed: () {
+                  goto(context, const MainMenuScreen());
+                }, 
+                child: const Text("OK, UNDERSTOOD.")
+              )
+            )
+          ]
         )
       ),
     );
