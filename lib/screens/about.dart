@@ -1,10 +1,12 @@
 import 'dart:async';
+import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 
 import 'package:accordion/accordion.dart';
 import 'package:accordion/controllers.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:four_pics_baybayin/char-symbols/@base.dart';
 import 'package:four_pics_baybayin/char-symbols/deko.dart';
 import 'package:four_pics_baybayin/char-symbols/robotika.dart';
@@ -44,7 +46,6 @@ class AboutScreenState extends State<AboutScreen>
   @override
   bool get wantKeepAlive => true; 
 
-  
   int value = 0;
 
   @override 
@@ -72,6 +73,8 @@ class AboutScreenState extends State<AboutScreen>
                       child: Center(
                         child: Column(
                           children: [
+                            const SizedBox(height: 25),
+                            createDisclaimer(),
                             createAccordion()
                           ]
                         )
@@ -94,6 +97,19 @@ class AboutScreenState extends State<AboutScreen>
       )
     );
   } 
+
+  Widget createDisclaimer() {
+    return const HtmlWidget(
+      """
+        <div style="color: white; text-align: center;">
+          <b>Disclaimer:</b><br />
+          This game is for educational purposes only. <br />
+          The game is free and open-source. <br />
+          There are no ads or in-app purchases. 
+        </div>
+      """ 
+    );
+  }
 
   Widget createHeaderSection(BuildContext context) {
     int currentLevel = gameState.currentLevel;
@@ -325,36 +341,82 @@ class AboutScreenState extends State<AboutScreen>
       children: [
         createSection(
           title: 'IMAGES',
-          description: const Text("hello")
+          description: const HtmlWidget(
+            """ 
+              The images used on the puzzles of this game 
+              are selected from royalty-free stock photos on 
+              <a href="https://pixabay.com/">Pixabay</a> and 
+              <a href="https://www.pexels.com/">Pexels</a>
+            """ 
+          )
         ),
         createSection(
           title: 'BAYBAYIN FONTS',
-          description: const Text("hello")
+          description: const HtmlWidget(
+            """ 
+              The Baybayin font types used in this game are 
+              free fonts from <b>Lloyd Zapanta</b>, an independent
+              artist at <a href="https://behance.com/">Behance.com</a>.
+              Support his other <a href="https://www.behance.net/lloydzapanta">works.</a>
+            """ 
+          )
         ),
         createSection(
           title: 'UI FONT',
-          description: const Text("hello")
+          description: const HtmlWidget(
+            """ 
+              The UI font used in this game is a third-party 
+              Google Font named 
+              <a href="https://fonts.google.com/specimen/Lexend">
+                Lexend 
+              </a>
+            """ 
+          )
         ),
         createSection(
           title: 'SOUND EFFECTS',
-          description: const Text("hello")
+          description: const HtmlWidget(
+            """ 
+              The sound effects used in this game are royalty-free
+              sound effects from <a href="https://pixabay.com/">Pixabay</a>.
+            """ 
+          )
         ),
         createSection(
           title: 'BACKGROUND PATTERNS',
-          description: const Text("hello")
+          description: const HtmlWidget(
+            """ 
+              The background patterns used in this game 
+              are free patterns from 
+              <a href="https://www.toptal.com/designers/subtlepatterns/">SubtlePatterns</a>
+            """ 
+          )
         ),
         createSection(
-          title: 'BAYBAYIN FONTS',
-          description: const Text("hello")
-        ),
-        createSection(
-          title: 'PACKAGE AND LIBRARIES',
-          description: const Text("hello")
+          title: 'PACKAGES AND LIBRARIES',
+          description: const HtmlWidget(
+            """ 
+              This app was made with <a href="https://flutter.dev/"></a>
+              using the <a href="https://dart.dev/get-dart">Dart</a> programming language. 
+
+              Major Dart packages used this project are: 
+              <i>animate_do</i>, <i>get_storage</i>, <i>audioplayers</i>,
+              <i>accordion</i>, <i>flutter_widget_from_html</i>, etc.
+            """ 
+          )
         ),
         createSection(
           title: 'PROGRAMMING / CODING',
-          description: const Text("hello")
-        ),
+          description: const HtmlWidget(
+            """ 
+              The app was coded by LJ Sta. Ana using Flutter
+              and the Dart Programming language. <br /><br /> 
+
+              The code is open-source and can be viewed in this 
+              <a href="https://github.com/lvjhn/four-pics-baybayin">repo</a>.
+            """ 
+          )
+        )
       ]
     );
   }

@@ -96,7 +96,7 @@ class GameState extends ChangeNotifier
   void init() {
     currentLevel = 1;
     currentPuzzle = 1;
-    coins = 1000;
+    coins = 100000;
     puzzles = PuzzlesState(
       PuzzleState(1, [], [], [], []),
       PuzzleState(2, [], [], [], []),
@@ -408,12 +408,12 @@ class GameState extends ChangeNotifier
 
   void preSave() {
     final storage = GetStorage();
-    if(storage.read("game-state") != Null &&
-       storage.read("current-level") != Null && 
-       storage.read("coins") != Null) {
-      return;
+    if(storage.read("game-state") == Null ||
+       storage.read("current-level") == Null || 
+       storage.read("coins") == Null) {  
+      debugPrint("Pre-saving...");
+      save();
     }
-    save();
   }
 
   void clear() {

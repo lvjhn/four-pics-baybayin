@@ -36,14 +36,12 @@ class InputWord extends StatefulWidget
 
 class InputWordState extends State<InputWord> 
 {
-  late CharSymbolBase tileFont;
   final shakeKey = GlobalKey<ShakeWidgetState>();
   
 
   @override 
   void initState() {
     super.initState(); 
-    tileFont = uiState.getCurrentTileFont();
 
 
     if (mounted) {
@@ -138,7 +136,7 @@ class InputWordState extends State<InputWord>
         ), 
         child: character == "-" ? 
           const Text("") : 
-          CharacterDefinitions(tileFont).createCharacter(character, 50, 50)
+          CharacterDefinitions(widget.tileFont).createCharacter(character, 50, 50)
       )
     );
   }

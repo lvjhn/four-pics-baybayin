@@ -42,9 +42,7 @@ List<String> preloads = [
 
 Future<void> main() async {
   await GetStorage.init();
-
-  // resetGameData();
-
+  
   gameState.preSave(); 
   progressState.preSave();
 

@@ -141,8 +141,7 @@ class ProgressState extends ChangeNotifier
     return (sum / 4).ceil().toInt();
   }
 
-  
-  
+
   void save() {
     final storage = GetStorage();
     storage.write("progress-state", jsonEncode(progressState));
@@ -155,15 +154,14 @@ class ProgressState extends ChangeNotifier
       jsonDecode(storage.read("progress-state")) as Map<String, dynamic>;
     progressState =  
       PuzzleProgressesState.fromJSON(progressStateMap); 
-
   }
 
   void preSave() {
     final storage = GetStorage();
-    if(storage.read("progress-state") != Null) {
-      return;
+    if(storage.read("progress-state") == Null) {
+      debugPrint("Pre-saving...");
+      save();
     }
-    save();
   }
 
   void clear() {

@@ -101,136 +101,6 @@ class MainGameScreenState extends State<MainGameScreen>
     );
   } 
 
-  Widget createHeaderSection(BuildContext context) {
-    return Container(
-      width: double.infinity, 
-      height: 150, 
-      decoration:  BoxDecoration(
-        color: const Color.fromRGBO(234, 234, 234, 1.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.5),
-       
-            blurRadius: 7,
-            offset: Offset(0, 3), // changes position of shadow
-          ),
-        ]
-      ),
-      child: Column(
-        children: [ 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 350,
-                height: 150,
-                child: Stack(
-                  children: [
-                    Positioned(
-                      top: 40, 
-                      left: 60,
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 50, 
-                            width: 270,
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(5),
-                              )
-                            ),
-                            child: Container(
-                              child: const Center(
-                                child: Text(
-                                  "PUZZLES 1-4",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20
-                                  )
-                                )
-                              )
-                            )
-                          ),
-                          Container(
-                            width: 270,
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(5),
-                              )
-                            ),
-                            child: Row(
-                              children: [
-                                SizedBox(
-                                  width: 220, 
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      color: Color.fromRGBO(50, 50, 50, 1.0)
-                                    ),
-                                    padding: const EdgeInsets.all(2.5),
-                                    child: Container(
-                                      margin: const EdgeInsets.only(left: 36),
-                                      child: const Text(
-                                        "AVG. ATTEMPTS / PUZZLE",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold
-                                        )
-                                      )
-                                    )
-                                  )
-                                ),
-                                SizedBox(
-                                  width: 50, 
-                                  child: Container(
-                                    decoration: const BoxDecoration(
-                                      color: Color.fromRGBO(150, 150, 150, 1.0),
-                                      borderRadius: BorderRadius.only(
-                                        bottomRight: Radius.circular(5),
-                                      )
-                                    ),
-                                    padding: const EdgeInsets.all(2.5),
-                                    child: const Center(
-                                      child: Text(
-                                        "5",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold
-                                        )
-                                      )
-                                    )
-                                  )
-                                )
-                              ],
-                            )
-                          ),
-                          
-                          
-                        ],
-                      )
-                    ),
-                    Positioned(
-                      top: 25, 
-                      left: 0,
-                      child: Image.asset(
-                        "assets/icons/icon-open-box.png", 
-                        width: 100
-                      )
-                    )
-                  ],
-                )
-              )
-              
-            ]
-          )
-        ]
-      )
-    );
-  }
-
   void submitInput() {
     int puzzleNo = gameState.getCurrentPuzzleNo();
 
@@ -270,13 +140,15 @@ class MainGameScreenState extends State<MainGameScreen>
     List<String> syllables = gameState.getCurrentSyllables();
     List<String> symbols = gameState.getCurrentPuzzleState().symbols;
     List<int> validIndices = [];
+    
     for(int i = 0; i < symbols.length; i++) {
       String symbol = symbols[i];
       debugPrint("Checking $symbol...");
-      if(syllables.contains(symbol) == false) {
+      if(symbol != "-" && syllables.contains(symbol) == false) {
         validIndices.add(i);
       }
     }
+
     debugPrint("Syllables: " + syllables.toString());
     debugPrint("Symbols: " + symbols.toString());
     debugPrint("Valid indices: " + validIndices.toString());
@@ -284,7 +156,7 @@ class MainGameScreenState extends State<MainGameScreen>
     gameState.selectSymbol(removeIndex, symbols[removeIndex], toInput: false );
     submitInput();
   }
-
+  
   void revealACharacter() {
     debugPrint("Revealing a character...");
     List<String> input = gameState.getCurrentPuzzleState().input;
@@ -296,7 +168,7 @@ class MainGameScreenState extends State<MainGameScreen>
     for(int i = 0; i < symbols.length; i++) {
       String symbol = symbols[i];
       debugPrint("Checking $symbol...");
-      if(syllables.contains(symbol) == true) {
+      if(syllables.contains(symbol) == true && input.contains(symbol) == false) {
         validIndices.add(i);
       }
     }
@@ -320,8 +192,10 @@ class MainGameScreenState extends State<MainGameScreen>
     );
     
     gameState.selectSymbol(removeIndex, symbols[removeIndex], toInput: false);
+    gameState.removeInputCharacter(removeIndex);
     
     submitInput();
+    
   }
 
   void removeExtraCharacters() {
@@ -334,10 +208,12 @@ class MainGameScreenState extends State<MainGameScreen>
     for(int i = 0; i < symbols.length; i++) {
       String symbol = symbols[i];
       debugPrint("Checking $symbol...");
-      if(syllables.contains(symbol) == false) {
+      if(symbol != "-" && syllables.contains(symbol) == false) {
         validIndices.add(i);
       }
     }
+
+    debugPrint(validIndices.toString());
 
     for(int i = 0; i < validIndices.length; i++) {
       gameState.selectSymbol(validIndices[i], symbols[i], toInput: false );

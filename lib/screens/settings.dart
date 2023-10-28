@@ -372,6 +372,7 @@ class SettingsScreenState extends State<SettingsScreen>
               width: 250,
               child: ElevatedButton(
                 onPressed: () {
+                  playSound("click-1");
                   goto(context, const MainMenuScreen());
                 }, 
                 child: const Text("OK, UNDERSTOOD.")
