@@ -126,6 +126,11 @@ class GameState extends ChangeNotifier
   }
 
   List<String> getSyllables(int puzzleNo) {
+
+    debugPrint("Puzzle No: " + puzzleNo.toString());
+    
+    debugPrint("Puzzle No: " + LevelDefinitions.levels[puzzleNo - 1].toString());
+
     var syllables = 
       LevelDefinitions.levels[puzzleNo - 1]["syllables"]!.split("-");
 
@@ -185,7 +190,7 @@ class GameState extends ChangeNotifier
     "sa", "se", "so", "s", 
     "ta", "te", "to", "t", 
     "wa", "we", "wo", "w", 
-    "ya", "ye", "yo", "y" 
+    "ya", "ye", "yo", "Y+" 
   ];
 
   String generateRandomSyllable() {

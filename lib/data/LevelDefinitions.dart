@@ -96,9 +96,9 @@ class LevelDefinitions
     },
     {
       "word": "leeg",
-      "syllables": "le-eg"
+      "syllables": "le-e-g"
     },
-    {
+    { 
       "word": "kamay",
       "syllables": "ka-ma-y"
     },

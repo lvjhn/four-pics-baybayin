@@ -170,7 +170,7 @@ class SettingsScreenState extends State<SettingsScreen>
 
   Widget createFontSelectionSection(BuildContext context) {
 
-    var size = 94s.0;
+    var size = 94.0;
 
     List<Widget> generateSelectionSymbols() {
       if (uiState.flags["showCharacterLabels"]!) {

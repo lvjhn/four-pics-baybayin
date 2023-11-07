@@ -63,7 +63,10 @@ class InputWordState extends State<InputWord>
     List<String> correct = gameState.getCurrentSyllables(); 
     List<String> current = gameState.getCurrentPuzzleInput();
 
-    
+    debugPrint("InputWord -> Correct: " + correct.toString());
+
+    debugPrint("InputWord -> Current: " + correct.toString());
+
     for(int i = 0; i < correct.length; i++) {
       input.add(createSlot(context, i, current[i])); 
       if(i != current.length - 1) {
