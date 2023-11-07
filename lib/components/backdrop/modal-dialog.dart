@@ -12,7 +12,8 @@ class ModalDialog extends StatefulWidget
     this.showCloseIcon = true,
     required this.width,
     required this.title,
-    required this.container
+    required this.container,
+    this.backgroundColor = Colors.white
   });
 
   final Widget child; 
@@ -20,6 +21,7 @@ class ModalDialog extends StatefulWidget
   final double width;
   final String title;
   final GlobalKey<ModalContainerState> container;
+  final Color backgroundColor;
 
   @override 
   State<ModalDialog> createState() => ModalDialogState(); 
@@ -71,9 +73,9 @@ class ModalDialogState extends State<ModalDialog>
           ),
           Container(
             width: widget.width, 
-            decoration: const BoxDecoration(
-              color:  Colors.white,
-              borderRadius: BorderRadius.only(
+            decoration: BoxDecoration(
+              color: widget.backgroundColor,
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(5), 
                 bottomRight: Radius.circular(5)
               )

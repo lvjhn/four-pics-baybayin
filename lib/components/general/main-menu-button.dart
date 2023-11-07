@@ -20,6 +20,7 @@ class MainMenuButtonState extends State<MainMenuButton>
   with TickerProviderStateMixin
 {
   bool isHovered = false; 
+  bool hasNotClicked = false;
 
   @override 
   void initState() {
@@ -30,9 +31,15 @@ class MainMenuButtonState extends State<MainMenuButton>
   Widget build(BuildContext context) {
     return GestureDetector(
       onTapUp: (TapUpDetails details) {
-        playSound("click-1");
-        widget.onPressed();
+        if(hasNotClicked) {
+          playSound("click-1");
+          setState(() {
+            hasNotClicked = true;
+          });
+        }
+        
         setState(() {
+          widget.onPressed();
           isHovered = false;
         });
       },

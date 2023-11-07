@@ -169,6 +169,27 @@ class SettingsScreenState extends State<SettingsScreen>
   }
 
   Widget createFontSelectionSection(BuildContext context) {
+
+    List<Widget> generateSelectionSymbols() {
+      if (uiState.flags["showCharacterLabels"]!) {
+        return [
+          SisilCharSymbolWithLabels().createA(100, 100),  
+          DekoCharSymbolWithLabels().createA(100, 100),  
+          RobotikaCharSymbolWithLabels().createA(100, 100),
+          SarimanokCharSymbolWithLabels().createA(100, 100),
+          SejongCharSymbolWithLabels().createA(100, 100)
+        ];
+      } else {
+        return [
+          SisilCharSymbolNoLabels().createA(100, 100),  
+          DekoCharSymbolNoLabels().createA(100, 100),  
+          RobotikaCharSymbolNoLabels().createA(100, 100),
+          SarimanokCharSymbolNoLabels().createA(100, 100),
+          SejongCharSymbolNoLabels().createA(100, 100)
+        ];
+      }
+    }
+
     return createSectionWrapper(
       child:  Row(
         children: [
@@ -202,13 +223,7 @@ class SettingsScreenState extends State<SettingsScreen>
                 const SizedBox(height: 5),
                 BoxSelect(
                   activeItem: uiState.tileFont,
-                  items: [
-                    SisilCharSymbolNoLabels().createA(100, 100),  
-                    DekoCharSymbolNoLabels().createA(100, 100),  
-                    RobotikaCharSymbolNoLabels().createA(100, 100),
-                    SarimanokCharSymbolNoLabels().createA(100, 100),
-                    SejongCharSymbolNoLabels().createA(100, 100)
-                  ],
+                  items: generateSelectionSymbols(),
                   onChange: (int i) {
                     playSound("click-1");
                     uiState.setTileFont(i);
@@ -385,13 +400,14 @@ class SettingsScreenState extends State<SettingsScreen>
   }
 
   Widget createPreviewModal(BuildContext context) {
-    CharSymbolBase currentTileSet = uiState.tilesets[uiState.tileFont][0];
+    CharSymbolBase currentTileSet = uiState.getCurrentTileFont();
     double size = 65;
 
     return ModalDialog(
       width: 300, 
       title: "PREVIEW",
       container: mainModal,
+      backgroundColor: Colors.grey,
       child: Container(
         margin: const EdgeInsets.all(14), 
         child: Center(

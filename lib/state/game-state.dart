@@ -96,7 +96,7 @@ class GameState extends ChangeNotifier
   void init() {
     currentLevel = 1;
     currentPuzzle = 1;
-    coins = 100000;
+    coins = 1000;
     puzzles = PuzzlesState(
       PuzzleState(1, [], [], [], []),
       PuzzleState(2, [], [], [], []),
@@ -343,11 +343,13 @@ class GameState extends ChangeNotifier
     inputWordsState.notifyListeners();
   }
 
-  void removeInputCharacter(int index) {
+  void removeInputCharacter(int index, { bool toSymbols = true }) {
     String character = getCurrentPuzzleInput()[index];
     getCurrentPuzzleState().input[index] = "-"; 
-    int location = getCurrentPuzzleState().locations[index]; 
-    getCurrentPuzzleState().symbols[location] = character;
+    if(toSymbols) {
+      int location = getCurrentPuzzleState().locations[index]; 
+      getCurrentPuzzleState().symbols[location] = character;
+    }
     save();
     inputWordsState.notifyListeners();
   }

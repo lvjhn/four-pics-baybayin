@@ -172,7 +172,7 @@ class MainMenuScreenState extends State<MainMenuScreen>
       height: 50,
       child: MainMenuButton(
         child: const Center( 
-          child:  Text(
+          child: Text(
             "ABOUT", 
             style: 
               TextStyle(
