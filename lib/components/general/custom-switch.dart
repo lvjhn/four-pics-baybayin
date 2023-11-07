@@ -24,7 +24,7 @@ class CustomSwitchState extends State<CustomSwitch>
       children: [
         Text(widget.isOn ? "ON" : "OFF"),
         const SizedBox(width: 10),
-        InkWell(
+        GestureDetector(
           child: Transform.scale(
             scale: widget.isOn ? 1 : -1, 
             child: Image.asset( 
@@ -32,10 +32,8 @@ class CustomSwitchState extends State<CustomSwitch>
               height: 50
             )
           ),
-          onTap: () {
-            setState(() {
-              widget.onChange(widget.isOn);
-            });
+          onTapDown: (TapDownDetails details) {
+            widget.onChange(widget.isOn);
           }
         )
       ]

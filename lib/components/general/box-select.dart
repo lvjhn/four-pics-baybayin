@@ -7,12 +7,15 @@ class BoxSelect extends StatefulWidget
     super.key,
     required this.items,
     this.activeItem = 0,
-    this.onChange
+    this.onChange,
+    this.borderRadius = 15
   });
 
   final List<Widget> items;
   final int activeItem;
   final Function? onChange;
+
+  final double borderRadius;
 
   @override 
   State<BoxSelect> createState() => BoxSelectState(); 
@@ -36,7 +39,7 @@ class BoxSelectState extends State<BoxSelect>
                 Color.fromRGBO(234, 234, 234, 1.0),
               width: 3
             ),
-            borderRadius: BorderRadius.circular(15)
+            borderRadius: BorderRadius.circular(widget.borderRadius)
           ),
           child: InkWell(
             child: widget.items[i],  

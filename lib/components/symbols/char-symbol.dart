@@ -16,7 +16,7 @@ class CharSymbol extends StatefulWidget
     this.fontSize = 0.4,
     this.label = "a",
     this.labelColor = Colors.black,
-    this.borderRadius = 0.1,
+    this.borderRadius = 0.12,
     this.labelCharacters = "a"
   });
 

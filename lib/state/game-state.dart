@@ -277,12 +277,14 @@ class GameState extends ChangeNotifier
     });
   }
 
-  void increaseCoins(int amount, GlobalKey<GameBarState> gameBar) {
+  void increaseCoins(int amount, GlobalKey<GameBarState> gameBar, bool notify) {
     coins += amount; 
     gameBar.currentState?.coinSI?.currentState?.setValue(coins);
     Future.delayed(const Duration(milliseconds: 550), () {
       save();
-      notifyListeners();
+      if(notify) {
+        notifyListeners();
+      }
     });
   }
 
@@ -339,8 +341,8 @@ class GameState extends ChangeNotifier
       }
     }
 
-    save();
     inputWordsState.notifyListeners();
+    save();
   }
 
   void removeInputCharacter(int index, { bool toSymbols = true }) {
@@ -350,8 +352,9 @@ class GameState extends ChangeNotifier
       int location = getCurrentPuzzleState().locations[index]; 
       getCurrentPuzzleState().symbols[location] = character;
     }
-    save();
+
     inputWordsState.notifyListeners();
+    save();
   }
 
   String getWordForPuzzle(int puzzleNo) {
@@ -410,9 +413,11 @@ class GameState extends ChangeNotifier
 
   void preSave() {
     final storage = GetStorage();
-    if(storage.read("game-state") == Null ||
-       storage.read("current-level") == Null || 
-       storage.read("coins") == Null) {  
+    debugPrint("On gameState.preSave()");
+
+    if(storage.read("game-state") == null ||
+       storage.read("current-level") == null || 
+       storage.read("coins") == null) {  
       debugPrint("Pre-saving...");
       save();
     }

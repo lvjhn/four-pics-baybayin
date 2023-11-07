@@ -11,12 +11,13 @@ class NextBar extends StatefulWidget {
   const NextBar({
     super.key, 
     required this.title,
-    required this.onNext
+    required this.onNext, 
+    this.replace = false
   });
 
   final String title;
-  final Function onNext;
-
+  final Function onNext; 
+  final bool replace;
 
   @override
   State<NextBar> createState() => NextBarState();

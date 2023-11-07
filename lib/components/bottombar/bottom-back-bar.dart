@@ -11,11 +11,13 @@ class BottomBackBar extends StatefulWidget {
   const BottomBackBar({
     super.key, 
     required this.title,
-    required this.target
+    required this.target, 
+    this.replace = false
   });
 
   final String title;
   final Widget target;
+  final bool replace;
 
 
   @override
@@ -46,7 +48,7 @@ class BottomBackBarState extends State<BottomBackBar> {
               ), 
               onPressed: () {
                 playSound("click-1");
-                goto(context, widget.target);
+                goto(context, widget.target, replace: true);
               }
             )
           )

@@ -170,22 +170,24 @@ class SettingsScreenState extends State<SettingsScreen>
 
   Widget createFontSelectionSection(BuildContext context) {
 
+    var size = 94s.0;
+
     List<Widget> generateSelectionSymbols() {
       if (uiState.flags["showCharacterLabels"]!) {
         return [
-          SisilCharSymbolWithLabels().createA(100, 100),  
-          DekoCharSymbolWithLabels().createA(100, 100),  
-          RobotikaCharSymbolWithLabels().createA(100, 100),
-          SarimanokCharSymbolWithLabels().createA(100, 100),
-          SejongCharSymbolWithLabels().createA(100, 100)
+          SisilCharSymbolWithLabels().createA(size, size),  
+          DekoCharSymbolWithLabels().createA(size, size),  
+          RobotikaCharSymbolWithLabels().createA(size, size),
+          SarimanokCharSymbolWithLabels().createA(size, size),
+          SejongCharSymbolWithLabels().createA(size, size)
         ];
       } else {
         return [
-          SisilCharSymbolNoLabels().createA(100, 100),  
-          DekoCharSymbolNoLabels().createA(100, 100),  
-          RobotikaCharSymbolNoLabels().createA(100, 100),
-          SarimanokCharSymbolNoLabels().createA(100, 100),
-          SejongCharSymbolNoLabels().createA(100, 100)
+          SisilCharSymbolNoLabels().createA(size, size),  
+          DekoCharSymbolNoLabels().createA(size, size),  
+          RobotikaCharSymbolNoLabels().createA(size, size),
+          SarimanokCharSymbolNoLabels().createA(size, size),
+          SejongCharSymbolNoLabels().createA(size, size)
         ];
       }
     }

@@ -11,12 +11,10 @@ class SymbolSelector extends StatefulWidget
 {
   const SymbolSelector({ 
     super.key,
-    required this.characters,
     required this.onSelect, 
     required this.tileFont
   });
 
-  final List<String> characters;
   final Function onSelect;
   final CharSymbolBase tileFont;
 

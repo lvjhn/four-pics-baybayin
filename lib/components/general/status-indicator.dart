@@ -28,9 +28,12 @@ class StatusIndicatorState extends State<StatusIndicator>
     super.initState(); 
 
     actualValue = widget.value; 
+  }
 
-   
-
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   void setValue(int value) {

@@ -12,23 +12,16 @@ class InputWord extends StatefulWidget
 {
   const InputWord({ 
     super.key,
-    required this.correct, 
-    required this.current,
     required this.locations, 
     required this.onRemove,
-    required this.onCorrect, 
-    required this.onInvalid,
     required this.tileFont
   });
 
-  final List<String> correct; 
-  final List<String> current;
+
   final List<int> locations;
   final CharSymbolBase tileFont;
 
   final Function onRemove;
-  final Function onCorrect; 
-  final Function onInvalid;
 
   @override 
   State<InputWord> createState() => InputWordState(); 
@@ -42,33 +35,21 @@ class InputWordState extends State<InputWord>
   @override 
   void initState() {
     super.initState(); 
-
-
-    if (mounted) {
-      if(gameState.isInputFilled()) {
-        checkInput();
-      }
-    }
   }
  
 
   bool isCorrect() {
-    for(int i = 0; i < widget.current.length; i++) {
-      if(widget.current[i] != widget.correct[i]) {
+    List<String> correct = gameState.getCurrentSyllables(); 
+    List<String> current = gameState.getCurrentPuzzleInput();
+
+    for(int i = 0; i < current.length; i++) {
+      if(current[i] != correct[i]) {
         return false;
       }
     }
     return true;
   }
 
-  void checkInput() {
-    if(isCorrect()) {
-      widget.onCorrect();
-    } else {
-      widget.onInvalid(); 
-    }
-  }
-  
   void shake() {
     shakeKey.currentState?.shake();
   }
@@ -79,10 +60,13 @@ class InputWordState extends State<InputWord>
 
     List<Widget> input = []; 
 
+    List<String> correct = gameState.getCurrentSyllables(); 
+    List<String> current = gameState.getCurrentPuzzleInput();
 
-    for(int i = 0; i < widget.correct.length; i++) {
-      input.add(createSlot(context, i, widget.current[i])); 
-      if(i != widget.current.length - 1) {
+    
+    for(int i = 0; i < correct.length; i++) {
+      input.add(createSlot(context, i, current[i])); 
+      if(i != current.length - 1) {
         input.add(SizedBox(width: spacing));
       }
     } 
@@ -104,6 +88,7 @@ class InputWordState extends State<InputWord>
   }
 
   Widget createSlot(BuildContext context, int index, String character) {
+
     return GestureDetector(
       onTapDown: (TapDownDetails details) {
         if(gameState.getCurrentPuzzleState().fixed[index] == false) {

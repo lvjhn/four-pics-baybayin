@@ -40,11 +40,7 @@ class MainGameScreen extends StatefulWidget
 }
 
 class MainGameScreenState extends State<MainGameScreen>
-  with AutomaticKeepAliveClientMixin
 {
-  @override
-  bool get wantKeepAlive => true; 
-
   GlobalKey<ModalContainerState> mainModal = GlobalKey<ModalContainerState>();
   late Widget modalContent;
 
@@ -71,8 +67,8 @@ class MainGameScreenState extends State<MainGameScreen>
 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Consumer3<UIState, GameState, ProgressState>(
-        builder: (context, uiState, gameState, progressState, child) {
+      body: Consumer2<UIState, GameState>(
+        builder: (context, uiState, gameState, child) {
           return BGIBox( 
             child: Stack(
               children: [
@@ -101,38 +97,6 @@ class MainGameScreenState extends State<MainGameScreen>
     );
   } 
 
-  void submitInput() {
-    int puzzleNo = gameState.getCurrentPuzzleNo();
-
-    if(gameState.isInputFilled()) {
-      if(progressState.forCurrentPuzzle().attempts == 0) {
-        progressState.increaseAttempt(true, puzzleNo);
-      } else {
-        progressState.increaseAttempt(true, puzzleNo);
-      }
-
-      if(inputWord.currentState?.isCorrect() == false) {
-        inputWord.currentState?.shake();
-        playSound("error");
-      } 
-      
-      else {
-        int attempts = progressState.forCurrentPuzzle().attempts;
-        int reward = gameState.computeRewardForPuzzleAttempt(attempts);
-
-        debugPrint("Claimed reward $reward for $attempts attempts.");
-
-        playSound("solved");
-        setState(() { overlayLayer = "puzzle-solved"; });
-        gameState.increaseCoins(
-          reward, 
-          gameBar
-        );
-        progressState.markAsSolved(puzzleNo);
-      }
-
-    }
-  }
 
   void removeExtraCharacter() {
     debugPrint("Removing extra character...");
@@ -463,6 +427,42 @@ class MainGameScreenState extends State<MainGameScreen>
     );
   }
 
+  
+  void submitInput() {
+    int puzzleNo = gameState.getCurrentPuzzleNo();
+
+    if(gameState.isInputFilled()) {
+      if(progressState.forCurrentPuzzle().attempts == 0) {
+        progressState.increaseAttempt(true, puzzleNo);
+      } else {
+        progressState.increaseAttempt(true, puzzleNo);
+      }
+
+      if(inputWord.currentState?.isCorrect() == false) {
+        inputWord.currentState?.shake();
+        playSound("error");
+      } 
+      
+      else {
+        int attempts = progressState.forCurrentPuzzle().attempts;
+        int reward = gameState.computeRewardForPuzzleAttempt(attempts);
+
+        debugPrint("Claimed reward $reward for $attempts attempts.");
+
+        playSound("solved");
+        setState(() { overlayLayer = "puzzle-solved"; });
+        gameState.increaseCoins(
+          reward, 
+          gameBar,
+          false
+        );
+        progressState.markAsSolved(puzzleNo);
+      }
+
+    }
+  }
+
+  
   Widget createMainLayer() {
   
     gameState.preparePuzzleState(false, gameState.getCurrentPuzzleState());
@@ -478,7 +478,6 @@ class MainGameScreenState extends State<MainGameScreen>
     List<String> currentSymbols = gameState.getCurrentPuzzleSymbols();
     
 
-    
     final locations = gameState.getCurrentPuzzleState().locations;
 
     debugPrint("Current Syllables: " + correctSyllables.toString());
@@ -505,121 +504,135 @@ class MainGameScreenState extends State<MainGameScreen>
 
               const SizedBox(height: 40),
 
-              // INPUT WORD 
               Consumer<InputWordsState>(
                 builder: (context, inputWordsState, child) {
-                  return InputWord(
-                    key: inputWord,
-                    tileFont: uiState.getCurrentTileFont(),
-                    correct: correctSyllables, 
-                    current: currentPuzzleInput,
-                    locations: locations, 
-                    onRemove: (int index, String character, int location) {
-                      debugPrint("Removing character $location -> $character from input.");
-                      gameState.removeInputCharacter(index);
-                    },
-                    onCorrect: () {
-                      debugPrint("Correct guess detected");
-                    },
-                    onInvalid: () {
-                      debugPrint("Invalid guess detected");
-
-                      // playSound("error");
-                    }
+                  return Column(
+                    children: [
+                      InputWord(
+                        key: inputWord,
+                        tileFont: uiState.getCurrentTileFont(),
+                        locations: locations, 
+                        onRemove: (int index, String character, int location) {
+                          debugPrint("Removing character $location -> $character from input.");
+                          gameState.removeInputCharacter(index);
+                        }
+                      ),
+                      const SizedBox(height: 60),
+                      SymbolSelector(
+                        tileFont: uiState.getCurrentTileFont(),
+                        onSelect: (int i, String character) {
+                          debugPrint("Selecting symbol $i -> $character");
+                          gameState.selectSymbol(i, character);
+                          debugPrint(gameState.getCurrentPuzzleState().fixed.toString());
+                          submitInput();
+                        }
+                      )
+                    ]
                   );
                 }
               ), 
 
-              // ElevatedButton(
-              //   onPressed: () {
-              //     playSound("error");
-              //     inputWord.currentState?.shake();
-              //   }, 
-              //   child: const Text("Shake Input Word")
-              // ), 
-
-              const SizedBox(height: 60),
-
-              // SYMBOL SELECTION 
-              Consumer<InputWordsState>(
-                builder: (context, inputWordsState, child) {
-                  return SymbolSelector(
-                    tileFont: uiState.getCurrentTileFont(),
-                    characters: currentSymbols,
-                    onSelect: (int i, String character) {
-                      debugPrint("Selecting symbol $i -> $character");
-                      gameState.selectSymbol(i, character);
-                      debugPrint(gameState.getCurrentPuzzleState().fixed.toString());
-                      submitInput();
-                    }
-                  );
-                }
-              ),
-
-         
               const SizedBox(height: 20),
 
+              // // INPUT WORD 
+              // Consumer<InputWordsState>(
+              //   builder: (context, inputWordsState, child) {
+              //     return InputWord(
+              //       key: inputWord,
+              //       tileFont: uiState.getCurrentTileFont(),
+              //       locations: locations, 
+              //       onRemove: (int index, String character, int location) {
+              //         debugPrint("Removing character $location -> $character from input.");
+              //         gameState.removeInputCharacter(index);
+              //       }
+              //     );
+              //   }
+              // ), 
+
+              // const SizedBox(height: 60),
+
+              // // SYMBOL SELECTION 
+              // Consumer<InputWordsState>(
+              //   builder: (context, inputWordsState, child) {
+              //     return SymbolSelector(
+              //       tileFont: uiState.getCurrentTileFont(),
+              //       onSelect: (int i, String character) {
+              //         debugPrint("Selecting symbol $i -> $character");
+              //         gameState.selectSymbol(i, character);
+              //         debugPrint(gameState.getCurrentPuzzleState().fixed.toString());
+              //         submitInput();
+              //       }
+              //     );
+              //   }
+              // ),
+
+         
+
               // OTHER CONTROLS 
-              OtherControls(
-                onRemoveExtraCharacter: () {
-                  debugPrint("Removing extra character.");
-                  setState(() {
-                    modalContent = createRemoveExtraCharacterModal(context);
-                    mainModal.currentState?.show(); 
-                  }); 
-                }, 
-                onRevealACharacter: () {
-                  debugPrint("Revealing a character.");
-                  setState(() {
-                    modalContent = createRevealACharacterModal(context); 
-                    mainModal.currentState?.show(); 
-                  });
-                }, 
-                onRemoveExtraCharacters: () {
-                  debugPrint("Removing extra characters.");
-                  setState(() {
-                    modalContent = createRemoveExtraCharactersModal(context);
-                    mainModal.currentState?.show(); 
-                  });
-                },
-               
-                attempts: progressState.progressState.progress[puzzleNo - 1].attempts,
-               
-                enableRemoveExtraCharacter: (() {
-                  int noEmptySymbols = gameState.countEmptySymbols();
-                  List<String> syllables = gameState.getCurrentSyllables();
-                  
-                  bool minimalSymbols = 10 - noEmptySymbols < syllables.length;
-                  bool matchingCharsets = gameState.matchingSymbolsToSyllables();
-                  
+              Consumer<ProgressState>(
+                builder: (context, progressState, children) { 
+                  return OtherControls(
+                    onRemoveExtraCharacter: () {
+                      debugPrint("Removing extra character.");
+                      setState(() {
+                        modalContent = createRemoveExtraCharacterModal(context);
+                        mainModal.currentState?.show(); 
+                      }); 
+                    }, 
+                    onRevealACharacter: () {
+                      debugPrint("Revealing a character.");
+                      setState(() {
+                        modalContent = createRevealACharacterModal(context); 
+                        mainModal.currentState?.show(); 
+                      });
+                    }, 
+                    onRemoveExtraCharacters: () {
+                      debugPrint("Removing extra characters.");
+                      setState(() {
+                        modalContent = createRemoveExtraCharactersModal(context);
+                        mainModal.currentState?.show(); 
+                      });
+                    },
+                    
+                    attempts: progressState.progressState.progress[puzzleNo - 1].attempts,
+                    
+                    enableRemoveExtraCharacter: (() {
+                      int noEmptySymbols = gameState.countEmptySymbols();
+                      List<String> syllables = gameState.getCurrentSyllables();
+                      
+                      bool minimalSymbols = 10 - noEmptySymbols < syllables.length;
+                      bool matchingCharsets = gameState.matchingSymbolsToSyllables();
+                      
 
-                  if(matchingCharsets || minimalSymbols) {
-                    return false;
-                  } else{
-                    return true;
-                  }
-                })(),
+                      if(matchingCharsets || minimalSymbols) {
+                        return false;
+                      } else{
+                        return true;
+                      }
+                    })(),
 
-                enableRevealACharacter: (() {
-                  List<String> syllables = gameState.getCurrentSyllables();
-                  List<String> input = gameState.getCurrentPuzzleInput();
-                  return !listEquals(syllables, input);
-                })(),
+                    enableRevealACharacter: (() {
+                      List<String> syllables = gameState.getCurrentSyllables();
+                      List<String> input = gameState.getCurrentPuzzleInput();
+                      return !listEquals(syllables, input);
+                    })(),
 
-                enableRemoveAllCharacters: (() {
-                  int noEmptySymbols = gameState.countEmptySymbols();
-                  List<String> syllables = gameState.getCurrentSyllables();
-                  
-                  bool minimalSymbols = 10 - noEmptySymbols < syllables.length;
-                  bool matchingCharsets = gameState.matchingSymbolsToSyllables();
-                  
+                    enableRemoveAllCharacters: (() {
+                      int noEmptySymbols = gameState.countEmptySymbols();
+                      List<String> syllables = gameState.getCurrentSyllables();
+                      
+                      bool minimalSymbols = 10 - noEmptySymbols < syllables.length;
+                      bool matchingCharsets = gameState.matchingSymbolsToSyllables();
+                      
 
-                  if(matchingCharsets || minimalSymbols) {
-                    return false;
-                  } else{
-                    return true;
-                  }
-                })()
+                      if(matchingCharsets || minimalSymbols) {
+                        return false;
+                      } else{
+                        return true;
+                      }
+                    })()
+                  ); 
+                }
               )
             ]
           )
@@ -628,7 +641,8 @@ class MainGameScreenState extends State<MainGameScreen>
         // BOTTOMBAR SECTION
         const BottomBackBar(
           title: "BACK TO LEVEL SELECTION SCREEN",
-          target: LevelSelectorScreen()
+          target: LevelSelectorScreen(),
+          replace: true 
         ), 
 
         // DEV. ONLY CONTROLS
@@ -667,7 +681,7 @@ class MainGameScreenState extends State<MainGameScreen>
   Widget createPuzzleSolvedLayer() {
     return PuzzleSolved(
       onNext: () {
-        goto(context, const LevelSelectorScreen());
+        goto(context, const LevelSelectorScreen(), replace: true);
       }
     );
   }
@@ -677,7 +691,7 @@ class MainGameScreenState extends State<MainGameScreen>
       onNext: () {
         debugPrint("Moving on to the next level...");
         gameState.moveToNextLevel(false);
-        goto(context, const LevelSelectorScreen());
+        goto(context, const LevelSelectorScreen(), replace: true);
       }
     );
   }

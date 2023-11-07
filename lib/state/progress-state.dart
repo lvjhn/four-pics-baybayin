@@ -158,7 +158,10 @@ class ProgressState extends ChangeNotifier
 
   void preSave() {
     final storage = GetStorage();
-    if(storage.read("progress-state") == Null) {
+    debugPrint("On progressState.preSave()");
+    
+
+    if(storage.read("progress-state") == null) {
       debugPrint("Pre-saving...");
       save();
     }
