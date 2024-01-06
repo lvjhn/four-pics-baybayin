@@ -1,16 +1,7 @@
-# four_pics_baybayin
+# four-pics-baybayin
 
-A new Flutter project.
+4 Pics Baybayin is a prototypal (proof-of-concept) simple mobile puzzle-game app to aid in learning Baybayin. 
 
-## Getting Started
+It is inspired by another puzzle game named 4 Pics 1 Word and 4 Pics Tagalog. 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app extends the idea of 4 Pics, 1 Word - Tagalog to Baybayin. 
